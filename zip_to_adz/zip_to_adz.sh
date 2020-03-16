@@ -85,7 +85,6 @@ do
   if [ $_TEST_RUN -eq 0 ]; then
     rm -f "$line"
   fi
-  exit 1
 done < "./tmp.txt"
 rm ./tmp.txt
 rm -rf "$_destdir"
