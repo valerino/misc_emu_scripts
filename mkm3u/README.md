@@ -45,8 +45,9 @@ total 1120
 ~~~
 
 ## special note for Android
-. needs rooted device and a terminal emulator (of course!)
-. copy the script to /data/local/tmp and use from there.
-. /data/local/tmp must be writable: __su -c chmod 777 /data/local/tmp__
+
+* needs rooted device and a terminal emulator (of course!)
+* copy the script to /data/local/tmp and use from there.
+* /data/local/tmp must be writable: __su -c chmod 777 /data/local/tmp__
 
 __no checks are made regarding the .zips content, make sure to use zips containing each exactly ONE disk image (TOSEC collections are one zip/one disc already).__
