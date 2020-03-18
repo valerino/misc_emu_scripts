@@ -1,13 +1,18 @@
 #!/usr/bin/env sh
 function usage {
-    echo 'extract all files matching substring and create .m3u with them\n'
+    echo 'extract all files matching substring and create .m3u\n'
     echo 'usage:' "$0" '-f <path/to/substring> -d </path/to/destination> [-n m3u name] [-x delete destination first] [-s to skip extract for already unzipped discs]'
-    echo '\tif -n is not provided, the provided substring is the name of the generated .m3u'
+    echo '\t[-l limit to n entries, i.e. 10]\n'
+    echo 'if -n is not provided, the provided substring is the name of the generated .m3u'
 }
 _DELETE_DEST=0
 _SKIP_EXTRACT=0
-while getopts "xsf:d:n:" arg; do
+_LIMIT=0
+while getopts "xsf:d:n:l:" arg; do
     case $arg in
+        l)
+          _LIMIT="${OPTARG}"
+          ;;
         f)
           _PATH="${OPTARG}"
           ;;
@@ -59,12 +64,19 @@ if [ $_SKIP_EXTRACT -eq 0 ]; then
     rm ./tmp.txt
     exit 1
   fi
+  _n=0
   while IFS= read -r line
   do
-    unzip "$line" -d "$_DEST" 1> /dev/null
+    unzip "$line" -d "$_DEST"
     if [ $? -ne 0 ]; then
       # error extraction
       exit 1
+    fi
+    _n+=1
+    if [ $_LIMIT -ne 0 ]; then
+      if [ $_n -eq $_LIMIT ]; then
+        break
+      fi
     fi
   done < "./tmp.txt"
   rm ./tmp.txt
