@@ -71,28 +71,14 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/A-Team (19xx)(Elwood Computers).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/A.M.C. - Astro Marine Corps (1990)(Dinamic)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/A.M.C. - Astro Marine Corps (1990)(Dinamic)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ACE - Air Combat Emulator (1985)(Cascade).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ACE 2 (1987)(Cascade).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ACE 2088 (1988)(Cascade).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ADIDAS Championship Football (1990)(Ocean)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ADIDAS Championship Football (1990)(Ocean)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ADIDAS Championship Tie Break (1990)(Ocean - Starbyte).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/AMC - Astro Marine Corps (1990)(Dinamic)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/AMC - Astro Marine Corps (1990)(Dinamic)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/APB (1989)(Domark)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/APB (1989)(Domark)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/APB (1989)(Domark).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/APB - All Points Bulletin (1989)(Tengen)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/APB - All Points Bulletin (1989)(Tengen)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ASL Game, The (2005)(Kristensen, M).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ATF - Advanced Tactical Fighter (1988)(Digital Integration).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ATF - Advanced Tactical Fighter (1988)(Digital Integration)[cr Sharks].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ATV - All Terrain Vehicle Simulator (1987)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aaaargh! (1989)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aaargh! (1989)(Virgin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aardvark (1986)(Bug-Byte).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Abrasco Golf (1983)(Abrasco).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Abrasco Golf (1985)(Datacompaniet+64 Tape Computing).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ACE - Air Combat Emulator (1985)(Cascade).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ACE 2 (1987)(Cascade).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ACE 2088 (1988)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ace 2088 (1989)(Summit).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ace of Aces (1986)(Accolade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ace of Aces (1988)(U.S. Gold).zip
@@ -112,6 +98,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Action Service (1989)(Cobrasoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Addams Family, The (1992)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Addicta Ball (1987)(Alligata Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ADIDAS Championship Football (1990)(Ocean)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ADIDAS Championship Football (1990)(Ocean)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ADIDAS Championship Tie Break (1990)(Ocean - Starbyte).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Advance of the Mega Camels (1983)(Llamasoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Advanced Basketball Simulator (1989)(Mastertronic Plus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Advanced Basketball Simulator (1989)(Mastertronic).zip
@@ -120,18 +109,18 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Advanced Swimming Simulator (2004)(Sweety Socks Software).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Adventure 1 - Mutant Spiders, The (19xx)(-).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Adventure 3 - Fourth Sarcophagus, The (19xx)(-).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Adventure a - Planet of Death (1984)(Artic Computing).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Adventure B - Inca Curse (1984)(Artic Computing).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Adventure Quest (1986)(Level 9 Computing).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Adventure Series - Viking Raider (1984)(Interphase).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Adventure a - Planet of Death (1984)(Artic Computing).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Adventures of Bond... Basildon Bond, The (1986)(Probe Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Adventures of Buckaroo Banzai, The (1987)(U.S. Gold).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Aegean Voyage (1984)(Spinnaker Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Affen Jagd (1985)(Europa Computer Club)(de).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/After the War (1989)(Dinamic)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/After the War (1989)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/After the War (1989)(Dinamic)(es)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/After the War (1989)(Dinamic)(es)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/After the War (1989)(Dinamic)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/After the War (1989)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/After the War (1989)(Dinamic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Afterburner (1988)(Sega - Activision)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Afterburner (1988)(Sega - Activision)(Side B).zip
@@ -192,6 +181,8 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Amazon Tales (2012)(The Next Dimension).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Amazon Tales (2012)(The Next Dimension).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ambush (1984)(Virgin Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/AMC - Astro Marine Corps (1990)(Dinamic)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/AMC - Astro Marine Corps (1990)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/America's Cup, The (1986)(U.S. Gold).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/American 3D Pool (1991)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/American Football (1984)(Argus Press - Mind Games).zip
@@ -214,6 +205,11 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Antics (1985)(Bug-Byte).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Antiriad (1986)(Palace).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Apache Raid (1984)(Omega).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/APB (1989)(Domark)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/APB (1989)(Domark)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/APB (1989)(Domark).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/APB - All Points Bulletin (1989)(Tengen)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/APB - All Points Bulletin (1989)(Tengen)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ape Craze (1983)(CommData).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aqua Racer - Grand Prix F1 Nautica (1985)(Bubble Bus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aquanaut (1984)(Interceptor).zip
@@ -259,6 +255,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Arnie 2 (1993)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Around The World In 80 Days (1987)(Rainbow Arts).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Artura (1988)(Gremlin).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ASL Game, The (2005)(Kristensen, M).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aspar GP Master (1988)(Dinamic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Assault Course (1990)(Players Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Asterix and the Magic Cauldron (1986)(Melbourne House).zip
@@ -271,6 +268,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Astrolab (2005)(Eway 10 Software)[Release 2].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Astronaut Battle (1987)(Elwood Computers).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Asylum (1986)(All American Adventures).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ATF - Advanced Tactical Fighter (1988)(Digital Integration).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ATF - Advanced Tactical Fighter (1988)(Digital Integration)[cr Sharks].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Athena (1987)(Imagine).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Atom Ant - Up and Atom (1990)(Hi-Tec).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Atomic Robo-Kid (1990)(Activision)(Side A).zip
@@ -282,6 +281,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Attack of the Mutant Camels (1983)(Llamasoft)[Anirog Loader].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Attack of the Mutant Camels (1983)(Llamasoft)[ROM Loader].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Attacker (1984)(Cascade).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ATV - All Terrain Vehicle Simulator (1987)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Auf Wiedersehen Monty (1987)(Gremlin)(de).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Auf Wiedersehen Monty (1987)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Augie Doggie and Doggie Daddy (1991)(Hi-Tec).zip
@@ -304,24 +304,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aventura Original, La (1989)(Aventuras AD)(es)(Side B)[Part 2 - El Encuentro].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Aztec Challenge (1983)(Cosmi).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/B.C. Bill (1984)(Imagine).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BC 1 - BC's Quest for Tires (1983)(Sierra Online).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BC Bill (1984)(Image).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BC II - Grog's Revenge (1984)(U.S. Gold).zip
-/Users/valerino/Downloads/Commodore - 64 (crt)/BC's Quest for Tires (1983)(Sierra Online).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BC's Quest for Tires (1983)(Sierra Online).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BC's Quest for Tires (1984)(Software Projects).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BCII- Grog's Revenge (1988)(Power House).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Freestyle Simulator (1989)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Kidz (1987)(Firebird).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Ninja (1988)(Alternative).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Racers (1984)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Racers (1985)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator (1986)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator (1986)(Codemasters)[10].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator 2 - Dirt Biking (1989)(Codemasters)[Standard Version].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator 2 - Quarry Racing (1989)(Codemasters)[Expert Version].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Trials (1985)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Trials (1985)(Mastertronic)[10].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Back to Reality (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Back to Reality (1986)(Mastertronic)[10].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Back to the Future (1986)(Electric Dreams).zip
@@ -400,6 +382,7 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Battle Command (1991)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Field (1988)(Atlantis).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Island (1988)(Novagen).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Battle of Midway, The (1984)(Personal Software Services).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Ships (1987)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Ships (1987)(Elite)[cr RDI].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Ships (1988)(Encore).zip
@@ -407,11 +390,17 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Through Time (1984)(Anirog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Valley (1987)(Hewson).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Battle Valley (1988)(Hewson).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Battle of Midway, The (1984)(Personal Software Services).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Battlezone (1984)(Atari).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Batty (1987)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Bazooka Bill (1985)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Bazooka Bill (19xx)(Ricochet).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BC 1 - BC's Quest for Tires (1983)(Sierra Online).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BC Bill (1984)(Image).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BC II - Grog's Revenge (1984)(U.S. Gold).zip
+/Users/valerino/Downloads/Commodore - 64 (crt)/BC's Quest for Tires (1983)(Sierra Online).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BC's Quest for Tires (1983)(Sierra Online).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BC's Quest for Tires (1984)(Software Projects).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BCII- Grog's Revenge (1988)(Power House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Beach Buggy Simulator (1988)(Silverbird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Beach Head 2 (1985)(Access Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Beach Volleyball (1990)(Ocean).zip
@@ -526,6 +515,17 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Blue Thunder (1984)(Richard Wilcox Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Blue Thunder (198x)(Richard Wilcox Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Blues Brothers, The (1991)(Titus Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Freestyle Simulator (1989)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Kidz (1987)(Firebird).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Ninja (1988)(Alternative).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Racers (1984)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Racers (1985)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator (1986)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator (1986)(Codemasters)[10].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator 2 - Dirt Biking (1989)(Codemasters)[Standard Version].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Simulator 2 - Quarry Racing (1989)(Codemasters)[Expert Version].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Trials (1985)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/BMX Trials (1985)(Mastertronic)[10].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Bob Moran - Science Fiction (1988)(Infogrames)[cr Gang1933].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Bobby Bearing (1986)(The Edge).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Bobo (19xx)(Infogrames).zip
@@ -621,10 +621,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Bushido (1989)(Graftgold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/C.O.D.E. Hunter (1987)(Firebird Silver).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/C64anabalt (2011)(RGCD).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/CBM 64 Golf (1986)(Yes Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/CInc.o en Raya (19xx)(Microelectronica y Control)(es).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/CJ in the USA (1991)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/CJ's Elephant Antics (1991)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Cabal (1989)(Ocean)(Side 1).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Cabal (1989)(Ocean)(Side 2).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Cabal (1989)(Ocean)(Side A).zip
@@ -643,9 +639,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Candle Burner (2012)(Laxity).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Cannonball Battle (198x)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Captain America in the Doom Tube of Dr. Megalomann (1987)(Go!).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Captain Blood (1988)(Mindscape)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Captain Blood (1988)(Mindscape)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Captain Blood (1988)(Mindscape)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Captain Blood (1988)(Mindscape)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Captain Blood (1988)(Mindscape).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Captain Dynamo (1992)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Captain Fizz (1989)(Psyclapse).zip
@@ -676,6 +672,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Caverns of Xydrahpur (1986)(Gepo Soft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Caverns of Xydrapur (1986)(Gepo Soft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Caves of Oberon, The (1985)(RadarSoft).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/CBM 64 Golf (1986)(Yes Software).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Centipede (1983)(Atari).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Centropods (1983)(Comm Data).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Centurions Power X Treme (1987)(Ariolasoft - Reaktor).zip
@@ -729,12 +726,15 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Chuck Yeagers Aft (1987)(Electronic Arts).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Chuckie Egg (1984)(A&F Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Chuckie Egg 2 (1985)(A&F Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/CInc.o en Raya (19xx)(Microelectronica y Control)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Circus (1982)(Channel 8).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Circus Attractions (1989)(Golden Goblins).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Circus Circus (1985)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Circus Games (1988)(Tynesoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Citadel (1989)(Electric Dreams).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/City Fighter (1984)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/CJ in the USA (1991)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/CJ's Elephant Antics (1991)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Classic Adventure (1984)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Classic Collection 2 (1987)(Mikro-Gen)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Classic Collection 2 (1987)(Mikro-Gen)(Side B).zip
@@ -851,8 +851,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Creatures (1990)(Thalamus)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Creatures (1990)(Thalamus)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Creatures (1990)(Thalamus).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Creatures (1990)(Thalamus)[Single Tape Version].zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Creatures (1990)(Thalamus)[cr Black Mail][EasyFlash 2013-12-26].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Creatures (1990)(Thalamus)[Single Tape Version].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Creatures - Patched Version (1990)(Thalamus)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Creatures - Patched Version (1990)(Thalamus)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Creatures - Patched Version (1990)(Thalamus).zip
@@ -907,8 +907,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Cyrus II (1987)(Alligata).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/D-Bug (1983)(Electronic Arts).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/D-Bug (1984)(Ariolasoft).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/DJ Puff's Volcantic Capers (1992)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/DNA Warrior (1989)(Artronic Products).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Daley Thompson's Decathlon (1984)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Daley Thompson's Decathlon (1985)(Ocean Software Ltd).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Daley Thompson's Decathlon (1989)(Hit Squad).zip
@@ -945,20 +943,20 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Days of Thunder (1990)(Mindscape).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deactivators (1986)(Ariolasoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Dead Enders (1988)(Dreaming Djinn).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Dead Zone (1987)(The Power House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Dead or Alive (1987)(Alternative).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Dead Zone (1987)(The Power House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deadenders (1988)(Maynard International).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deadly Evil (1990)(Players Premier).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deadly Evil (1990)(Players Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deadly Evil (1990)(Players).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deadringer (1987)(Ariolasoft).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Death or Glory (1987)(CRL).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Death Race 64 (1987)(Atlantis).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Death Star (1983)(Rabbit Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Death Star (1983)(Rabbit).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Death Star Interceptor (1984)(System 3).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Death Trap 64 (1985)(Business Press International+Your Computer).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Death Wish 3 (1987)(Gremlin).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Death or Glory (1987)(CRL).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Deathscape (1987)(Starlight Software).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Decathlon (1983)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Decathlon (1983)(Activision).zip
@@ -1037,6 +1035,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Dizzy 12 - Panic Dizzy (1991)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Dizzy Dice (1987)(Players).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Dizzy- Down the Rapids (19xx)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/DJ Puff's Volcantic Capers (1992)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/DNA Warrior (1989)(Artronic Products).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Do Your Sums! (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Doc the Destroyer (1987)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Doctor Doom's Revenge (1989)(Empire)(Side A).zip
@@ -1120,8 +1120,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/E-Motion (1990)(U.S. Gold).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/E-Swat (1990)(U.S. Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/E-Swat (1990)(U.S. Gold)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ESWAT (1990)(Sega - U.S. Gold)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ESWAT (1990)(Sega - U.S. Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Eagle Empire (1984)(Alligata).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Eagle Empire (1987)(Alligata).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Eagle Empire (19xx)(Central Software).zip
@@ -1177,14 +1175,16 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Erebus (1986)(Virgin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Erebus (19xx)(Ricochet).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Ernie's Magic Shapes (1984)(Children's Computer Workshop).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Escape From the Planet of the Robot Monsters (1990)(Tengen - Domark).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Escape MCP (1983)(CommData).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Escape from Doomworld (1985)(Illusion).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Escape from the Laundry (2012)(MAD Productions).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Escape from the Planet of the Robot Monsters (1990)(Domark).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Escape From the Planet of the Robot Monsters (1990)(Tengen - Domark).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Escape MCP (1983)(CommData).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Espial (1984)(Tigervision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Espionage (19xx)(Grandslam).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Estra (1984)(Firebird).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ESWAT (1990)(Sega - U.S. Gold)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ESWAT (1990)(Sega - U.S. Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Eureka! (1984)(Domark)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Eureka! (1984)(Domark)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Euro Boss (1991)(Challenge).zip
@@ -1363,10 +1363,10 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Freak Factory (1986)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Fred (1983)(Indescomp - Quicksilva).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Fred (1983)(Quicksilva)(es).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest (1987)(Dinamic)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest (1987)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest (1987)(Dinamic)(es)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest (1987)(Dinamic)(es)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest (1987)(Dinamic)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest (1987)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Freddy Hardest in South Manhattan (1990)(Dinamic)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Frenesis (1987)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Friday the 13th (1985)(Domark).zip
@@ -1406,8 +1406,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/G-Loc R360 (1992)(Sega - U.S. Gold)[Part 1 - Picture].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/G-Loc R360 (1992)(Sega - U.S. Gold)[Part 2 - Intro].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/G-Loc R360 (1992)(Sega - U.S. Gold)[Part 3 - Game].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/GBA Championship Basketball - Two on Twol (1986)(Activision).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/GBA Championship Basketball - Two-on-Two (1986)(Activision-Gamestar).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Galactic Attack (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Galactic Dog Fight (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Galactic Games (1987)(Activision)(Side A).zip
@@ -1469,6 +1467,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gauntlet- The Deeper Dungeons (1987)(US Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gauntlet- The Deeper Dungeons (1987)(US Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gazza II (1990)(Empire).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/GBA Championship Basketball - Two on Twol (1986)(Activision).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/GBA Championship Basketball - Two-on-Two (1986)(Activision-Gamestar).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gee Bee Air Rally (1987)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Geoff Capes Strongman Challenge (1986)(Martech).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gerry the Germ (1985)(Firebird).zip
@@ -1510,17 +1510,17 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gnome Ranger (1987)(Level 9 Computing)(Tape 1 of 3 Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gnome Ranger (1987)(Level 9 Computing)(Tape 2 of 3 Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gnome Ranger (1987)(Level 9 Computing)(Tape 3 of 3 Side C).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Go Micro (1984)(Longman Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Go Racing (1984)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Go for the Gold (1986)(Americana Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Go for the Gold (1986)(Americana).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Go Micro (1984)(Longman Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Go Racing (1984)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Go-Kart Simulator (1989)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Goblin Towers (1983)(Supersoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gogo the Ghost (1984)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gold Collection III, The (1987)(U.S. Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gold Collection III, The (1987)(U.S. Gold)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Gold Quest 5 (2013)(Inferior Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Gold or Glory (1989)(Alternative Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Gold Quest 5 (2013)(Inferior Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Golden Axe (1990)(Sega - Virgin Games)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Golden Axe (1990)(Sega - Virgin Games)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Golden Axe (1990)(Virgin Games)(Side A).zip
@@ -1623,7 +1623,6 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/H.E.R.O. (1984)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/H.E.R.O. (1984)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/H.E.R.O. (1987)(Firebird Silver).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/HERO (1987)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hacker (1985)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hacker 2 - The Doomsday Papers (1986)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hacker II (1986)(Activision).zip
@@ -1642,8 +1641,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Harbour Attack (1984)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hard Drivin' (1989)(Domark).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hard Drivin' (1989)(Tengen-Domark).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/HardBall! (1985)(Accolade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hardball (1985)(Accolade).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/HardBall! (1985)(Accolade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Harrier Attack (1984)(Durell)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Harrier Attack (1984)(Durell).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Harvey Headbanger (1986)(Firebird Silver).zip
@@ -1678,11 +1677,12 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Herbert's Dummy Run (1986)(Micro Gen)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Herbert's Dummy Run (1986)(Micro Gen).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hercules (1984)(Interdisc).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/HERO (1987)(Activision).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Hero of the Golden Talisman (1985)(Mastertronic - Mr. Chip).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Hero of the Golden Talisman (1985)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hero Quest (1991)(Gremlin)(de).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hero Quest (1991)(Gremlin)(en).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hero Quest (1991)(Gremlin).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Hero of the Golden Talisman (1985)(Mastertronic - Mr. Chip).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Hero of the Golden Talisman (1985)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Herobotix (1987)(Hewson).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Herobotix (1987)(Rack It).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Heroes - Barbarian II (19xx)(Domark).zip
@@ -1712,12 +1712,12 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hohle, Die (2005)(Eway 10 Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hohle, Die (2005)(Eway 10 Software)[Release 4].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hole in One (1986)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood or Bust (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood Poker (1987)(Golden Games)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood Poker (1987)(Golden Games)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood Poker (1987)(Golden Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood Poker (1988)(Players)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood Poker (1988)(Players)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Hollywood or Bust (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Holy Grail (1984)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hong Kong Phooey (1990)(Hi-Tec).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hoodoo Voodoo (1986)(Bug-Byte).zip
@@ -1750,8 +1750,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Humpty Dumpty Meets the Fuzzy Wuzzies (1984)(Artic Computing).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Humpty Dumpty Mystery (1984)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hunchback (1983)(Ocean).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Hunchback II - Quasimodo's Revenge (1985)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hunchback at the Olympics (1985)(Software Projects).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Hunchback II - Quasimodo's Revenge (1985)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hungry Horace (1983)(Beam).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hungry Horace (1983)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Hunt for Red October, The (1990)(Grandslam Entertainment).zip
@@ -1786,15 +1786,12 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/I-Xera (1988)(Power House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/I.Q. (1987)(CRL).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/I.Q. (1987)(CRL)[Version b].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Ian Botham's Test Match (1984)(Tynesoft).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Ice Temple, The (1989)(Blue Ribbon Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/ICUPS (1986)(Thor Computer).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/IK+ (1987)(System 3)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/IK+ (1987)(System 3)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/IK+ (1987)(System 3).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/IO (1991)(Zeppelin Games).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/IO - Into Oblivion (1987)(Firebird).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ISS - Incredible Shrinking Sphere (1989)(Electric Dreams).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Ian Botham's Test Match (1984)(Tynesoft).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Ice Temple, The (1989)(Blue Ribbon Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ikari Warriors (1988)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ikari Warriors (1990)(Encore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Imagination (1987)(Firebird).zip
@@ -1864,10 +1861,13 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Invasion (1987)(Bulldog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Invert (2013)(The New Dimension).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Invert (2013)(The New Dimension).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/IO (1991)(Zeppelin Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/IO - Into Oblivion (1987)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Iridis Alpha (1986)(Hewson).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Iron Horse (1987)(Konami)[cr Anon].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Iron Horse (1988)(Konami).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Island of Dr. Destructo, The (1987)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ISS - Incredible Shrinking Sphere (1989)(Electric Dreams).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/It's a Kind of Magic (1988)(Magic Bytes)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/It's a Kind of Magic (1988)(Magic Bytes)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/It's a Kind of Magic - Clever and Smart (1988)(Magic Bytes)(Tape 2 of 2 Side B).zip
@@ -1884,11 +1884,11 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ivasive Action (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jabato (1989)(Aventuras AD)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jabato (1989)(Aventuras AD)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Jack and the Beanstalk (1984)(Thor Computer Software).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Jack Attack (1983)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jack Charlton's Match Fishing (1985)(Alligata).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jack Nicklaus Greatest 18 Holes of Major Championship Golf (1989)(Accolade)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jack Nicklaus Greatest 18 Holes of Major Championship Golf (1989)(Accolade)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Jack and the Beanstalk (1984)(Thor Computer Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jack the Nipper (1986)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jack the Nipper 2 - Coconut Capers (1987)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jack the Nipper 2 - In Coconut Capers (1987)(Gremlin).zip
@@ -1942,9 +1942,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jonah Barrington's Squash (1985)(New Generation).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jonah Barrington's Squash (1989)(Mastertronic Plus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jonah Barrington's Squash (1989)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Jonny Quest in Doctor Zin's Underworld (1991)(Hi-Tec).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jonny and the Jimpys (1984)(Ocean Software Ltd)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jonny and the Jimpys (1984)(Ocean Software Ltd)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Jonny Quest in Doctor Zin's Underworld (1991)(Hi-Tec).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jouste (1984)(IJK Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jouste (1984)(IJK).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Judge Dredd (1987)(Melbourne House).zip
@@ -1962,9 +1962,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Jungle Story (1984)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Jupiter Lander (1982)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/K-ring (1987)(The Byte Engineers).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/KGB Superspy (1989)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/KGB Superspy (19xx)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/KP Skips Action Biker with Clumsy Colin (1985)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kaktus (1983)(Supersoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kamikaze (1990)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kane (1985)(Mastertronic)(Side A).zip
@@ -1993,6 +1990,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kentucky Racing (1990)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kentucky Racing (19xx)(Alternative Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kettle (1987)(Alligata).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/KGB Superspy (1989)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/KGB Superspy (19xx)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kick Box Vigilante (1990)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kick Off (1983)(Bubblebus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kick Off (1989)(Anco)(de-en-es-it-nl).zip
@@ -2042,6 +2041,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kongo Kong (1983)(Victory).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Koronis Rift (1986)(Lucasfilm).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Kosmic Kanga (1984)(Micromania).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/KP Skips Action Biker with Clumsy Colin (1985)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Krakout (1987)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Krazy Kar (1984)(IJK Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Krazy Kong (1983)(Bubble Bus).zip
@@ -2183,8 +2183,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/M-Y-T-H - History in the Making (1989)(System 3)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/M.A.C.H. (1987)(Starvision)[Maneuverable Armed Computer Humans].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/M.U.L.E. (1983)(Electronic Arts).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/MIG-29 Soviet Fighter (1989)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/MULE (19xx)(Bunten, Dan - Bunten, Bill - Rushing, Jim - Watson, Alan)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Macadam Bumper (1985)(Personal Software Services)(de).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Macadam Bumper (1985)(Personal Software Services).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Macadam Bumper (1986)(Personal Software Services).zip
@@ -2244,9 +2242,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Match Day (1986)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Match Day (1986)(Ocean)[Hit Squad - They Sold a Million 2].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Match Day II (1987)(Ocean).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Match of the Day (1992)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Match Point (1984)(Psion Ltd).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Match Point (1984)(Psion).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Match of the Day (1992)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Matrix (1983)(Llamasoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mayday Squad! (1989)(Tynesoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mayhem (1983)(Mr. Micro).zip
@@ -2309,6 +2307,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Midnight Resistance (1990)(Ocean)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Midnight Resistance (1990)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mig Alley Ace (1985)(MicroProse).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/MIG-29 Soviet Fighter (1989)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mighty Bombjack (1991)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mike Read's Computer Pop Quiz (1988)(Elite Systems Ltd).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mikie (1986)(Konami - Imagine).zip
@@ -2343,8 +2342,8 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Mole Attack Max (1982)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Molecule Man (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Money Wars (1982)(Commodore).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Monkey Magic (1985)(Sparklers).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Monkey eat Milkey (2012)(Software of Sweden).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Monkey Magic (1985)(Sparklers).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monopole (1983)(Rabbit Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monopole (1983)(Rabbit).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monopoly (1985)(Leisure Genius).zip
@@ -2353,11 +2352,11 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monte Carlo Casino (1989)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Montezuma's Revenge (1984)(Parker Brothers).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monty Mole (1984)(Gremlin).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Monty on the Run (1993)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monty Python's Flying Circus (1990)(Virgin Games)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monty Python's Flying Circus (1990)(Virgin Games)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monty Python's Flying Circus (1990)(Virgin Mastertronic)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Monty Python's Flying Circus (1990)(Virgin Mastertronic)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Monty on the Run (1993)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Moon Buggy! (1983)(Anirog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Moon Buggy! (1984)(Anirog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Moon Cresta (1985)(Incentive Software).zip
@@ -2411,14 +2410,15 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Ms. Pac-Man (1984)(Atari).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ms. Pacman (1985)(Drean Commodore)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mugsy's Revenge (1986)(Melbourne House).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/MULE (19xx)(Bunten, Dan - Bunten, Bill - Rushing, Jim - Watson, Alan)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/MultiMixx 5 - Monty on the Run & Auf Wiedersehen Monty (1992)(Gremlin)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Munch Mania (1984)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Muncher, The (1988)(Gremlin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Murder (1983)(Rabbit Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Murder on the Atlantic (1987)(Infogrames)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Murder on the Atlantic (1987)(Infogrames)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Murder on the Atlantic (1987)(Infogrames)(de)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Murder on the Atlantic (1987)(Infogrames)(de)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Murder on the Atlantic (1987)(Infogrames)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Murder on the Atlantic (1987)(Infogrames)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Murphy (1984)(Mogul Communications).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Murray Mouse Super Cop (1992)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Mushroom Alley (1983)(Mogul).zip
@@ -2434,8 +2434,6 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Myth - History in the Making (1990)(System 3).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/N.E.I.L. (1988)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/N.O.M.A.D. (1986)(Ocean).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/NATO Commander (1984)(MicroProse).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/NEIL Android (1988)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nam (1986)(SSI)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nam (1986)(SSI)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Narc (1990)(Ocean)(Side A).zip
@@ -2443,12 +2441,14 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Narc (1990)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Narco Police (1991)(Dinamic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/National, The (19xx)(Cult Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/NATO Commander (1984)(MicroProse).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Navarone (1983)(Rabbit).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Navy Moves (1989)(Dinamic)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Navy Moves (1989)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Navy Seals (1990)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nebulus (1987)(Erbe).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nebulus (1987)(Hewson).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/NEIL Android (1988)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nemesis - The Final Challenge (1986)(Konami).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nemesis the Warlock (1987)(Martech).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Neoclyps (1983)(Cymbal).zip
@@ -2473,8 +2473,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Night Racer (1988)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Night Raider (1988)(Acme Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Night Shift (1990)(U.S. Gold).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/NightShade (1985)(Ultimate).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nightdawn (1989)(Magic Bytes).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/NightShade (1985)(Ultimate).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nim (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ninja (1986)(Mastertronic Added Dimension).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ninja (1986)(Mastertronic).zip
@@ -2498,10 +2498,10 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nosferatu the Vampire (1986)(Macmillan).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nosferatu the Vampyre (1986)(Piranha - MacMillan).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Nosferatu the Vampyre (1986)(Piranha-McMillan).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Not Even Human (2008)(Triad).zip
-/Users/valerino/Downloads/Commodore - 64 (crt)/Not Even Human (2011)(RGCD)[Inhumane Edition].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Not a Penny More, Not a Penny Less (1987)(Domark)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Not a Penny More, Not a Penny Less (1987)(Domark)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Not Even Human (2008)(Triad).zip
+/Users/valerino/Downloads/Commodore - 64 (crt)/Not Even Human (2011)(RGCD)[Inhumane Edition].zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Nova Blast (1984)(Imagic).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Nova Blast (1984)(Imagic)[no-header].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Now Games 3 (1986)(Virgin Games)(Side A).zip
@@ -2567,6 +2567,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Otan Alerta - Teatro de Europa (19xx)(Personal Software Services)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Othello (1984)(Microelectronica y Control)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Othello (1991)(-).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Out of this World (1988)(Ariolasoft).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Out on a Limb (1985)(Anirog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Out On the Tiles (1987)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Out Run (1988)(Sega - U.S. Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Out Run (1988)(Sega - U.S. Gold)(Side B).zip
@@ -2574,8 +2576,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Out Run (1988)(U.S. Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Out Run (1988)(U.S. Gold)(Tape 1 of 2 Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Out Run (1988)(U.S. Gold)(Tape 2 of 2 Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Out of this World (1988)(Ariolasoft).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Out on a Limb (1985)(Anirog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Outback (1984)(Paramount).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Outlaw (1990)(Players Premier).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Outlaws (1986)(Ultimate).zip
@@ -2589,14 +2589,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/P.H.M. Pegasus (1987)(Electronic Arts)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/P.O.D. (1986)(Mr. Chip).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/P.O.D. - Proof of Destruction (1987)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PC Fuzz (1984)(Anirog Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PHM Pegasus (1987)(Electronic Arts-Lucasfilms)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PHM Pegasus (1987)(Electronic Arts-Lucasfilms)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1985)(Accolade)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1985)(Accolade)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1985)(Accolade).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1986)(Accolade)(Side A)[3 Separate Games].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1986)(Accolade)(Side A)[Mission with Crew Selection].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Pac-Land (1988)(Quicksilva).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Pac-Man (1983)(Atari).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Pac-Mania (1988)(Grandslam Entertainment).zip
@@ -2638,6 +2630,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Paste-Man Pat (1988)(Silverbird).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Pastfinder (1984)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Pastfinder (1984)(Activision).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PC Fuzz (1984)(Anirog Software).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Peanut Butter Panic (1984)(Children's Computer Workshop).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Pedro (1984)(Imagine).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Penalty Soccer (1990)(Artronic).zip
@@ -2656,6 +2649,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Phantomas II (1987)(Dinamic)(es).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Phaser (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Phileas Fogg's Balloon Battles (1991)(Zeppelin Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PHM Pegasus (1987)(Electronic Arts-Lucasfilms)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PHM Pegasus (1987)(Electronic Arts-Lucasfilms)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Phobia (1989)(Mirrorsoft)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Phobia (1989)(Mirrorsoft)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Pi. R Squared (1987)(Argus Press).zip
@@ -2789,6 +2784,11 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Protium (1988)(Alternative Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Protium (1988)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Prowler (1987)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1985)(Accolade)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1985)(Accolade)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1985)(Accolade).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1986)(Accolade)(Side A)[3 Separate Games].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/PSI-5 Trading Company (1986)(Accolade)(Side A)[Mission with Crew Selection].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Psi-Droid (1988)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Psi-Warrior (1984)(Beyond Software)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Psi-Warrior (1984)(Beyond Software)(Side B).zip
@@ -2818,6 +2818,11 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Pyramid, The (1984)(Fantasy).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Q-Bert (1983)(Parker Brothers).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Q10 Tankbuster (1992)(Zeppelin Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Quake Minus One (1985)(Beyond Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Quartet (1987)(Activision).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Quasar (1984)(Voyager Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Quasar (1984)(Voyager).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Quasar Zone (198x)(Krypton Force).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/QUATTRO Adventure (19xx)(Codemasters)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/QUATTRO Adventure (19xx)(Codemasters)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/QUATTRO Cartoon (19xx)(Codemasters)(Side A).zip
@@ -2830,11 +2835,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/QUATTRO Racers (19xx)(Codemasters)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/QUATTRO Super Hits (19xx)(Codemasters)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/QUATTRO Super Hits (19xx)(Codemasters)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Quake Minus One (1985)(Beyond Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Quartet (1987)(Activision).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Quasar (1984)(Voyager Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Quasar (1984)(Voyager).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Quasar Zone (198x)(Krypton Force).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Quedex (1987)(Thalamus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Quest for the Golden Egg Cup, The (1988)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Quest for the Golden Eggcup, The (1988)(Mastertronic).zip
@@ -2859,7 +2859,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/R.B.I. Baseball 2 (1991)(Tengen - Domark)(Side A)[1 Player].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/R.B.I. Baseball 2 (1991)(Tengen - Domark)(Side B)[2 Players].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/R.I.S.K. - Rapid Intercept Seek and Kill (1987)(The Edge).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/RMS Titanic (1987)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Race, The (1990)(Players Premier).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Races, The - Go Racing with Peter O'Sullivan (1984)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Racing Game, The (1989)(Tanglewood).zip
@@ -2999,6 +2998,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/River Rescue (19xx)(Alternative Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/River Rescue - Racing Against Time (1984)(Creative Sparks-Thorn Emi)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/River Rescue - Racing Against Time (1984)(Creative Sparks-Thorn Emi)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/RMS Titanic (1987)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Road Blasters (1988)(Erbe)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Road Blasters (1988)(Erbe)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Road Blasters (1988)(U.S. Gold)(Side A).zip
@@ -3017,9 +3017,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Roadblasters (1988)(U.S. Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Roadkiller (1988)(Edicola-Super Game 2000)(it).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Roadwars (1988)(Melbourne House).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Robin Smith's International Cricket (1991)(Challenge Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Robin of Sherwood - The Touchstones of Rhiannon (1986)(Adventure International).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Robin of the Wood (1985)(Odin Computer Graphics).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Robin Smith's International Cricket (1991)(Challenge Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Robin to the Rescue (1983)(Solar Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Robocop (1988)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Robocop (1989)(Ocean).zip
@@ -3027,9 +3027,9 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Robocop 3 (1992)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Robotron 2084 (1983)(Atari).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Robozone (1991)(Mirrorsoft).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Rock n' Bolt (1985)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rock Star Ate My Hamster (19xx)(Codemasters)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rock Star Ate My Hamster (19xx)(Codemasters)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Rock n' Bolt (1985)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rock'n Wrestle (1985)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rock'n Wrestle (1985)(Melbourne House)[10].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rocket Ball (1984)(I.J.K. Software).zip
@@ -3075,9 +3075,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Ruff and Reddy in the Space Adventure (1990)(Hi-Tec).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rugby - The World Cup (1991)(Domark).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Rugby Boss (1990)(Alternative).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Run for Gold (1985)(Hill MacGibbon).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Run For Gold (1987)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Run Games Nr.11 (19xx)(-)(it).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Run for Gold (1985)(Hill MacGibbon).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Run the Gauntlet (1989)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Running Man, The (1989)(Grandslam Entertainment)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Running Man, The (1989)(Grandslam Entertainment)(Side B).zip
@@ -3091,16 +3091,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/S.D.I. - Strategic Defence Initiative (1988)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/S.O.S. (1987)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/S.O.S. - The Game with no Name (1986)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/S.W.A.T (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/S.t.o.r.m (1986)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SAS Combat Simulator (1989)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SDI - Strategic Defence Initiative (1988)(Activision).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SIPE Unk (19xx)(-)(it)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SIPE Unk (19xx)(-)(it)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SMASHED- Strangest Mobile Army Surgical Hospital East of Detroit (1987)(Alternative Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/STUN Runner (1990)(Tengen - Domark).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SWIV (1991)(Storm)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SWIV (1991)(Storm)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/S.W.A.T (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Saboteur (1984)(Cable).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Saboteur (1986)(Durell).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Saboteur II - Avenging Angel (1987)(Durell).zip
@@ -3123,6 +3115,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Samurai Warrior - The Battles of Usagi Yojimbo (1988)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Santa's Christmas Capers (1990)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Sanxion (1986)(Thalamus).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SAS Combat Simulator (1989)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Satan (1990)(Dinamic)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Satan (1990)(Dinamic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Satan (1990)(Dinamic).zip
@@ -3160,6 +3153,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Scuba Dive (1983)(Durell).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Scuba Kidz (1988)(Silverbird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Scumball (1987)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SDI - Strategic Defence Initiative (1988)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Se-Kaa of Assiah (1984)(Mastertronic)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Se-Kaa of Assiah (1984)(Mastertronic)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Se-Kaa of Assiah (1985)(Mastertronic)(Side A).zip
@@ -3192,16 +3186,16 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Serpentine (1982)(Broderbund).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Sesame Street Letter-Go-Round (1984)(Children's Computer Workshop).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Seymour - Stunt Man (1992)(Codemasters).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Seymour Goes to Hollywood (1992)(Codemasters)[aka Seymour at the Movies].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Seymour at the Movies (1992)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Seymour Goes to Hollywood (1992)(Codemasters)[aka Seymour at the Movies].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shackled (1986)(U.S. Gold).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shackled (1988)(U.S. Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shackled (1988)(U.S. Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadow Dancer (1991)(Sega - U.S. Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadow Dancer (1991)(Sega - U.S. Gold)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (crt)/Shadow of the Beast (1990)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadow Skimmer (1987)(The Edge).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadow Warriors (1990)(Ocean).zip
-/Users/valerino/Downloads/Commodore - 64 (crt)/Shadow of the Beast (1990)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadowfax (1982)(Postern).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadowfax (1983)(Mike Singleton).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Shadowfire (1985)(Beyond Software).zip
@@ -3250,6 +3244,8 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Silkworm (1989)(Tecmo - The Sales Curve).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Silkworm (1992)(Tronix).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Silverrock 3-in-1 (2014-03-03)(Silverrock)(DK)[cr SAM][EasyFlash].zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SIPE Unk (19xx)(-)(it)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SIPE Unk (19xx)(-)(it)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Siren City (1983)(Interceptor).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Sitting Target (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Six Appeal - P47 (19xx)(Ubi Soft)(Tape 2 of 2 Side B).zip
@@ -3261,12 +3257,12 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Six Shooter - Parallax (1986)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Six Shooter - Wizball (1987)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Skate Crazy (1988)(Gremlin).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Skate Rock (1986)(Bubble Bus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Skate or Die (1987)(Electronic Arts).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Skate or Die! (1987)(Electronic Arts)[cr The Stock][docs][EasyFlash 2012-04-30].zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Skate or Die! (1987)(Electronic Arts)[cr The Stock][f][docs][EasyFlash 2012-04-30].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SkateWars (1990)(Ubi Soft).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Skate Rock (1986)(Bubble Bus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Skateboard Joust (1988)(Silverbird).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SkateWars (1990)(Ubi Soft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Skatin' USA (1990)(Atlantis Software Limited).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Skatin' USA (1990)(Atlantis).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Skel (1984)(Hitech Games Plus).zip
@@ -3320,6 +3316,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Smash 4K (19xx)(TND Games)(FW).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Smash T.V. (1991)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Smash the Windows (1984)(Cascade).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SMASHED- Strangest Mobile Army Surgical Hospital East of Detroit (1987)(Alternative Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Smuggler (1984)(Abbex Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Snake-Pit (1982)(Postern).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Snakes (19xx)(Elwood Computers).zip
@@ -3342,9 +3339,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Soccer Pinball (1992)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Soccer Supremo (1988)(Unknown).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Solar Fox (1983)(Commodore).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Soldier One (1986)(American Action).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Soldier of Fortune (1988)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Soldier of Light (1988)(Softek).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Soldier One (1986)(American Action).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Solo Flight (1984)(MicroProse)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Solo Flight (1984)(MicroProse)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Solo Flight (1984)(MicroProse).zip
@@ -3498,7 +3495,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Star Wars- Return of the Jedi (19xx)(Hit Squad).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Star-G8 (1990)(Outlaw - Emix Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Star-Lifter (1987)(Mastertronic).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/StarRay (1989)(Logotron).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starace (1984)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starace (1987)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starball (1988)(Rainbow Arts).zip
@@ -3516,6 +3512,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starquake (1985)(Bubble Bus Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starquake (1985)(Bubble Bus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starrace (1984)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/StarRay (1989)(Logotron).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Starship Andromeda (1985)(Ariolasoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Startrash (1989)(Rainbow Arts)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Startrash (1989)(Rainbow Arts)(Side B).zip
@@ -3530,10 +3527,10 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stellar Wars (1983)(Kevin A. Moughtin).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Steve Davis Snooker (1985)(CDS Microsystems).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Steve Davis Snooker (1985)(CDS Software Ltd.).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Stifflip & Co. (1987)(Palace)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Stifflip & Co. (1987)(Palace)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stifflip & Co. (1987)(Palace)(es)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stifflip & Co. (1987)(Palace)(es)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Stifflip & Co. (1987)(Palace)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Stifflip & Co. (1987)(Palace)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Sting 64 (1983)(Quicksilva).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stix (1983)(Supersoft).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stix (1984)(Supersoft).zip
@@ -3601,6 +3598,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Strip Poker II (1989)(Byte Back)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Strontium Dog and the Death Gauntlet (1984)(Quicksilva).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stryker in the Crypts of Trogan (1992)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/STUN Runner (1990)(Tengen - Domark).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stunt Bike (1984)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stunt Bike (1988)(Silverbird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Stunt Bike Simulator (1988)(Silverbird).zip
@@ -3623,12 +3621,12 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Camp (1990)(Thalamus)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Camp (1990)(Thalamus)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Camp (1990)(Thalamus).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(d3m Software)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(d3m Software)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(Epyx)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(Epyx)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(Epyx).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(Epyx)[Single Tape Version].zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(d3m Software)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (1984)(d3m Software)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games (19xx)(Kixx).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games 2 (1985)(Epyx)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Summer Games 2 (1985)(Epyx)(Side B).zip
@@ -3696,7 +3694,6 @@
 /Users/valerino/Downloads/Commodore - 64 (crt)/Super Wonderboy In Monsterland (1989)(Activision)[cr Nostalgia][t +17][EasyFlash 2011-12-16].zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Super Zaxxon (1984)(HesWare).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Super Zaxxon (1984)(HesWare).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/SuperTed - The Search for Spot (1990)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Supercuda (1983)(CommData).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Superhero (1988)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Superkid (1990)(Atlantis).zip
@@ -3710,6 +3707,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Superstar Ping-Pong (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Superstar Ping-Pong (1987)(SportTime).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Superstar Soccer (1987)(Mindscape).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SuperTed - The Search for Spot (1990)(Alternative).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Supertrux (1989)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Supremacy (1991)(Virgin Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Survivor (1983)(Synapse Software).zip
@@ -3719,15 +3717,14 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Swap (1991)(Palace).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Sweep (1987)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Sweep (1988)(Mastertronic).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SWIV (1991)(Storm)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/SWIV (1991)(Storm)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Swoop (1984)(Micro Power).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Sword of Honour (1992)(Prestige Software)(de-en)[cr Nostalgia][t +6][docs][EasyFlash 2013-01-01].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Sydney Affair, The (1987)(Infogrames).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/System 8 - The Pools Predictor (1988)(Blue Ribbon Software - Cygnus Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/T-Bird (1988)(Mastertronic Plus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/T-Bird (1990)(Mastertronic Plus).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/TLL - Tornado Low Level (1985)(Ocean).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/TRAZ - Transformable Arcade Zone (1988)(Cascade).zip
-/Users/valerino/Downloads/Commodore - 64 (crt)/TSI Cycles (1983)(Turbo Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Table Soccer (1986)(Alligata).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Table Tennis (1993)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Table Tennis (1993)(Zeppelin Games)[aka International Table Tennis].zip
@@ -3819,19 +3816,19 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunder Force (1987)(Rack It).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunder Jaws (1991)(Atari - Domark)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunder Jaws (1991)(Atari - Domark)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderBlade (1988)(Sega - U.S. Gold)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderBlade (1988)(Sega - U.S. Gold)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderBlade (1988)(Sega - U.S. Gold).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderCats - The Lost Eye of Thundera (1987)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbirds (1985)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbirds (1989)(Grandslam Entertainment)(Tape 1 of 4).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbirds (1989)(Grandslam Entertainment)(Tape 2 of 4)[Key RECOVERY].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbirds (1989)(Grandslam Entertainment)(Tape 3 of 4)[Key ALOYSIUS].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbirds (1989)(Grandslam Entertainment)(Tape 4 of 4)[Key ANDERSON].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbirds (1989)(Grandslam Entertainment).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderBlade (1988)(Sega - U.S. Gold)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderBlade (1988)(Sega - U.S. Gold)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderBlade (1988)(Sega - U.S. Gold).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderbolt (1987)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thundercats (1987)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thundercats (1987)(Encore).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ThunderCats - The Lost Eye of Thundera (1987)(Elite).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thundercross (1988)(CRL).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Thunderforce (1987)(Hewson).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Tiger Mission (1987)(Kele Line).zip
@@ -3858,6 +3855,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Titanic (1986)(Yes Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Titanic - The Adventure Begins... (19xx)(Yes!).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Titanic Blinky (1992)(Zeppelin Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/TLL - Tornado Low Level (1985)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/To be on Top (1987)(Rainbow Arts).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Toadforce (1986)(Players).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Toki (1991)(Ocean).zip
@@ -3915,6 +3913,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Trashman (1984)(New Generation).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Traxxion (1987)(CRL).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Traxxion (1987)(Derrett, Jay).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/TRAZ - Transformable Arcade Zone (1988)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Treasure Hunt (1987)(Macsen).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Treasure Island (1987)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Treasure Island Dizzy (1989)(Codemasters).zip
@@ -3944,6 +3943,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Trooper Truck (1983)(Rabbit Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Trooper Truck (1983)(Rabbit).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Trull (1984)(Europa Computer-Club).zip
+/Users/valerino/Downloads/Commodore - 64 (crt)/TSI Cycles (1983)(Turbo Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Tube, The (1987)(Argus Press - Quicksilva).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Tube, The (1987)(Quicksilva).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Tunnel Escape (1984)(Cascade).zip
@@ -3986,6 +3986,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Typhoon (1988)(Konami)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/U.F.O. (1987)(Firebird Silver).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/U.F.O. (1987)(Firebird-Odin Computer Graphics).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Uchi-Mata (1986)(Martech).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/UCM - Ultimate Combat Mission (1988)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/UFO (1987)(Firebird - Odin Computer Graphics).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/UFO (1987)(Odin Computer Graphics).zip
@@ -3993,15 +3994,14 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/UN Squadron (1990)(Capcom - U.S. Gold)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/UN Squadron (1990)(U.S. Gold)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/UN Squadron (1990)(U.S. Gold)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Uchi-Mata (1986)(Martech).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Underwurlde (1984)(Firebird - Ultimate).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Universe (1984)(Cascade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Untouchables, The (1989)(Ocean).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Up 'n Down (1984)(Sega).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Up 'n Down (1984)(Sega).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Up Up and Away (1985)(Starcade).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Up and Add 'Em (1984)(Fisher Price).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Up for Grabs (1983)(Spinnaker Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Up Up and Away (1985)(Starcade).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Uridium (1986)(Hewson Consultants).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Uridium (1986)(Hewson).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Uridium Plus (1986)(Hewson).zip
@@ -4050,13 +4050,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Vortex Raider (1983)(Interceptor).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Vultures (1983)(J Morrison Micros).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Vultures (1983)(J. Morrison Micros).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WEC Le Mans (1988)(Imagine)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WEC Le Mans (1988)(Imagine)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WEC Le Mans (1989)(Imagine).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WWF European Rampage Tour (1992)(Ocean)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WWF European Rampage Tour (1992)(Ocean)(Side B).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WWF Wrestlemania Challenge (1991)(Ocean)(Side A).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/WWF Wrestlemania Challenge (1991)(Ocean)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wacky Darts (1990)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wacky Races (1992)(Hi-Tec).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wall$treet (1989)(Magic Bytes).zip
@@ -4071,9 +4064,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/War Cars Construction Set (1988)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/War Hawk (1986)(Firebird Silver).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/War Hawk (1986)(Firebird).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/War in Middle Earth (1989)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/War Machine (1989)(Players).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/War Play (1986)(Anco).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/War in Middle Earth (1989)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Warhawk (1986)(Firebird).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Warlock (1991)(Millenium).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Warlock - The Avenger (1991)(Millennium).zip
@@ -4095,6 +4088,9 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Web (1986)(Orpheus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Web Dimension (1985)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Webster - The Word Game (1983)(Heuristic Software).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WEC Le Mans (1988)(Imagine)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WEC Le Mans (1988)(Imagine)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WEC Le Mans (1989)(Imagine).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wembley Greyhounds (1990)(Cult Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Werewolves of London (1988)(Viz Design).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/West (1984)(Talent Computer Systems).zip
@@ -4138,10 +4134,10 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Witch's Cauldron, The (1985)(Mikro-Gen)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wiz (1987)(Melbourne House).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wiz Biz (1987)(Alternative Software).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Wizard Warz (1988)(Go!).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/Wizard Willy (1990)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Wizard of Wor (1983)(Commodore).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Wizard of Wor Max (1983)(Commodore)(JP).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Wizard Warz (1988)(Go!).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/Wizard Willy (1990)(Codemasters).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wizard's Lair (1985)(Bubble Bus).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Wizard's of ID (1983)(Sierra Online).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wizardry (1985)(The Edge).zip
@@ -4187,6 +4183,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Games (1986)(Epyx)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Games (1988)(Kixx)(Side A).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Games (1988)(Kixx)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/World of Soccer (1992)(Challenge).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Race (1989)(Edicola-Super Game 2000)(it).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Rugby (1992)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Series Baseball (1984)(Imagine).zip
@@ -4195,9 +4192,12 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Soccer (1990)(Zeppelin Games).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Soccer League (1990)(E&J).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/World Tour Golf (1987)(Electronic Arts).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/World of Soccer (1992)(Challenge).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Worm in the Paradise (1985)(Level 9 Computing).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wrestling Superstars (1992)(Codemasters).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WWF European Rampage Tour (1992)(Ocean)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WWF European Rampage Tour (1992)(Ocean)(Side B).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WWF Wrestlemania Challenge (1991)(Ocean)(Side A).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/WWF Wrestlemania Challenge (1991)(Ocean)(Side B).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Wyvern (2012)(The New Dimension).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/X-15 Alpha Mission (1987)(Activision).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/X-Out (1989)(Rainbow Arts).zip
@@ -4233,8 +4233,6 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Yogi's Great Escape (1990)(HiTEC Software).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Young Ones, The (1986)(Orpheus).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Z (1986)(Rino Marketing).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ZZZ-UNK EA2 (19xx)(-).zip
-/Users/valerino/Downloads/Commodore - 64 (tap)/ZZZ-UNK POOL (19xx)(-).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zaga (1984)(Kingsoft).zip
 /Users/valerino/Downloads/Commodore - 64 (crt)/Zak McKracken & Maniac Mansion (198x)(LucasArts)[cr Onslaught][t +1][docs][EasyFlash 2011-03-17].zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zariaros (2004)(Cyber systems).zip
@@ -4274,5 +4272,7 @@
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zynaps (1987)(Hewson).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zyrons Escape (1986)(Kele Line).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zyto (1985)(Virgin Games).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ZZZ-UNK EA2 (19xx)(-).zip
+/Users/valerino/Downloads/Commodore - 64 (tap)/ZZZ-UNK POOL (19xx)(-).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zzzz (1986)(Mastertronic).zip
 /Users/valerino/Downloads/Commodore - 64 (tap)/Zzzzzzz (1985)(Mastertronic).zip

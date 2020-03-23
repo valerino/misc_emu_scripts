@@ -58,7 +58,7 @@ while getopts "p:d:s:c:n:l:r:t:y:x:" arg; do
     esac
 done
 
-if [ ! -z "$_MERGE_IN_PATH" ]; then
+if [ ! -z "$_MERGE_IN_PATH" ] || [ ! -z "$_MERGE_OUT_PATH" ]; then
   if [ "$_PATH" == "" ]; then
     usage
     exit 1
@@ -69,19 +69,6 @@ else
     exit 1
   fi
 fi
-
-echo '[.] generating' "$_LPL_PATH"
-rm -f "$_LPL_PATH"
-
-# generate header
-echo '{' >> "$_LPL_PATH"
-echo '\t"version": "1.2",' >> "$_LPL_PATH"
-echo '\t"default_core_path":' \""$_CORE_PATH"\", >> "$_LPL_PATH"
-echo '\t"default_core_name":' \""$_CORE_NAME"\", >> "$_LPL_PATH"
-echo '\t"label_display_mode":' "$_LABEL_DISPLAY_MODE", >> "$_LPL_PATH"
-echo '\t"right_thumbnail_mode":' "$_RIGHT_THUMBNAIL_MODE", >> "$_LPL_PATH"
-echo '\t"left_thumbnail_mode":' "$_LEFT_THUMBNAIL_MODE", >> "$_LPL_PATH"
-echo '\t"items": [' >> "$_LPL_PATH"
 
 # get all files
 find "$_PATH" > ./tmp.txt
@@ -103,6 +90,19 @@ if [ ! -z "$_MERGE_OUT_PATH" ]; then
   mv ./tmp.txt "$_MERGE_OUT_PATH"
   exit 0
 fi
+
+echo '[.] generating' "$_LPL_PATH"
+rm -f "$_LPL_PATH"
+
+# generate header
+echo '{' >> "$_LPL_PATH"
+echo '\t"version": "1.2",' >> "$_LPL_PATH"
+echo '\t"default_core_path":' \""$_CORE_PATH"\", >> "$_LPL_PATH"
+echo '\t"default_core_name":' \""$_CORE_NAME"\", >> "$_LPL_PATH"
+echo '\t"label_display_mode":' "$_LABEL_DISPLAY_MODE", >> "$_LPL_PATH"
+echo '\t"right_thumbnail_mode":' "$_RIGHT_THUMBNAIL_MODE", >> "$_LPL_PATH"
+echo '\t"left_thumbnail_mode":' "$_LEFT_THUMBNAIL_MODE", >> "$_LPL_PATH"
+echo '\t"items": [' >> "$_LPL_PATH"
 
 _count=0
 while IFS= read -r line
