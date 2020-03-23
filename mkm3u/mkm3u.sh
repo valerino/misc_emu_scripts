@@ -72,7 +72,7 @@ if [ $_SKIP_EXTRACT -eq 0 ]; then
       # error extraction
       exit 1
     fi
-    _n+=1
+    (( _n+=1 ))
     if [ $_LIMIT -ne 0 ]; then
       if [ $_n -eq $_LIMIT ]; then
         break

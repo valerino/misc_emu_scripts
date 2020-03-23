@@ -1,12 +1,13 @@
 #!/usr/bin/env sh
 function usage {
-    echo 'turn all .ZIP in the given folder to .ADZ\n'
-    echo 'usage:' "$0" '-p <path/to/folder> [-b to break on error] [-t to test run, no deletion of source .ZIPs]'
+    echo 'turn all zipped .ADF in the given folder to .ADZ\n'
+    echo 'usage:' "$0" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of unzip] [-t to test run, no deletion of source .ZIPs]'
 }
 
 _TEST_RUN=0
 _BREAK_ON_ERROR=0
-while getopts "btp:" arg; do
+_USE_7Z=0
+while getopts "btzp:" arg; do
     case $arg in
         p)
           _PATH="${OPTARG}"
@@ -16,6 +17,9 @@ while getopts "btp:" arg; do
           ;;
         b)
           _BREAK_ON_ERROR=1
+          ;;
+        z)
+          _USE_7Z=1
           ;;
         *)
           usage
@@ -30,7 +34,7 @@ if [ "$_PATH" == "" ]; then
 fi
 
 echo '[.] processing' "$_PATH"
-_regex="$_regex"'.+(.zip|.ZIP)$'
+_regex='.+(.zip|.ZIP)$'
 find "$_PATH" | grep -E "$_regex" > ./tmp.txt
 if [ $? -ne 0 ]; then
   echo '[x] wrong input, or no matches found!'
@@ -47,13 +51,18 @@ do
     _dodelete=1
     _domove=1
   fi
-  echo '[.] extracting:' "$line"
 
   # unzip to tmp
+  echo '[.] extracting:' "$line"
   _destdir=/tmp/unz
   rm -rf "$_destdir"
   mkdir -p "$_destdir"
-  unzip -d "$_destdir" "$line" 1>/dev/null
+  if [ $_USE_7Z == 0 ]; then
+    unzip -o -d "$_destdir" "$line" 1>/dev/null
+  else
+    # use 7z
+    7z x -y -o"$_destdir" "$line" 1>/dev/null
+  fi
   if [ $? -ne 0 ]; then
     if [ $_BREAK_ON_ERROR -eq 1 ]; then
       exit 1
