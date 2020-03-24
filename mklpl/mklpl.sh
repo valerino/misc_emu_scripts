@@ -3,7 +3,7 @@
 function usage {
     echo 'generates retroarch (> 1.7.6, json) .LPL playlist\n'
     echo 'usage:' "$0" '-p <path/to/folder_to_scan> <-s path/to/parent/folder_on_destination_machine> -d </path/to/playlist>'
-    echo '\t<-c /path/to/core_on_destination_machine> <-n core_name>'
+    echo '\t<-c /path/to/core_on_destination_machine> <-n core_name> [-z to strip further extension from labels (i.e. for .adf.adz files)]'
     echo '\t[-l label_display_mode, default 0] [-r right_thumbnail_mode, default 0] [-t left_thumbnail_mode, default 0]'
     echo '\t[-x /path/to/merge file to use in another invocation] [-y input merge file previously generated with -x]\n'
     echo 'path specified with -s must be the parent path on the destination machine where folder_to_scan is.\n'
@@ -19,10 +19,14 @@ _LEFT_THUMBNAIL_MODE=0
 _GENERATE_MERGE=0
 _MERGE_IN_PATH=""
 _MERGE_OUT_PATH=""
-while getopts "p:d:s:c:n:l:r:t:y:x:" arg; do
+_STRIP_FURTHER=0
+while getopts "p:d:s:c:n:l:r:t:y:x:z" arg; do
     case $arg in
         p)
           _PATH="${OPTARG}"
+          ;;
+        z)
+          _STRIP_FURTHER=1
           ;;
         y)
           _MERGE_IN_PATH="${OPTARG}"
@@ -124,9 +128,15 @@ do
   # get filename without extension
   _tmp=$(basename "$line")
   _name=$(echo "$_tmp" | rev | cut -c 5- | rev)
-  echo '[.] adding' "$_name"
 
   # generate entry
+  if [ $_STRIP_FURTHER -eq 1 ]; then
+    # strip extension further
+    _tmp="$_name"
+    _name=$(echo "$_tmp" | rev | cut -c 5- | rev)
+  fi
+
+  echo '[.] adding' "$_name"
   echo '\t\t\t"label":' \""$_name"\", >> "$_LPL_PATH"
   echo '\t\t\t"core_path":' \"DETECT\", >> "$_LPL_PATH"
   echo '\t\t\t"core_name":' \"DETECT\", >> "$_LPL_PATH"

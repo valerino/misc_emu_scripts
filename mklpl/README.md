@@ -9,17 +9,17 @@ usage:
 generates retroarch (> 1.7.6, json) .LPL playlist
 
 usage: ./mklpl.sh -p <path/to/folder_to_scan> <-s path/to/parent/folder_on_destination_machine> -d </path/to/playlist>
-        <-c /path/to/core_on_destination_machine> <-n core_name>
+        <-c /path/to/core_on_destination_machine> <-n core_name> [-z to strip further extension from labels (i.e. for .adf.adz files)]
         [-l label_display_mode, default 0] [-r right_thumbnail_mode, default 0] [-t left_thumbnail_mode, default 0]
         [-x /path/to/merge file to use in another invocation] [-y input merge file previously generated with -x]
 
-NOTE: path specified with -s must be the parent path on the destination machine where folder_to_scan is.
+path specified with -s must be the parent path on the destination machine where folder_to_scan is.
 
-if -x is specified, merge_file is generated and can be specified with -y in another invocation to generate a merged playlist.
-when -x is specified, every other parameters is ignored except -p and -y.
+if -x is specified, merge_file is generated and can be specified with -y to generate another merged playlist.
+NOTE: to be sorted correctly, both the paths in merge_file generated with -x and the -p path in the new invocation must have the same depth!
+
+when -x is specified, every other parameters are ignoted except -p and -y.
 if both -x and -y are specified, merge_file is read in input, merged with the content of the path at -p and rewritten.
-
-!!NOTE!!: to be sorted correctly, both the paths in merge_file generated with -x and the -p path in the new invocation using the merge file must have the same depth!
 ~~~
 
 examples
