@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-if [ "$1" == "" ]; then
+if [ $# -lt 1 ]; then
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr'
 	echo '\tnote1: this is meant to be executed from the roms folder to be scraped, i.e. /some/path/roms/atarijaguar, gamelist.txt and media will be generated there.'
 	echo '\tnote2: replace -u in the commandline with your username and password!\n'
