@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!zsh
+# doesn't work with the default rpi shell, install zsh!
 function usage {
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr\n'
 	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform>'
@@ -51,7 +52,8 @@ if [ $_DO_GAMELIST -eq 1 ] && [ $_DO_SCRAPE -eq 1 ]; then
 fi
 
 _SCRAPER='screenscraper'
-_CMDLINE='/opt/retropie/supplementary/skyscraper/Skyscraper --verbosity 3 -p '"$_PLATFORM"
+_SKYSCRAPER='/opt/retropie/supplementary/skyscraper/Skyscraper'
+_CMDLINE='--verbosity 3 -p '"$_PLATFORM"
 if [ $_DO_SCRAPE -eq 1 ]; then
 	# scrape
 	_CMDLINE="$_CMDLINE"' -s '"$_SCRAPER"
@@ -67,4 +69,6 @@ else
 fi
 
 # run!
-"$_CMDLINE"
+_cmd="$_SKYSCRAPER"' '"$_CMDLINE"
+echo '. using commandline:' "$_cmd"
+"$_cmd"
