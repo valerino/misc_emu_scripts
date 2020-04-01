@@ -3,17 +3,20 @@
 function usage {
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr\n'
 	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform>'
-	echo '\t[-u screenscraper.fr username:password] [-c to refresh cache, only valid with -s]\n'
+	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]\n'
 	echo 'note: gamelist.xml and media will be created in the platorm folder, gamelist.xml will have relative paths both for roms and media.'
 }
 
 _DO_GAMELIST=0
 _DO_SCRAPE=0
 _REFRESH_CACHE=0
-while getopts "gscu:p:" arg; do
+while getopts "gscu:p:f:" arg; do
     case $arg in
         p)
           _PLATFORM="${OPTARG}"
+          ;;
+        f)
+          _FILEPATH="${OPTARG}"
           ;;
         u)
           _USER="${OPTARG}"
@@ -51,24 +54,26 @@ if [ $_DO_GAMELIST -eq 1 ] && [ $_DO_SCRAPE -eq 1 ]; then
 	exit 1
 fi
 
-_SCRAPER='screenscraper'
-_SKYSCRAPER='/opt/retropie/supplementary/skyscraper/SkyScraper'
-_CMDLINE='--verbosity 3 -p '"$_PLATFORM"
+_SCRAPER="screenscraper"
+_SKYSCRAPER="/opt/retropie/supplementary/skyscraper/Skyscraper"
+set -- "$_SKYSCRAPER"
+set -- "$@" --verbosity 3 -p "$_PLATFORM"
 if [ $_DO_SCRAPE -eq 1 ]; then
 	# scrape
-	_CMDLINE="$_CMDLINE"' -s '"$_SCRAPER"
+	set -- "$@" -s "$_SCRAPER"
 	if [ ! -z "$_USER" ]; then
-		_CMDLINE="$_CMDLINE"' -u '"$_USER"
+		set -- "$@" -u "$_USER"
+	fi
+	if [ ! -z "$_FILEPATH" ]; then
+		set -- "$@" -f "$_FILEPATH"
 	fi
 	if [ $_REFRESH_CACHE -eq 1 ]; then
-		_CMDLINE="$_CMDLINE"' --cache refresh'
+		set -- "$@" --cache refresh
 	fi
 else
-	# generate gamelist
-	_CMDLINE="$_CMDLINE"' --relative'
+	set -- "$@" --relative
 fi
 
 # run!
-_cmd="$_SKYSCRAPER"' '"$_CMDLINE"
-echo '. using commandline:' "$_cmd"
-"$_cmd"
+echo '. using commandline:' "$@"
+"$@"
