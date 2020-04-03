@@ -57,7 +57,7 @@ fi
 _SCRAPER="screenscraper"
 _SKYSCRAPER="/opt/retropie/supplementary/skyscraper/Skyscraper"
 set -- "$_SKYSCRAPER"
-set -- "$@" --verbosity 3 -p "$_PLATFORM"
+set -- "$@" --verbosity 3 --addext *.chd -p "$_PLATFORM"
 if [ $_DO_SCRAPE -eq 1 ]; then
 	# scrape
 	set -- "$@" -s "$_SCRAPER"
