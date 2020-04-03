@@ -93,10 +93,13 @@ else
   find "$_parent" | grep "$_tofind" > ./tmp.txt
 fi
 
+# sort and done
+sort ./tmp.txt > ./tmp2.txt
 while IFS= read -r line
 do
   echo "$line" >> "$_M3UPATH"
-done < "./tmp.txt"
+done < "./tmp2.txt"
 rm ./tmp.txt
+rm ./tmp2.txt
 
 echo '[.] done!'
