@@ -83,7 +83,7 @@ if [ ! -z "$_INCLUDE" ]; then
 	set -- "$@" --includefiles \""$_INCLUDE"\"
 fi
 
-if [ ! -z "$_NOSUBDIRS" ]; then
+if [ "$_NOSUBDIRS" -eq 1 ]; then
 	set -- "$@" --nosubdirs
 fi
 
