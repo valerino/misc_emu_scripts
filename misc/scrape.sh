@@ -74,13 +74,13 @@ set -- "$_SKYSCRAPER"
 set -- "$@" --verbosity 3 -p "$_PLATFORM"
 
 if [ ! -z "$_ADDEXT" ]; then
-	set -- "$@" --addext "$_ADDEXT"
+	set -- "$@" --addext \"$_ADDEXT"\"
 fi
 if [ ! -z "$_EXCLUDE" ]; then
-	set -- "$@" --excludefiles "$_EXCLUDE"
+	set -- "$@" --excludefiles \""$_EXCLUDE"\"
 fi
 if [ ! -z "$_INCLUDE" ]; then
-	set -- "$@" --includefiles "$_INCLUDE"
+	set -- "$@" --includefiles \""$_INCLUDE"\"
 fi
 
 if [ ! -z "$_NOSUBDIRS" ]; then
