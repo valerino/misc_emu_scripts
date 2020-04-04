@@ -90,7 +90,7 @@ if [ $_SKIP_EXTRACT -eq 0 ]; then
   find "$_DEST"/* > ./tmp.txt
 else
   # use the source folder directly 
-  find "$_parent" | grep "$_tofind" > ./tmp.txt
+  find -maxdepth 1 "$_parent" | grep "$_tofind" > ./tmp.txt
 fi
 
 # sort and done
