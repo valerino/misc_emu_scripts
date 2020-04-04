@@ -2,7 +2,7 @@
 # doesn't work with the default rpi shell, install zsh!
 function usage {
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr\n'
-	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform>'
+	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform> [-d do not descend in subdirs]'
 	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]\n'
 	echo '\t[-a add extensions space separated i.e. "*.chd *.m3u"] [-x exclude wildcards comma-separated i.e. "*.adz,*.zip"] [-i include wildcards comma-separated i.e. "*.adz,*.zip"]\n'
 	echo 'note: gamelist.xml and media will be created in the platorm folder, gamelist.xml will have relative paths both for roms and media.'
@@ -11,8 +11,12 @@ function usage {
 _DO_GAMELIST=0
 _DO_SCRAPE=0
 _REFRESH_CACHE=0
-while getopts "gscu:p:f:x:i:a:" arg; do
+_NOSUBDIRS=0
+while getopts "gscu:p:f:x:i:a:d" arg; do
     case $arg in
+        d)
+          _NOSUBDIRS=1
+          ;;
         p)
           _PLATFORM="${OPTARG}"
           ;;
@@ -77,6 +81,10 @@ if [ ! -z "$_EXCLUDE" ]; then
 fi
 if [ ! -z "$_INCLUDE" ]; then
 	set -- "$@" --includefiles "$_INCLUDE"
+fi
+
+if [ ! -z "$_NOSUBDIRS" ]; then
+	set -- "$@" --nosubdirs
 fi
 
 if [ $_DO_SCRAPE -eq 1 ]; then
