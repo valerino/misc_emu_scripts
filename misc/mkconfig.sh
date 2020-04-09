@@ -27,7 +27,7 @@ declare -a _VALUES
 
 function usage {
   echo 'create configuration for retropie\n'
-  echo 'usage:' "$0" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-w overwrite] to reset default retropie configuration for the given platform'
+  echo 'usage:' "$0" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to reset default retropie configuration for the given platform'
   echo '\t-g -c <path/to/game> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file'
   echo '\t-d -c <path/to/content_directory> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file'
   echo '\t-o -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create core override file\n'
@@ -73,6 +73,22 @@ function check_arrays {
     return 1
   fi
   return 0
+}
+
+function write_pairs {
+    if [ -z "$_OVERLAY" ]; then 
+      # write key/value pairs
+      for ((_i = 0; _i < $_keycount; _i++)); do
+        delete_line_starting_with_pattern ${_KEYS[$_i]} "$_CFG"
+        _str="${_KEYS[$_i]} = \"${_VALUES[$_i]}\""
+        echo "$_str" >> "$_CFG"
+      done
+    else
+      # shortcut to set overlay
+      delete_line_starting_with_pattern "input_overlay = " "$_CFG"
+      _str="input_overlay = \"$_OVERLAY\""
+      echo "$_str" >> "$_CFG"
+    fi
 }
 
 while getopts "c:p:k:v:y:rowgd" arg; do
@@ -195,37 +211,22 @@ if [ $_CREATE_RETROARCH_CFG -eq 1 ]; then
   _keycount=${#_KEYS[@]}
   check_overwrite "$_CFG"
   mkdir -p "$_DIRNAME"
-  if [ "$_keycount" -eq 0 ]; then
+  if [ "$_keycount" -eq 0 ] && [ -z "$_OVERLAY" ]; then
     # create default
+    echo '[.] creating default configuration for platform' "$_PLATFORM_CORE"
     _str="input_remapping_directory = \"/opt/retropie/configs/$_PLATFORM_CORE/\""
     echo "$_str" >> "$_CFG"
     _str="#include \"/opt/retropie/configs/all/retroarch.cfg\""
     echo "$_str" >> "$_CFG"
   else
     # edit
-    for ((_i = 0; _i < $_keycount; _i++)); do
-      delete_line_starting_with_pattern ${_KEYS[$_i]} "$_CFG"
-      _str="${_KEYS[$_i]} = \"${_VALUES[$_i]}\""
-      echo "$_str" >> "$_CFG"
-    done
+    write_pairs
   fi
 else
   # everything else
   check_overwrite "$_CFG"
   mkdir -p "$_DIRNAME"
-  if [ -z "$_OVERLAY" ]; then 
-    # use arrays
-    for ((_i = 0; _i < $_keycount; _i++)); do
-      delete_line_starting_with_pattern ${_KEYS[$_i]} "$_CFG"
-      _str="${_KEYS[$_i]} = \"${_VALUES[$_i]}\""
-      echo "$_str" >> "$_CFG"
-    done
-  else
-    # shortcut to set overlay
-      delete_line_starting_with_pattern "input_overlay = " "$_CFG"
-      _str="input_overlay = \"$_OVERLAY\""
-      echo "$_str" >> "$_CFG"
-  fi
+  write_pairs
 fi
 
 echo '[.] DONE, written' "$_CFG" '!'
