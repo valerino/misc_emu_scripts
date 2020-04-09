@@ -8,7 +8,9 @@ usage:
 ➜  misc (master) ✔ ../mkm3u/mkm3u.sh 
 extract all files matching substring and create .m3u
 
-usage: ../mkm3u/mkm3u.sh -f <path/to/substring> -d </path/to/destination> [-n m3u name] [-x delete destination first] [-s to skip extract for already unzipped discs]
+usage: ./mkm3u/mkm3u.sh -f <path/to/substring> -d </path/to/destination folder where to write the .m3u> [-n m3u name]
+
+        [-u desume -d by path at -f] [-x delete folder specified by -d first] [-s to skip extract for already unzipped discs]
         [-m include only files matching mask, i.e. *.zip] [-l limit to n entries, i.e. 10]
 
 if -n is not provided, the provided substring is the name of the generated .m3u

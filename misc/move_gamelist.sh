@@ -1,12 +1,12 @@
-#!zsh
-# doesn't work with the default rpi shell, install zsh!
+#!/usr/bin/env sh
+# use with bash /path/to/move_gamelist.sh on rpi
 
 function sedeasy {
   sed -i "s/$(echo $1 | sed -e 's/\([[\/.*]\|\]\)/\\&/g')/$(echo $2 | sed -e 's/[\/&]/\\&/g')/g" $3
 }
 
 if [ -z "$1" ]; then    
-    echo 'moves gamelist.xml and media from rpi .emulationstation to the roms folder, and fixes gamelist.xml paths'
+    echo 'moves gamelist.xml and media from rpi .emulationstation to the roms folder, and put relative paths in gamelist.xml'
     echo 'usage:' "$0" '<platform>'
     exit 1
 fi

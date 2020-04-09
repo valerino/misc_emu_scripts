@@ -1,15 +1,17 @@
 #!/usr/bin/env sh
 function usage {
     echo 'extract all files matching substring and create .m3u\n'
-    echo 'usage:' "$0" '-f <path/to/substring> -d </path/to/destination> [-n m3u name] [-x delete destination first] [-s to skip extract for already unzipped discs]'
+    echo 'usage:' "$0" '-f <path/to/substring> -d </path/to/destination folder where to write the .m3u> [-n m3u name]\n'
+    echo '\t[-u desume -d by path at -f] [-x delete folder specified by -d first] [-s to skip extract for already unzipped discs]'
     echo '\t[-m include only files matching mask, i.e. *.zip] [-l limit to n entries, i.e. 10]\n'
     echo 'if -n is not provided, the provided substring is the name of the generated .m3u'
 }
 _DELETE_DEST=0
 _SKIP_EXTRACT=0
 _LIMIT=0
+_USE_SRC_FOLDER=0
 _MASK="*"
-while getopts "xsf:d:n:l:m:" arg; do
+while getopts "xusf:d:n:l:m:" arg; do
     case $arg in
         m)
           _MASK="${OPTARG}"
@@ -29,6 +31,9 @@ while getopts "xsf:d:n:l:m:" arg; do
         x)
           _DELETE_DEST=1
           ;;
+        u)
+          _USE_SRC_FOLDER=1
+          ;;
         s)
           _SKIP_EXTRACT=1
           ;;
@@ -39,11 +44,20 @@ while getopts "xsf:d:n:l:m:" arg; do
     esac
 done
 
-if [ "$_PATH" == "" ] || [ "$_DEST" == "" ]; then
+if [ "$_PATH" == "" ]; then
   usage
   exit 1
 fi
 
+if [ $_USE_SRC_FOLDER -eq 0 ]; then
+  if [ -z "$_DEST" ]; then
+    usage
+    exit 1
+  fi
+else
+  # calculate from -f, using parent
+  _DEST=$(dirname "$_PATH")
+fi
 
 # remove destination first if asked to
 if [ $_DELETE_DEST -eq 1 ]; then

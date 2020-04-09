@@ -3,8 +3,9 @@
 function usage {
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr\n'
 	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform> [-d do not descend in subdirs]'
-	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]\n'
-	echo '\t[-a add extensions space separated i.e. "*.chd *.m3u"] [-x exclude wildcards comma-separated i.e. "*.adz,*.zip"] [-i include wildcards comma-separated i.e. "*.adz,*.zip"]\n'
+	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]'
+	echo '\t[-a add extensions space separated i.e. "*.chd *.m3u"] [-x exclude wildcards comma-separated i.e. "*.adz,*.zip"] [-i include wildcards comma-separated i.e. "*.adz,*.zip"]'
+  echo '\t[-n for interactive]\n'
 	echo 'note: gamelist.xml and media will be created in the platorm folder, gamelist.xml will have relative paths both for roms and media.'
 }
 
@@ -12,10 +13,14 @@ _DO_GAMELIST=0
 _DO_SCRAPE=0
 _REFRESH_CACHE=0
 _NOSUBDIRS=0
-while getopts "gscu:p:f:x:i:a:d" arg; do
+_INTERACTIVE=0
+while getopts "gnscu:p:f:x:i:a:d" arg; do
     case $arg in
         d)
           _NOSUBDIRS=1
+          ;;
+        n)
+          _INTERACTIVE=1
           ;;
         p)
           _PLATFORM="${OPTARG}"
@@ -74,13 +79,13 @@ set -- "$_SKYSCRAPER"
 set -- "$@" --verbosity 3 -p "$_PLATFORM"
 
 if [ ! -z "$_ADDEXT" ]; then
-	set -- "$@" --addext \""$_ADDEXT"\"
+	set -- "$@" --addext "$_ADDEXT"
 fi
 if [ ! -z "$_EXCLUDE" ]; then
-	set -- "$@" --excludefiles \""$_EXCLUDE"\"
+	set -- "$@" --excludefiles "$_EXCLUDE"
 fi
 if [ ! -z "$_INCLUDE" ]; then
-	set -- "$@" --includefiles \""$_INCLUDE"\"
+	set -- "$@" --includefiles "$_INCLUDE"
 fi
 
 if [ "$_NOSUBDIRS" -eq 1 ]; then
@@ -94,9 +99,11 @@ if [ $_DO_SCRAPE -eq 1 ]; then
 		set -- "$@" -u "$_USER"
 	fi
 	if [ $_REFRESH_CACHE -eq 1 ]; then
-		set -- "$@" \"--cache refresh\"
+		set -- "$@" --cache refresh
 	fi
-  
+	if [ $_INTERACTIVE -eq 1 ]; then
+		set -- "$@" --interactive
+	fi  
   # add single rom in the end if any
   if [ ! -z "$_FILEPATH" ]; then
 		set -- "$@" "$_FILEPATH"
