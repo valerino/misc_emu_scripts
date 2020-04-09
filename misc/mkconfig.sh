@@ -27,10 +27,17 @@ declare -a _VALUES
 
 function usage {
   echo 'create configuration for retropie\n'
-  echo 'usage:' "$0" '\n\t-r -p <platform> [-z config root instead of ~/.config/retroarch]\n\t\t[-w overwrite] to reset default retropie configuration for the given platform'
+  echo 'usage:' "$0" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-w overwrite] to reset default retropie configuration for the given platform'
   echo '\t-g -c <path/to/game> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file'
   echo '\t-d -c <path/to/content_directory> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file'
   echo '\t-o -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create core override file\n'
+}
+
+function delete_line_starting_with_pattern {
+  echo "[.] deleting lines starting with '$1' in '$2'"
+  grep -v ^"$1 = " "$2" > tmp.txt
+  cp ./tmp.txt "$2"
+  rm ./tmp.txt
 }
 
 function check_overwrite {
@@ -53,9 +60,12 @@ function check_arrays {
 
   _keycount=${#_KEYS[@]}
   _valcount=${#_VALUES[@]}
-  if [ ${#_KEYS[@]} -eq 0 ] && [ ${#_VALUES[@]} -eq 0 ]; then
-    echo '[x] ERROR: no keys/values provided.\n'
-    return 1
+  
+  if [ "$1" != "nocheckzero" ]; then
+    if [ $_keycount -eq 0 ] && [ $_valcount -eq 0 ]; then
+      echo '[x] ERROR: no keys/values provided.\n'
+      return 1
+    fi
   fi
 
   if [ $_keycount -ne $_valcount ]; then
@@ -117,8 +127,21 @@ if [ $_CREATE_RETROARCH_CFG -eq 1 ]; then
     exit 1
   fi
 
+  # check if keys and values are balanced
+  check_arrays nocheckzero
+  if [ $? -ne 0 ]; then
+    usage
+    exit 1
+  fi
+
+  if [ "$_PLATFORM_CORE" = "all" ]; then
+    # no overwrite here
+    _OVERWRITE=0
+    echo '[.] platform "all", overwrite forced to disabled.'
+  fi
+
   # params ok
-  echo '[.] create retroarch.cfg for platform' "$_PLATFORM_CORE"
+  echo '[.] editing retroarch.cfg for platform' "$_PLATFORM_CORE"
   _CFG="/opt/retropie/configs/$_PLATFORM_CORE/retroarch.cfg"
 
 elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG -eq 1 ]; then
@@ -136,10 +159,10 @@ elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG 
   # params ok
   _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_CFG_BASENAME"
   if [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ]; then
-    echo '[.] create content directory override:' "$_CFG"
+    echo '[.] editing content directory override:' "$_CFG"
     _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_CFG_BASEDIR"
   else
-    echo '[.] create game override:' "$_CFG"
+    echo '[.] editing game override:' "$_CFG"
     _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_CFG_BASENAME"
   fi
 
@@ -158,7 +181,7 @@ elif [ $_CREATE_CORE_OVERRIDE_CFG -eq 1 ]; then
 
   # params ok
   _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_PLATFORM_CORE.cfg"
-  echo '[.] create core override:' "$_CFG"
+  echo '[.] editing core override:' "$_CFG"
 
 else
   # wrong params
@@ -169,27 +192,38 @@ fi
 _DIRNAME=$(dirname "$_CFG")
 if [ $_CREATE_RETROARCH_CFG -eq 1 ]; then
   # editing retroarch cfg
+  _keycount=${#_KEYS[@]}
   check_overwrite "$_CFG"
   mkdir -p "$_DIRNAME"
-  _str="input_remapping_directory = \"/opt/retropie/configs/$_PLATFORM_CORE/\""
-  echo "$_str" >> "$_CFG"
-  _str="#include \"/opt/retropie/configs/all/retroarch.cfg\""
-  echo "$_str" >> "$_CFG"
-
+  if [ "$_keycount" -eq 0 ]; then
+    # create default
+    _str="input_remapping_directory = \"/opt/retropie/configs/$_PLATFORM_CORE/\""
+    echo "$_str" >> "$_CFG"
+    _str="#include \"/opt/retropie/configs/all/retroarch.cfg\""
+    echo "$_str" >> "$_CFG"
+  else
+    # edit
+    for ((_i = 0; _i < $_keycount; _i++)); do
+      delete_line_starting_with_pattern ${_KEYS[$_i]} "$_CFG"
+      _str="${_KEYS[$_i]} = \"${_VALUES[$_i]}\""
+      echo "$_str" >> "$_CFG"
+    done
+  fi
 else
   # everything else
   check_overwrite "$_CFG"
   mkdir -p "$_DIRNAME"
   if [ -z "$_OVERLAY" ]; then 
     # use arrays
-    _keycount=${#_KEYS[@]}
     for ((_i = 0; _i < $_keycount; _i++)); do
-      _str="${_KEYS[$_i]}=\"${_VALUES[$_i]}\""
+      delete_line_starting_with_pattern ${_KEYS[$_i]} "$_CFG"
+      _str="${_KEYS[$_i]} = \"${_VALUES[$_i]}\""
       echo "$_str" >> "$_CFG"
     done
   else
     # shortcut to set overlay
-      _str="input_overlay=\"$_OVERLAY\""
+      delete_line_starting_with_pattern "input_overlay = " "$_CFG"
+      _str="input_overlay = \"$_OVERLAY\""
       echo "$_str" >> "$_CFG"
   fi
 fi
