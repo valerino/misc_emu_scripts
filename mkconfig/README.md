@@ -36,6 +36,12 @@ samples:
 [.] deleting lines starting with 'input_overlay = ' in '/opt/retropie/configs/amiga/retroarch.cfg'
 [.] DONE, written /opt/retropie/configs/amiga/retroarch.cfg !
 
+# same as above, one shot (useful to reset and set overlay together)
+/media/usb0/retroarch » bash ~/mkconfig.sh -r -w -p amiga -y ~/.config/configroot/overlay/retroarch-overlays/Commodore-Amiga-Bezel-16x9-2560x1440.cfg
+
+# same as above, specify keys manually (-k and -v can be specified multiple times to edit more keys)
+/media/usb0/retroarch » bash ~/mkconfig.sh -r -w -p amiga -k input_overlay -v ~/.config/configroot/overlay/retroarch-overlays/Commodore-Amiga-Bezel-16x9-2560x1440.cfg
+
 # check created configuration
 /media/usb0/retroarch » cat /opt/retropie/configs/amiga/retroarch.cfg
 input_remapping_directory = "/opt/retropie/configs/amiga/"
@@ -44,6 +50,6 @@ input_overlay = "/home/pi/.config/configroot/overlay/retroarch-overlays/Commodor
 ~~~
 
 ~~~bash
-# create game override
+# create game override (i.e. vectrex)
 /media/usb0/retroarch » bash ~/mkconfig.sh -g -p VecX -c /home/pi/RetroPie/roms/vectrex/3D\ Crazy\ Coaster\ \(USA\).zip -y /media/usb0/retroarch/overlay/overlay-borders/1080\ GCE\ Vectrex/Generic\ Vectrex\ Border/3D_Crazy_Coaster.cfg -w
 ~~~
