@@ -211,17 +211,14 @@ if [ $_CREATE_RETROARCH_CFG -eq 1 ]; then
   _keycount=${#_KEYS[@]}
   check_overwrite "$_CFG"
   mkdir -p "$_DIRNAME"
-  if [ "$_keycount" -eq 0 ] && [ -z "$_OVERLAY" ]; then
-    # create default
+  if [ $_OVERWRITE -eq 1 ]; then
     echo '[.] creating default configuration for platform' "$_PLATFORM_CORE"
     _str="input_remapping_directory = \"/opt/retropie/configs/$_PLATFORM_CORE/\""
     echo "$_str" >> "$_CFG"
     _str="#include \"/opt/retropie/configs/all/retroarch.cfg\""
     echo "$_str" >> "$_CFG"
-  else
-    # edit
-    write_pairs
   fi
+  write_pairs
 else
   # everything else
   check_overwrite "$_CFG"
