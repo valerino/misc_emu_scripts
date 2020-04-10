@@ -5,7 +5,7 @@ function usage {
 	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform> [-d do not descend in subdirs]'
 	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]'
 	echo '\t[-a add extensions space separated i.e. "*.chd *.m3u"] [-x exclude wildcards comma-separated i.e. "*.adz,*.zip"] [-i include wildcards comma-separated i.e. "*.adz,*.zip"]'
-  echo '\t[-n for interactive]\n'
+  echo '\t[-n for interactive] [-l relaunch with -g after scraping to generate gamelist.xml in one shot\n'
 	echo 'note: gamelist.xml and media will be created in the platorm folder, gamelist.xml will have relative paths both for roms and media.'
 }
 
@@ -14,10 +14,14 @@ _DO_SCRAPE=0
 _REFRESH_CACHE=0
 _NOSUBDIRS=0
 _INTERACTIVE=0
-while getopts "gnscu:p:f:x:i:a:d" arg; do
+_RELAUNCH=0
+while getopts "gnslcu:p:f:x:i:a:d" arg; do
     case $arg in
         d)
           _NOSUBDIRS=1
+          ;;
+        l)
+          _RELAUNCH=1
           ;;
         n)
           _INTERACTIVE=1
@@ -116,3 +120,11 @@ fi
 # run!
 echo '. using commandline:' "$@"
 "$@"
+if [ "$?" -ne 0 ]; then
+  exit 1
+fi
+
+if [ "$_RELAUNCH" -eq 1 ]; then
+  # relaunch with -g
+  "$_SKYSCRAPER" --verbosity 3 -p "$_PLATFORM"
+fi
