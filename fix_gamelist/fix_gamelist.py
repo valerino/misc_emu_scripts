@@ -74,6 +74,7 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
 
     # read xml
     abs_xml = os.path.abspath(xml)
+    abs_out = os.path.abspath(out)
     os.chdir(os.path.dirname(abs_xml))
     tree = ET.parse(abs_xml)
     root = tree.getroot()
@@ -174,7 +175,6 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
                 os.unlink(cover)
 
     # done, rewrite xml
-    abs_out = os.path.abspath(out)
     tree.write(abs_out)
     return 0
 
