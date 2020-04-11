@@ -73,8 +73,9 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
         return process_m3us(xml, out, fixm3u_folder)
 
     # read xml
-    os.chdir(os.path.dirname(xml))
-    tree = ET.parse(xml)
+    abs_xml = os.path.abspath(xml)
+    os.chdir(os.path.dirname(abs_xml))
+    tree = ET.parse(abs_xml)
     root = tree.getroot()
 
     # cycle games
@@ -173,7 +174,8 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
                 os.unlink(cover)
 
     # done, rewrite xml
-    tree.write(out)
+    abs_out = os.path.abspath(out)
+    tree.write(abs_out)
     return 0
 
 
