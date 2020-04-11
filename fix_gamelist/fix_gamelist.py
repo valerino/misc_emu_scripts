@@ -110,6 +110,12 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
         has_cover = True
         has_image = True
         has_desc = True
+        if alt or alt2:
+            # enable only check_path
+            check_path = True
+            check_image = False
+            check_cover = False
+            check_desc = False
 
         missing = is_missing(name, 'path', path)
         if missing:
