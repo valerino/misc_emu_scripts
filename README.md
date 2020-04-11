@@ -2,6 +2,8 @@
 
 my emulation-related scripts, mostly to ease cleaning up of rom collections and speed-up customizing retropie/retroarch.
 
+most (if not all) can be used directly on rpi itself.
+
 * [tosec_cleaner](./tosec_cleaner/README.md)
 * [zip_to_adz](./zip_to_adz/README.md)
 * [mkm3u](./mkm3u/README.md)
