@@ -53,7 +53,9 @@ def process_m3us(xml, out, fix_m3u_folder):
                     except:
                         path = None
 
-                    if path.lower() == line:
+                    a = os.path.basename(path.lower())
+                    b = os.path.basename(line)
+                    if a == b:
                         # remove this entry
                         print(
                             '[.] DELETED entry with path=%s (already in m3u=%s)' % (path, f))
