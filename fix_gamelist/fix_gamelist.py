@@ -233,7 +233,8 @@ def main():
         process_gamelist(args.xml[0], args.out[0] if args.out else args.xml[0], args.check_path, args.check_image,
                          args.check_cover, args.check_desc, args.interactive, args.delete_files, args.alt, args.alt2,
                          fix_m3u_folder)
-        print('[.] Done!')
+        print('[.] Done, written %s !' %
+              args.out[0] if args.out else args.xml[0])
     except Exception as ex:
         # error
         traceback.print_exc()
