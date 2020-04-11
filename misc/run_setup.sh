@@ -1,3 +1,3 @@
 # just launch retropie-setup :)
-sudo ~/Retropie-Setup/retropie_setup.sh
+sudo ~/RetroPie-Setup/retropie_setup.sh
 
