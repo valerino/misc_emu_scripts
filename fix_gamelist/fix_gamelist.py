@@ -73,6 +73,7 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
         return process_m3us(xml, out, fixm3u_folder)
 
     # read xml
+    os.chdir(os.path.dirname(xml))
     tree = ET.parse(xml)
     root = tree.getroot()
 
@@ -186,10 +187,11 @@ def main():
 
     by specifying --alt, an entry is kept only if path and the associated file exists AND at least one image/cover exists.
     by specifying --alt2, an entry is kept only if path and the associated file exists AND at least one image/cover/desc exists.
-    
-    if --fix_m3u (or --fix_m3u_from_input) is specified, all flags are ignored and the given folder is scanned for .m3u : for each .m3u it finds 
+
+    if --fix_m3u (or --fix_m3u_from_input) is specified, all flags are ignored and the given folder is scanned for .m3u : for each .m3u it finds
     in this folder, it deletes the duplicated entries (paths specified inside the .m3u) from the input gamelist.xml.
     """
+    pwd = os.getcwd()
 
     parser = argparse.ArgumentParser(
         description=d, formatter_class=RawTextHelpFormatter)
@@ -230,6 +232,7 @@ def main():
         fix_m3u_folder = args.fix_m3u[0] if args.fix_m3u else None
         if args.fix_m3u_from_input:
             fix_m3u_folder = os.path.dirname(args.xml[0])
+
         process_gamelist(args.xml[0], args.out[0] if args.out else args.xml[0], args.check_path, args.check_image,
                          args.check_cover, args.check_desc, args.interactive, args.delete_files, args.alt, args.alt2,
                          fix_m3u_folder)
@@ -241,6 +244,7 @@ def main():
         return 1
 
     finally:
+        os.chdir(pwd)
         pass
     return 0
 
