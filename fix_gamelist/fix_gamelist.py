@@ -110,39 +110,33 @@ def process_gamelist(xml, out, check_path, check_image, check_cover, check_desc,
         has_cover = True
         has_image = True
         has_desc = True
-        if alt or alt2:
-            # enable only check_path
-            check_path = True
-            check_image = False
-            check_cover = False
-            check_desc = False
 
         missing = is_missing(name, 'path', path)
         if missing:
             # path is missing, can be removed
             has_path = False
-            if check_path:
+            if check_path or alt or alt2:
                 remove = True
 
         missing = is_missing(name, 'image', image)
         if missing:
             # image is missing, can be removed
             has_image = False
-            if check_image:
+            if check_image or alt or alt2:
                 remove = True
 
         missing = is_missing(name, 'cover', cover)
         if missing:
             # cover is missing, can be removed
             has_cover = False
-            if check_cover:
+            if check_cover or alt or alt2:
                 remove = True
 
         missing = is_missing(name, 'desc', desc)
         if missing:
             # desc is missing, can be removed
             has_desc = False
-            if check_desc:
+            if check_desc or alt or alt2:
                 remove = True
 
         # now check the alt flags if any
