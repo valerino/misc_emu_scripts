@@ -125,6 +125,14 @@ if [ "$?" -ne 0 ]; then
 fi
 
 if [ "$_RELAUNCH" -eq 1 ]; then
-  # relaunch with -g
-  "$_SKYSCRAPER" --verbosity 3 --relative -p "$_PLATFORM"
+  set -- "$_SKYSCRAPER"
+  set -- "$@" --verbosity 3 --relative -p "$_PLATFORM"
+
+  if [ ! -z "$_ADDEXT" ]; then
+	  set -- "$@" --addext "$_ADDEXT"
+  fi
+
+  # run!
+  echo '. relaunching:' "$@"
+  "$@"
 fi
