@@ -18,7 +18,7 @@ usage: ./mkconfig.sh
                 [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create core override file
 ~~~
 
-samples:
+sample usage:
 
 ~~~bash
 # create/reset default configuration for amiga

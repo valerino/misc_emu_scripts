@@ -126,5 +126,5 @@ fi
 
 if [ "$_RELAUNCH" -eq 1 ]; then
   # relaunch with -g
-  "$_SKYSCRAPER" --verbosity 3 -p "$_PLATFORM"
+  "$_SKYSCRAPER" --verbosity 3 --relative -p "$_PLATFORM"
 fi
