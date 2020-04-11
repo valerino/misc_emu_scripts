@@ -55,3 +55,22 @@ total 1120
 * /data/local/tmp must be writable: __su -c chmod 777 /data/local/tmp__
 
 __no checks are made regarding the .zips content, make sure to use zips containing each exactly ONE disk image (TOSEC collections are one zip/one disc already).__
+
+## easily integrate into gamelist.xml
+
+to add a newly created .m3u to your gamelists just by commandline, first rescrape the given platform using [scrape.sh](../scrape/scrape.sh):
+
+~~~bash
+~ ./scrape.sh -u user:pwd -p c64 -a "*.m3u" -s -l
+. using commandline: /opt/retropie/supplementary/skyscraper/Skyscraper --verbosity 3 -p c64 --addext *.m3u --relative
+# ....
+~~~
+
+then use [fix_gamelist.py](../fix_gamelist/fix_gamelist.py):
+
+~~~bash
+~ ./fix_gamelist.py --xml /home/pi/RetroPie/roms/c64/gamelist.xml --fix_m3u_from_input
+# ....
+~~~
+
+in the end you will have your gamelist.xml with just the .m3u without the separated entries.
