@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 function usage {
     echo 'extract all files matching substring and create .m3u\n'
-    echo 'usage:' "$0" '-f <path/to/substring> -d </path/to/destination folder where to write the .m3u> [-n m3u name]\n'
+    echo 'usage:' "$1" '-f <path/to/substring> -d </path/to/destination folder where to write the .m3u> [-n m3u name]\n'
     echo '\t[-u desume -d by path at -f] [-x delete folder specified by -d first] [-s to skip extract for already unzipped discs]'
     echo '\t[-m include only files matching mask, i.e. *.zip] [-l limit to n entries, i.e. 10]\n'
     echo 'if -n is not provided, the provided substring is the name of the generated .m3u'
@@ -38,20 +38,20 @@ while getopts "xusf:d:n:l:m:" arg; do
           _SKIP_EXTRACT=1
           ;;
         *)
-          usage
+          usage "$0"
           exit 1
           ;;
     esac
 done
 
 if [ "$_PATH" == "" ]; then
-  usage
+  usage "$0"
   exit 1
 fi
 
 if [ $_USE_SRC_FOLDER -eq 0 ]; then
   if [ -z "$_DEST" ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 else

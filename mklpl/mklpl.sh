@@ -2,7 +2,7 @@
 
 function usage {
     echo 'generates retroarch (> 1.7.6, json) .LPL playlist\n'
-    echo 'usage:' "$0" '-p <path/to/folder_to_scan> <-s path/to/parent/folder_on_destination_machine> -d </path/to/playlist>'
+    echo 'usage:' "$1" '-p <path/to/folder_to_scan> <-s path/to/parent/folder_on_destination_machine> -d </path/to/playlist>'
     echo '\t<-c /path/to/core_on_destination_machine> <-n core_name> [-z to strip further extension from labels (i.e. for .adf.adz files)]'
     echo '\t[-l label_display_mode, default 0] [-r right_thumbnail_mode, default 0] [-t left_thumbnail_mode, default 0]'
     echo '\t[-x /path/to/merge file to use in another invocation] [-y input merge file previously generated with -x]\n'
@@ -56,7 +56,7 @@ while getopts "p:d:s:c:n:l:r:t:y:x:z" arg; do
           _LEFT_THUMBNAIL_MODE="${OPTARG}"
           ;;
         *)
-          usage
+          usage "$0"
           exit 1
           ;;
     esac
@@ -64,12 +64,12 @@ done
 
 if [ ! -z "$_MERGE_IN_PATH" ] || [ ! -z "$_MERGE_OUT_PATH" ]; then
   if [ "$_PATH" == "" ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 else
   if [ "$_PATH" == "" ] || [ "$_PATH_DEST" == "" ] || [ "$_LPL_PATH" == "" ] || [ "$_CORE_PATH" == "" ] || [ "$_CORE_NAME" == "" ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 fi

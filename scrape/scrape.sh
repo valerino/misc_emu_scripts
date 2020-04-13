@@ -2,7 +2,7 @@
 # doesn't work with the default rpi shell, install zsh!
 function usage {
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr\n'
-	echo 'usage' $0 '<-s to scrape|-g to generate gamelist after -s] <-p platform> [-d do not descend in subdirs]'
+	echo 'usage' $1 '<-s to scrape|-g to generate gamelist after -s] <-p platform> [-d do not descend in subdirs]'
 	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]'
 	echo '\t[-a add extensions space separated i.e. "*.chd *.m3u"] [-x exclude wildcards comma-separated i.e. "*.adz,*.zip"] [-i include wildcards comma-separated i.e. "*.adz,*.zip"]'
   echo '\t[-n for interactive] [-l relaunch with -g after scraping with -s to generate gamelist.xml in one shot\n'
@@ -54,26 +54,26 @@ while getopts "gnslcu:p:f:x:i:a:d" arg; do
           _DO_SCRAPE=1
           ;;
         *)
-          usage
+          usage "$0"
           exit 1
           ;;
     esac
 done
 
 if [ -z "$_PLATFORM" ]; then
-	usage
+	usage "$0"
 	exit 1
 fi
 
 if [ $_DO_GAMELIST -eq 0 ] && [ $_DO_SCRAPE -eq 0 ]; then
 	# at least one of -s or -g must be specified
-	usage
+	usage "$0"
 	exit 1
 fi
 
 if [ $_DO_GAMELIST -eq 1 ] && [ $_DO_SCRAPE -eq 1 ]; then
 	# only one of -s or -g must be specified
-	usage
+	usage "$0"
 	exit 1
 fi
 

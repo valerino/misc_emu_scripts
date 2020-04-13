@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 function usage {
     echo 'zip all (non compressed) files in the given folder\n'
-    echo 'usage:' "$0" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-t to test run]'
+    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-t to test run]'
 }
 
 _TEST_RUN=0
@@ -26,14 +26,14 @@ while getopts "btzdp:" arg; do
           _USE_7Z=1
           ;;
         *)
-          usage
+          usage "$0"
           exit 1
           ;;
     esac
 done
 
 if [ "$_PATH" == "" ]; then
-  usage
+  usage "$0"
   exit 1
 fi
 

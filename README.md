@@ -4,7 +4,7 @@ my emulation-related scripts, mostly to ease cleaning up of rom collections and 
 
 most (if not all) can be used directly on rpi itself.
 
-* [tosec_cleaner](./tosec_cleaner/README.md)
+* [purge_tosec](./purge_tosec/README.md)
 * [zip_to_adz](./zip_to_adz/README.md)
 * [mkm3u](./mkm3u/README.md)
 * [mklpl](./mklpl/README.md)
