@@ -174,6 +174,8 @@ elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG 
     usage "$0"
     exit 1
   fi
+  # params ok
+  _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_CFG_BASENAME"
 
   if [ ! -z "$_BASE_CONFIG" ]; then
     # base configuration provided
@@ -181,8 +183,6 @@ elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG 
     cp "$_BASE_CONFIG" "$_CFG"
   fi
 
-  # params ok
-  _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_CFG_BASENAME"
   if [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ]; then
     echo '[.] editing content directory override:' "$_CFG"
     _CFG="$_CONFIG_ROOT/$_PLATFORM_CORE/$_CFG_BASEDIR"
