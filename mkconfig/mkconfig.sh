@@ -27,7 +27,7 @@ declare -a _VALUES
 
 function usage {
   echo 'create configuration for retropie\n'
-  echo 'usage:' "$0" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to reset default retropie configuration for the given platform'
+  echo 'usage:' "$1" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to reset default retropie configuration for the given platform'
   echo '\t-g -c <path/to/game> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to edit/create game override file'
   echo '\t-d -c <path/to/content_directory> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to edit/create game override file'
   echo '\t-o -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to edit/create core override file\n'
@@ -133,7 +133,7 @@ while getopts "c:p:k:v:x:y:rowgd" arg; do
           _VALUES+=("${OPTARG}")
           ;;
         *)
-          usage
+          usage "$0"
           exit 1
           ;;
     esac
@@ -142,14 +142,14 @@ done
 # check params
 if [ $_CREATE_RETROARCH_CFG -eq 1 ]; then
   if [ -z "$_PLATFORM_CORE" ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 
   # check if keys and values are balanced
   check_arrays nocheckzero
   if [ $? -ne 0 ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 
@@ -165,13 +165,13 @@ if [ $_CREATE_RETROARCH_CFG -eq 1 ]; then
 
 elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG -eq 1 ]; then
   if [ -z "$_CFG_PATH" ] && [ -z "$_PLATFORM_CORE" ]; then
-    usage
+    usage "$0"
     exit 1
   fi
   # check if keys and values are balanced
   check_arrays
   if [ $? -ne 0 ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 
@@ -193,14 +193,14 @@ elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG 
 
 elif [ $_CREATE_CORE_OVERRIDE_CFG -eq 1 ]; then
   if [ -z "$_PLATFORM_CORE" ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 
   # check if keys and values are balanced
   check_arrays
   if [ $? -ne 0 ]; then
-    usage
+    usage "$0"
     exit 1
   fi
 
@@ -210,7 +210,7 @@ elif [ $_CREATE_CORE_OVERRIDE_CFG -eq 1 ]; then
 
 else
   # wrong params
-  usage
+  usage "$0"
   exit 1
 fi
 
