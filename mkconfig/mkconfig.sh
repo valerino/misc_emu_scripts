@@ -27,10 +27,10 @@ declare -a _VALUES
 
 function usage {
   echo 'create configuration for retropie\n'
-  echo 'usage:' "$0" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to reset default retropie configuration for the given platform'
-  echo '\t-g -c <path/to/game> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file'
-  echo '\t-d -c <path/to/content_directory> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file'
-  echo '\t-o -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create core override file\n'
+  echo 'usage:' "$0" '\n\t-r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to reset default retropie configuration for the given platform'
+  echo '\t-g -c <path/to/game> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to edit/create game override file'
+  echo '\t-d -c <path/to/content_directory> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to edit/create game override file'
+  echo '\t-o -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]\n\t\t[-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]\n\t\t[-x path/to/config use this config as base] [-w overwrite] to edit/create core override file\n'
 }
 
 function delete_line_starting_with_pattern {
@@ -91,7 +91,7 @@ function write_pairs {
     fi
 }
 
-while getopts "c:p:k:v:y:rowgd" arg; do
+while getopts "c:p:k:v:x:y:rowgd" arg; do
     case $arg in
         o)
           _CREATE_CORE_OVERRIDE_CFG=1
@@ -114,8 +114,11 @@ while getopts "c:p:k:v:y:rowgd" arg; do
         y)
           _OVERLAY="${OPTARG}"
           ;;
-        Z)
+        z)
           _CONFIG_ROOT="${OPTARG}"
+          ;;
+        x)
+          _BASE_CONFIG="${OPTARG}"
           ;;
         c)
           _tmp="${OPTARG}"
@@ -170,6 +173,12 @@ elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG 
   if [ $? -ne 0 ]; then
     usage
     exit 1
+  fi
+
+  if [ ! -z "$_BASE_CONFIG "]; then
+    # base configuration provided
+    echo "[.] using $_BASE_CONFIG as base for $_CFG"
+    cp "$_BASE_CONFIG" "$_CFG"
   fi
 
   # params ok

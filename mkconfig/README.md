@@ -7,15 +7,19 @@ usage:
 ~~~bash
 create configuration for retropie
 
-usage: ./mkconfig.sh 
+usage: ./mkconfig/mkconfig.sh 
         -r -p <platform|all> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]
-                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to reset default retropie configuration for the given platform
+                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]
+                [-x path/to/config use this config as base] [-w overwrite] to reset default retropie configuration for the given platform
         -g -c <path/to/game> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]
-                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file
+                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]
+                [-x path/to/config use this config as base] [-w overwrite] to edit/create game override file
         -d -c <path/to/content_directory> -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]
-                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create game override file
+                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]
+                [-x path/to/config use this config as base] [-w overwrite] to edit/create game override file
         -o -p <core> -k <key> -v <value> [ -k <key> -v <value> ...] [-z config root instead of ~/.config/retroarch]
-                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs] [-w overwrite] to edit/create core override file
+                [-y /path/to/overlay shortcut to set overlay, ignores k/v pairs]
+                [-x path/to/config use this config as base] [-w overwrite] to edit/create core override file
 ~~~
 
 sample usage:
