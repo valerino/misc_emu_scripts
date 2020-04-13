@@ -175,7 +175,7 @@ elif [ $_CREATE_CONTENTDIR_OVERRIDE_CFG -eq 1 ] || [ $_CREATE_GAME_OVERRIDE_CFG 
     exit 1
   fi
 
-  if [ ! -z "$_BASE_CONFIG "]; then
+  if [ ! -z "$_BASE_CONFIG" ]; then
     # base configuration provided
     echo "[.] using $_BASE_CONFIG as base for $_CFG"
     cp "$_BASE_CONFIG" "$_CFG"
