@@ -58,24 +58,26 @@ do
 	  _dodelete=0
 	fi
 
+  echo '[.] extracting:' "$line" 'to:' "$_destdir"
   if [ $_TEST_RUN -eq 0 ]; then
     # unzip
     _destdir=$_PATH
-    echo '[.] extracting:' "$line" 'to:' "$_destdir"
     if [ $_USE_7Z == 0 ]; then
       unzip -o -d "$_destdir" "$line" 1>/dev/null
     else
       # use 7z
       7z x -y -o"$_destdir" "$line" 1>/dev/null
     fi
-
     if [ $? -ne 0 ]; then
       if [ $_BREAK_ON_ERROR -eq 1 ]; then
         exit 1
       fi
     fi
+  fi
 
-    if [ $_dodelete -ne 0 ]; then
+  if [ $_dodelete -ne 0 ]; then
+    echo '[.] deleting:' "$line" 
+    if [ $_TEST_RUN -eq 0 ]; then
       rm -f "$line"
     fi
   fi

@@ -60,26 +60,29 @@ do
 	  _dodelete=0
 	fi
 
+  # unzip
+  _destdir=$_PATH
+  _barename=$(echo "$line" | rev | cut -c 5- | rev)
+  _newfile="$_barename"
+  echo '[.] compressing:' "$line" 'to:' "$_newfile"
   if [ $_TEST_RUN -eq 0 ]; then
-    # unzip
-    _destdir=$_PATH
-    _barename=$(echo "$line" | rev | cut -c 5- | rev)
-    _newfile="$_barename"
-    echo '[.] compressing:' "$line" 'to:' "$_newfile"
+    # zip
     if [ $_USE_7Z == 0 ]; then
       zip -D -j -q -9 "$_newfile".zip "$line" 1>/dev/null
     else
       # use 7z
       7z a -y "$_newfile".7z "$line" 1>/dev/null
     fi
-
     if [ $? -ne 0 ]; then
       if [ $_BREAK_ON_ERROR -eq 1 ]; then
         exit 1
       fi
     fi
+  fi
 
-    if [ $_dodelete -ne 0 ]; then
+  if [ $_dodelete -ne 0 ]; then
+    if [ $_TEST_RUN -eq 0 ]; then
+      echo '[.] deleting:' "$line" 
       rm -f "$line"
     fi
   fi
