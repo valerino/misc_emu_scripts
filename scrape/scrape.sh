@@ -21,7 +21,7 @@ while getopts "gnslcu:t:p:f:x:i:a:d" arg; do
           _NOSUBDIRS=1
           ;;
         t)
-          _INPUT_PATH=1
+          _INPUT_PATH="${OPTARG}"
           ;;
         l)
           _RELAUNCH=1
