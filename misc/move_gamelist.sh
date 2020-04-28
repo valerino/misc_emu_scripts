@@ -15,11 +15,6 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
-# check if directories exists
-if [ ! -d "/home/pi/.emulationstation/gamelists/$1" ]; then
-    echo '[x] error!' "/home/pi/.emulationstation/gamelists/$1" 'do not exists!'
-    exit 1
-fi
 if [ "$2" = '--media' ]; then
     if [ ! -d "/home/pi/.emulationstation/downloaded_media/$1" ]; then
         echo '[w] warning!' "/home/pi/.emulationstation/downloaded_media/$1" 'do not exists!'
@@ -35,11 +30,15 @@ else
     exit 1
 fi
 
-# move
-echo '. moving gamelist to' "/home/pi/RetroPie/roms/$1/gamelist.xml"
-mv "/home/pi/.emulationstation/gamelists/$1"/* "/home/pi/RetroPie/roms/$1"    
-if [ "$?" -eq 0 ]; then
-    rm -rf "/home/pi/.emulationstation/gamelists/$1"
+# move gamelist
+if [ ! -d "/home/pi/.emulationstation/gamelists/$1" ]; then
+    echo '[w] warning!' "/home/pi/.emulationstation/gamelists/$1" 'do not exists!'
+else
+    echo '. moving gamelist to' "/home/pi/RetroPie/roms/$1/gamelist.xml"
+    mv "/home/pi/.emulationstation/gamelists/$1"/* "/home/pi/RetroPie/roms/$1"    
+    if [ "$?" -eq 0 ]; then
+        rm -rf "/home/pi/.emulationstation/gamelists/$1"
+    fi
 fi
 
 if [ "$2" = '--media' ]; then
