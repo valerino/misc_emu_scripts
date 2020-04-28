@@ -19,7 +19,7 @@ def create_gamelist(src, dst):
     except:
         pass
 
-    gamelist = Element('gamelist')
+    gamelist = Element('gameList')
 
     # walk directory
     files = sorted(os.listdir(src))
