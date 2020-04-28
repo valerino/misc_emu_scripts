@@ -6,7 +6,6 @@ import traceback
 from pathlib import Path
 import os
 import re
-import lxml
 from argparse import RawTextHelpFormatter
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element, SubElement
