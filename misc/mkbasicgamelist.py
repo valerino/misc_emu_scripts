@@ -30,16 +30,15 @@ def create_gamelist(src, dst):
                 continue
 
             # generate entry
-            filename = Path(game).stem
-            title = re.sub("\((.*?)\)", '', filename)
+            title = Path(game).stem
 
-            f.write('<game>\n')
-            f.write('\t<path>./%s</path>\n' % (filename))
-            f.write('\t<name>%s</name>\n' % (title))
-            f.write('\t<image>./boxart/%s.png</image>\n' % (title))
-            f.write('\t<marquee>./wheel/%s.png</marquee>\n' % (title))
-            f.write('\t<video>./boxart/%s.mp4</video>\n' % (title))
-            f.write('</game>\n')
+            f.write('\t<game>\n')
+            f.write('\t\t<path>./%s</path>\n' % (game))
+            f.write('\t\t<name>%s</name>\n' % (title))
+            f.write('\t\t<image>./boxart/%s.png</image>\n' % (title))
+            f.write('\t\t<marquee>./wheel/%s.png</marquee>\n' % (title))
+            f.write('\t\t<video>./boxart/%s.mp4</video>\n' % (title))
+            f.write('\t</game>\n')
 
         # write footer
         f.write('</gamelist>\n')
