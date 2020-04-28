@@ -105,7 +105,10 @@ do
   if [ "$_dodelete" -eq 1 ]; then
     echo '[.] deleting' "$line"
     rm -f "$line"
+  else
+    echo '[.] deleting (TEST)' "$line"
   fi
+
 
 done < "./tmp.txt"
 rm ./tmp.txt
