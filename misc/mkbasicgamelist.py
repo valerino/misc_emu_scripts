@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
+
 import argparse
 import sys
 import traceback
 from pathlib import Path
 import os
 import re
+import lxml
 from argparse import RawTextHelpFormatter
+import xml.etree.ElementTree as ET
+from xml.etree.ElementTree import Element, SubElement
+import xml.dom.minidom
 
 
 def create_gamelist(src, dst):
@@ -15,33 +20,42 @@ def create_gamelist(src, dst):
     except:
         pass
 
+    gamelist = Element('gamelist')
+
+    # walk directory
+    files = sorted(os.listdir(src))
+    for g in files:
+        # skip unwanted
+        _, ext = os.path.splitext(g)
+        if ext.lower() == '.xml':
+            continue
+        if os.path.isdir(os.path.join(src, g)):
+            continue
+
+        # generate entry
+        game = SubElement(gamelist, 'game')
+        title = Path(g).stem
+
+        path = SubElement(game, 'path')
+        path.text = './%s' % (g)
+
+        name = SubElement(game, 'name')
+        name.text = title
+
+        image = SubElement(game, 'image')
+        image.text = './boxart/%s.png' % (title)
+
+        marquee = SubElement(game, 'marquee')
+        marquee.text = './wheel/%s.png' % (title)
+
+        video = SubElement(game, 'video')
+        video.text = './snap/%s.mp4' % (title)
+
+    # done, write to file
+    ss = ET.tostring(gamelist, 'utf-8')
+    s = xml.dom.minidom.parseString(ss).toprettyxml(indent='\t')
     with open(dst, 'w') as f:
-        # write header
-        f.write('<?xml version="1.0"?>\n')
-        f.write('<gamelist>\n')
-
-        # walk directory
-        files = sorted(os.listdir(src))
-        for game in files:
-            _, ext = os.path.splitext(game)
-            if ext.lower() == '.xml':
-                continue
-            if os.path.isdir(os.path.join(src, game)):
-                continue
-
-            # generate entry
-            title = Path(game).stem
-
-            f.write('\t<game>\n')
-            f.write('\t\t<path>./%s</path>\n' % (game))
-            f.write('\t\t<name>%s</name>\n' % (title))
-            f.write('\t\t<image>./boxart/%s.png</image>\n' % (title))
-            f.write('\t\t<marquee>./wheel/%s.png</marquee>\n' % (title))
-            f.write('\t\t<video>./boxart/%s.mp4</video>\n' % (title))
-            f.write('\t</game>\n')
-
-        # write footer
-        f.write('</gamelist>\n')
+        f.write(s)
 
 
 def main():
