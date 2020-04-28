@@ -10,7 +10,10 @@ from argparse import RawTextHelpFormatter
 
 def create_gamelist(src, dst):
     print('[.] processing src=%s, dst=%s' % (src, dst))
-    os.unlink(dst)
+    try:
+        os.unlink(dst)
+    except:
+        pass
 
     with open(dst, 'w') as f:
         # write header
