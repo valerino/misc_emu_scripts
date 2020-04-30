@@ -26,7 +26,7 @@ def create_gamelist(src, dst):
     for g in files:
         # skip unwanted
         _, ext = os.path.splitext(g)
-        if ext.lower() == '.xml':
+        if ext.lower() == '.xml' or ext.lower() == '.srm' or ext.lower() == '.nvr' or ext.lower == '.ds_store':
             continue
         if os.path.isdir(os.path.join(src, g)):
             continue

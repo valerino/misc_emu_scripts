@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # doesn't work with the default rpi shell, install zsh!
 function usage {
 	echo 'scrape on rpi/retropie using Skyscraper with screenscraper.fr\n'
@@ -6,7 +6,7 @@ function usage {
 	echo '\t[-u screenscraper.fr username:password, expects -s] [-f /path/to/file to scrape single file, expects -s] [-c to refresh cache, expects -s]'
 	echo '\t[-a add extensions space separated i.e. "*.chd *.m3u"] [-x exclude wildcards comma-separated i.e. "*.adz,*.zip"] [-i include wildcards comma-separated i.e. "*.adz,*.zip"]'
   echo '\t[-t sets roms path, if different than platform] [-n for interactive] [-l relaunch with -g after scraping with -s to generate gamelist.xml in one shot\n'
-  echo '\t[-k to include skipped games anyway]\n'
+  echo '\t[-k to include skipped games anyway] [-j to force using filenames for gamelist, instead of the scraped name]\n'
 	echo 'note: gamelist.xml and media will be created in the platorm folder, gamelist.xml will have relative paths both for roms and media.'
 }
 
@@ -16,14 +16,18 @@ _REFRESH_CACHE=0
 _NOSUBDIRS=0
 _INTERACTIVE=0
 _INCLUDE_SKIPPED=0
+_USE_FILENAME=0
 _RELAUNCH=0
-while getopts "gnsklcu:t:p:f:x:i:a:d" arg; do
+while getopts "gnsjklcu:t:p:f:x:i:a:d" arg; do
     case $arg in
         d)
           _NOSUBDIRS=1
           ;;
         k)
           _INCLUDE_SKIPPED=1
+          ;;
+        j)
+          _USE_FILENAME=1
           ;;
         t)
           _INPUT_PATH="${OPTARG}"
@@ -102,8 +106,11 @@ fi
 if [ ! -z "$_INPUT_PATH" ]; then
 	set -- "$@" -i "$_INPUT_PATH"
 fi
-if [ ! -z "$_INCLUDE_SKIPPED" ]; then
+if [ "$_INCLUDE_SKIPPED" -eq 1 ]; then
   set -- "$@" --skipped
+fi
+if [ "$_USE_FILENAME" -eq 1 ]; then
+  set -- "$@" --forcefilename
 fi
 if [ "$_NOSUBDIRS" -eq 1 ]; then
 	set -- "$@" --nosubdirs
@@ -144,8 +151,11 @@ if [ "$_RELAUNCH" -eq 1 ]; then
   if [ ! -z "$_ADDEXT" ]; then
 	  set -- "$@" --addext "$_ADDEXT"
   fi
-  if [ ! -z "$_INCLUDE_SKIPPED" ]; then
+  if [ "$_INCLUDE_SKIPPED" -eq 1 ]; then
     set -- "$@" --skipped
+  fi
+  if [ "$_USE_FILENAME" -eq 1 ]; then
+    set -- "$@" --forcefilename
   fi
   if [ ! -z "$_INPUT_PATH" ]; then
 	  set -- "$@" -i "$_INPUT_PATH"
