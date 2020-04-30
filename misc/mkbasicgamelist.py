@@ -26,7 +26,7 @@ def create_gamelist(src, dst):
     for g in files:
         # skip unwanted
         _, ext = os.path.splitext(g)
-        if ext.lower() == '.xml' or ext.lower() == '.srm' or ext.lower() == '.nvr' or ext.lower == '.ds_store':
+        if ext.lower() == '.xml' or ext.lower() == '.srm' or ext.lower() == '.nvr':
             continue
         if os.path.isdir(os.path.join(src, g)):
             continue
@@ -34,6 +34,10 @@ def create_gamelist(src, dst):
         # generate entry
         game = SubElement(gamelist, 'game')
         title = Path(g).stem
+
+        # avoid garbage on macos
+        if (title.lower() == 'ds_store'):
+            continue
 
         path = SubElement(game, 'path')
         path.text = './%s' % (g)
