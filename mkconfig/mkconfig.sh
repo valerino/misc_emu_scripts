@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # use with bash /path/to/mkoverlayconfig.sh on rpi
 
 # examples
