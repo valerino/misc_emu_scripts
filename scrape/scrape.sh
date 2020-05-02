@@ -10,6 +10,15 @@ function usage {
 	echo 'note: gamelist.xml and media will be created in the platorm folder, gamelist.xml will have relative paths both for roms and media.'
 }
 
+_FLAGS=""
+function add_flag {
+  if [[ -z "$_FLAGS" ]]; then
+    _FLAGS+="$1"
+  else
+    _FLAGS+=",$1"
+  fi  
+}
+
 _DO_GAMELIST=0
 _DO_SCRAPE=0
 _REFRESH_CACHE=0
@@ -94,6 +103,7 @@ _SKYSCRAPER="/opt/retropie/supplementary/skyscraper/Skyscraper"
 set -- "$_SKYSCRAPER"
 set -- "$@" --verbosity 3 -p "$_PLATFORM"
 
+_FLAGS=""
 if [ ! -z "$_ADDEXT" ]; then
 	set -- "$@" --addext "$_ADDEXT"
 fi
@@ -107,13 +117,16 @@ if [ ! -z "$_INPUT_PATH" ]; then
 	set -- "$@" -i "$_INPUT_PATH"
 fi
 if [ "$_INCLUDE_SKIPPED" -eq 1 ]; then
-  set -- "$@" --skipped
+  add_flag "skipped"
+  #set -- "$@" --skipped
 fi
 if [ "$_USE_FILENAME" -eq 1 ]; then
-  set -- "$@" --forcefilename
+  add_flag "forcefilename"
+  #set -- "$@" --forcefilename
 fi
 if [ "$_NOSUBDIRS" -eq 1 ]; then
-	set -- "$@" --nosubdirs
+	add_flag "nosubdirs"
+  #set -- "$@" --nosubdirs
 fi
 
 if [ $_DO_SCRAPE -eq 1 ]; then
@@ -132,9 +145,14 @@ if [ $_DO_SCRAPE -eq 1 ]; then
   if [ ! -z "$_FILEPATH" ]; then
 		set -- "$@" "$_FILEPATH"
 	fi
-
 else
-	set -- "$@" --relative
+  add_flag "relative"
+	#set -- "$@" --relative
+fi
+
+if [ ! -z "$_FLAGS" ]; then
+  # add flags
+  set -- "$@" --flags "$_FLAGS"
 fi
 
 # run!
@@ -146,22 +164,27 @@ fi
 
 if [ "$_RELAUNCH" -eq 1 ]; then
   set -- "$_SKYSCRAPER"
-  set -- "$@" --verbosity 3 --relative -p "$_PLATFORM"
+  set -- "$@" --verbosity 3 -p "$_PLATFORM"
 
+  add_flag "relative"
+  
   if [ ! -z "$_ADDEXT" ]; then
 	  set -- "$@" --addext "$_ADDEXT"
   fi
   if [ "$_INCLUDE_SKIPPED" -eq 1 ]; then
-    set -- "$@" --skipped
+    add_flag "skipped"
+    #set -- "$@" --skipped
   fi
   if [ "$_USE_FILENAME" -eq 1 ]; then
-    set -- "$@" --forcefilename
+      add_flag "forcefilename"
+      #set -- "$@" --forcefilename
   fi
   if [ ! -z "$_INPUT_PATH" ]; then
 	  set -- "$@" -i "$_INPUT_PATH"
   fi
 
   # run!
+  set -- "$@" --flags "$_FLAGS"
   echo '. relaunching:' "$@"
   "$@"
 fi
