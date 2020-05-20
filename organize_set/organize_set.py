@@ -171,7 +171,7 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
         do_moveunalpha(src, dst, test)
         return
 
-    files = os.listdir(src)
+    files = os.listdir(src).sort()
     alphadirs = {}
     for f in files:
         srcf = os.path.join(src, f)
@@ -207,6 +207,25 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
         # finally unarchive
         if unarchive and (not alt and not bad):
             unar(dstf, dstdir, delarchives, test)
+
+    # ensure max 255 folders per root
+    dirs = os.listdir(dst).sort()
+    n = 0
+    nfolders = 1
+    added = 0
+    for d in dirs:
+        dirpath = os.path.join(dst, d)
+        n += 1
+        if n > 255:
+            # move
+            mvpath = os.path.join(dst + '-' + str(nfolders), d)
+            print('[.] destination path %s exceeds 255 folders, moving %s to %s' % (
+                dst, dirpath, mvpath))
+            shutil.move(dirpath, mvpath)
+            added += 1
+            if added > 255:
+                nfolders += 1
+                added = 0
 
 
 def main():
