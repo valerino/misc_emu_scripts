@@ -171,7 +171,7 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
         do_moveunalpha(src, dst, test)
         return
 
-    files = os.listdir(src).sort()
+    files = sorted(os.listdir(src))
     alphadirs = {}
     for f in files:
         srcf = os.path.join(src, f)
@@ -209,7 +209,7 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
             unar(dstf, dstdir, delarchives, test)
 
     # ensure max 255 folders per root
-    dirs = os.listdir(dst).sort()
+    dirs = sorted(os.listdir(dst))
     n = 0
     nfolders = 1
     added = 0
@@ -296,7 +296,8 @@ def main():
             print('[w] delskipped disabled since skipbad or skipalt not specified!')
 
         # do stuff
-        process(args.src[0], args.dst[0] if args.dst else args.src[0], unarchive, delarchives, movealpha, moveunalpha,
+        dstdir = os.path.basename(args.src[0])
+        process(args.src[0], os.path.join(args.dst[0], dstdir) if args.dst else args.src[0], unarchive, delarchives, movealpha, moveunalpha,
                 skipbad, skipalt, delskipped, test)
 
         print('[.] Done!')
