@@ -237,7 +237,7 @@ def main():
     parser.add_argument('--src', help='folder to operate on',
                         nargs=1, required=True)
     parser.add_argument('--dst', help='destination folder, same as --src if not specified.',
-                        nargs=1, required=True)
+                        nargs=1, required=False)
     parser.add_argument('--flags', help='unarchive,delarchives,movealpha,moveunalpha,skipbad,skipalt,delskipped,test).',
                         nargs=1, required=True)
     args = parser.parse_args()
