@@ -29,6 +29,14 @@ def skip(to_skip, dstdir, delskipped, test):
         shutil.move(to_skip, skipped_path)
 
 
+def del_file(path, test):
+    """
+    delete file at path
+    """
+    if not test:
+        os.unlink(path)
+
+
 def unar(to_unar, dstdir, delarchives, test):
     """
     unarchive file to dstdir
@@ -38,8 +46,7 @@ def unar(to_unar, dstdir, delarchives, test):
         subprocess.run(['unar', '-f', '-o', dstdir, to_unar])
     if delarchives == True:
         print('[.] deleting archive: %s' % (to_unar))
-        if not test:
-            os.unlink(to_unar)
+        del_file(to_unar, test)
 
 
 def copy_file(src, dstdir, test):
@@ -175,6 +182,8 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
     alphadirs = {}
     for f in files:
         srcf = os.path.join(src, f)
+        if os.path.isdir(srcf):
+            continue
 
         # calculate destination
         if movealpha:
@@ -193,6 +202,10 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
             bad = is_bad(dstf)
             if bad == True:
                 skip(dstf, dst, delskipped, test)
+                if delarchives and not unarchive and movealpha:
+                    print('[.] deleting archive: %s' % (srcf))
+                    del_file(srcf, test)
+
                 dec_alphadir(dstf, alphadirs)
                 continue
 
@@ -201,6 +214,10 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
             alt = is_alt(dstf)
             if alt == True:
                 skip(dstf, dst, delskipped, test)
+                if delarchives and not unarchive and movealpha:
+                    print('[.] deleting archive: %s' % (srcf))
+                    del_file(srcf, test)
+
                 dec_alphadir(dstf, alphadirs)
                 continue
 
@@ -208,24 +225,33 @@ def process(src, dst, unarchive, delarchives, movealpha, moveunalpha, skipbad, s
         if unarchive and (not alt and not bad):
             unar(dstf, dstdir, delarchives, test)
 
-    # ensure max 255 folders per root
-    dirs = sorted(os.listdir(dst))
-    n = 0
-    nfolders = 1
-    added = 0
-    for d in dirs:
-        dirpath = os.path.join(dst, d)
-        n += 1
-        if n > 255:
-            # move
-            mvpath = os.path.join(dst + '-' + str(nfolders), d)
-            print('[.] destination path %s exceeds 255 folders, moving %s to %s' % (
-                dst, dirpath, mvpath))
-            shutil.move(dirpath, mvpath)
-            added += 1
-            if added > 255:
-                nfolders += 1
-                added = 0
+        if delarchives and not unarchive and movealpha:
+            print('[.] deleting archive: %s' % (srcf))
+            del_file(srcf, test)
+
+    # done
+    if movealpha == True:
+        # ensure max 255 folders per root
+        dirs = sorted(os.listdir(dst))
+        n = 0
+        nfolders = 1
+        added = 0
+        for d in dirs:
+            dirpath = os.path.join(dst, d)
+            if os.path.isfile(dirpath):
+                continue
+
+            n += 1
+            if n > 255:
+                # move
+                mvpath = os.path.join(dst + '-' + str(nfolders), d)
+                print('[.] destination path %s exceeds 255 folders, moving %s to %s' % (
+                    dst, dirpath, mvpath))
+                shutil.move(dirpath, mvpath)
+                added += 1
+                if added > 255:
+                    nfolders += 1
+                    added = 0
 
 
 def main():
@@ -288,9 +314,6 @@ def main():
         if movealpha == False and moveunalpha == False and unarchive == False:
             raise Exception(
                 '[x] ERROR: movealpha, moveunalpha and/or unarchive must be specified!')
-
-        if (unarchive == False and delarchives == True):
-            print('[w] delarchives ignored, valid only with unarchive!')
 
         if (delskipped == True and skipbad == False and skipalt == False):
             print('[w] delskipped disabled since skipbad or skipalt not specified!')
