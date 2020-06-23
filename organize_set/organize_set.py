@@ -86,7 +86,7 @@ def move_file(src, dstdir, test):
 
 
 def is_bad(file):
-    m = re.match('.+\[b\d*]', file, re.I)
+    m = re.match('.+(\[b]|\[b\d{1,2}])', file, re.I)
     if m:
         return True
 
@@ -94,7 +94,7 @@ def is_bad(file):
 
 
 def is_alt(file):
-    m = re.match('.+\[a\d*]', file, re.I)
+    m = re.match('.+(\[a]|\[a\d{1,2}])', file, re.I)
     if m:
         return True
 
