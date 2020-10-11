@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 function usage {
     echo 'purges the given TOSEC set from a,b,o,v,u,m,h dumps.\n'
-    echo 'usage:' "$1" '-p <path/to/folder [-t to test run, no deletion] [-h to keep hacks]'
+    echo 'usage:' "$1" '-p <path/to/folder [-t to test run, no deletion] [-h to keep hacks/modified]'
     echo '\t[-a to keep alternates] [-b to force delete [b] anyway]'
     echo '\nNOTE:\n'
     echo 'Before deleting, the script makes sure to delete a file ONLY if at least a "good" copy is kept, either it will keep the "bad".'
@@ -41,7 +41,7 @@ if [ "$_PATH" == "" ]; then
   exit 1
 fi
 
-_regex='\[(b|o|v|u|m'
+_regex='\[(b|o|v|u'
 if [ $_KEEP_ALTS -eq 0 ]; then
   _regex="$_regex"'|a'
 else
@@ -53,7 +53,7 @@ if [ $_FORCE_DELETE_BADS -eq 1 ]; then
 fi
 
 if [ $_KEEP_HACKS -eq 0 ]; then
-  _regex="$_regex"'|h'
+  _regex="$_regex"'|h|m'
 else
   echo '[w] keeping hacks'
 fi
