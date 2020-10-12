@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 function usage {
     echo 'purges the given TOSEC set from a,b,o,v,u,m,h dumps.\n'
     echo 'usage:' "$1" '-p <path/to/folder [-t to test run, no deletion] [-h to keep hacks/modified]'
