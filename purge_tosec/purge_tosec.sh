@@ -82,7 +82,6 @@ do
   _dname=$(dirname "$line")
   _base=$(echo "$_fname" | cut -d [ -f1)
   _copies=$(ls -l "$_dname/$_base"* | wc -l) 
-  echo "**** BASE=$_base, copies=$_copies"
   if [ "$_copies" -gt 1 ]; then
     if [ $_TEST_RUN -eq 0 ]; then
       # mark for deletion
