@@ -1,14 +1,15 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 function usage {
     echo 'zip all (non compressed) files in the given folder\n'
-    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-t to test run]'
+    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-t to test run]'
 }
 
 _TEST_RUN=0
 _BREAK_ON_ERROR=0
 _DELETE_SRC=0
 _USE_7Z=0
-while getopts "btzdp:" arg; do
+_MOVE_UP=0
+while getopts "btzmdp:" arg; do
     case $arg in
         p)
           _PATH="${OPTARG}"
@@ -16,6 +17,9 @@ while getopts "btzdp:" arg; do
         t)
           _TEST_RUN=1
           ;;
+	m)
+	  _MOVE_UP=1
+	  ;;
         b)
           _BREAK_ON_ERROR=1
           ;;
@@ -50,6 +54,10 @@ fi
 
 while IFS= read -r line
 do
+  if [ -d "$line" ]; then
+    continue
+  fi
+
   _dodelete=0
   if [ $_TEST_RUN -eq 0 ]; then
     # no test
@@ -63,15 +71,27 @@ do
   # zip
   _barename=$(echo "$line" | rev | cut -c 5- | rev)
   _newfile="$_barename"
-  echo '[.] compressing:' "$line" 'to:' "$_newfile"
   if [ $_TEST_RUN -eq 0 ]; then
     # zip
     if [ $_USE_7Z == 0 ]; then
-      zip -D -j -q -9 "$_newfile".zip "$line" 1>/dev/null
+      echo "[.] compressing: $line to $_newfile.zip" 
+      zip -D -j -q -9 "$_newfile.zip" "$line" 1>/dev/null
+      if [ $_MOVE_UP -ne 0 ]; then
+      	_dir=$(dirname "$_newfile.zip")
+	echo "[.] moving $_newfile.zip to $_dir/../"
+        mv "$_newfile.zip" "$_dir/../"
+      fi
     else
       # use 7z
-      7z a -y "$_newfile".7z "$line" 1>/dev/null
+      echo "[.] compressing: $line to $_newfile.7z"
+      7z a -y "$_newfile.7z" "$line" 1>/dev/null
+      if [ $_MOVE_UP -ne 0 ]; then
+        _dir=$(dirname "$_newfile.7z")
+        echo "[.] moving $_newfile.7z to $_dir/../"
+        mv "$_newfile.7z" "$_dir/../"
+      fi
     fi
+
     if [ $? -ne 0 ]; then
       if [ $_BREAK_ON_ERROR -eq 1 ]; then
         exit 1
