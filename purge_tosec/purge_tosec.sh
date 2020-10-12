@@ -106,7 +106,10 @@ do
     echo '[.] deleting' "$line"
     rm -f "$line"
   else
-    echo '[.] deleting (TEST)' "$line"
+    # check for test flag
+    if [ $_TEST_RUN -eq 1 ]; then
+    	echo '[.] deleting (TEST)' "$line"
+    fi
   fi
 
 
