@@ -19,9 +19,9 @@ while getopts "btzdp:" arg; do
         b)
           _BREAK_ON_ERROR=1
           ;;
-		    d)
-		      _DELETE_SRC=1
-		      ;;
+        d)
+          _DELETE_SRC=1
+          ;;
         z)
           _USE_7Z=1
           ;;
@@ -55,13 +55,12 @@ do
     # no test
     _dodelete=1
   fi
-	if [ $_DELETE_SRC -eq 0 ]; then
-	  # do not delete source zip
-	  _dodelete=0
-	fi
+  if [ $_DELETE_SRC -eq 0 ]; then
+    # do not delete source file
+    _dodelete=0
+  fi
 
-  # unzip
-  _destdir=$_PATH
+  # zip
   _barename=$(echo "$line" | rev | cut -c 5- | rev)
   _newfile="$_barename"
   echo '[.] compressing:' "$line" 'to:' "$_newfile"

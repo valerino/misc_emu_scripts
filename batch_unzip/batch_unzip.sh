@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 function usage {
     echo 'unzip all files in the given folder\n'
     echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of unzip] [-d to delete source zips] [-t to test run]'
@@ -19,9 +19,9 @@ while getopts "btzdp:" arg; do
         b)
           _BREAK_ON_ERROR=1
           ;;
-		    d)
-		      _DELETE_SRC=1
-		      ;;
+	d)
+	  _DELETE_SRC=1
+	  ;;
         z)
           _USE_7Z=1
           ;;
@@ -53,21 +53,22 @@ do
     # no test
     _dodelete=1
   fi
-	if [ $_DELETE_SRC -eq 0 ]; then
-	  # do not delete source zip
-	  _dodelete=0
-	fi
-
+  if [ $_DELETE_SRC -eq 0 ]; then
+    # do not delete source zip
+    _dodelete=0
+  fi
+  
+  _destdir=$(dirname "$line")
   echo '[.] extracting:' "$line" 'to:' "$_destdir"
   if [ $_TEST_RUN -eq 0 ]; then
     # unzip
-    _destdir=$_PATH
     if [ $_USE_7Z == 0 ]; then
       unzip -o -d "$_destdir" "$line" 1>/dev/null
     else
       # use 7z
       7z x -y -o"$_destdir" "$line" 1>/dev/null
     fi
+    
     if [ $? -ne 0 ]; then
       if [ $_BREAK_ON_ERROR -eq 1 ]; then
         exit 1
