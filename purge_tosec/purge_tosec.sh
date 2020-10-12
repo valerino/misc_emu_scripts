@@ -78,8 +78,11 @@ do
   _dodelete=0
 
   # check if this is the only entry for basename
-  _base=$(echo "$line" | cut -d [ -f1)
-  _copies=$(ls -l "$_base"* | wc -l) 
+  _fname=$(basename "$line")
+  _dname=$(dirname "$line")
+  _base=$(echo "$_fname" | cut -d [ -f1)
+  _copies=$(ls -l "$_dname/$_base"* | wc -l) 
+  echo "**** BASE=$_base, copies=$_copies"
   if [ "$_copies" -gt 1 ]; then
     if [ $_TEST_RUN -eq 0 ]; then
       # mark for deletion
