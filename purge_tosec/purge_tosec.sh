@@ -63,7 +63,9 @@ if [ $_TEST_RUN -eq 1 ]; then
 fi
 
 echo '[.] processing' "$_PATH"
-_regex="$_regex"')(\d*)(\s.*){0,1}]'
+_regex="$_regex)(\d*)((\s\w*)|])"
+echo "[.] using regex: $_regex"
+
 find "$_PATH" | grep -E "$_regex" > ./tmp.txt
 if [ $? -ne 0 ]; then
   echo '[x] wrong input, or no matches found!'
@@ -71,7 +73,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo '[.] using regex:' "$_regex"
 while IFS= read -r line
 do
   # default is to keep
@@ -90,7 +91,7 @@ do
   else
     # there's a single copy of this file, check for [b] and _FORCE_DELETE_BADS
     echo '[w] SINGLE COPY:' "$line"
-    _isbad=$(echo "$line" | grep -E '\[b(\d*)(.*){0,1}]')
+    _isbad=$(echo "$line" | grep -E '\[b(\d*)((\s\w*)|])')
     if [ "$_isbad" != "" ]; then
       if [ $_FORCE_DELETE_BADS -eq 1 ]; then
         # mark for deletion
