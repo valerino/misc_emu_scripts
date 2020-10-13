@@ -66,7 +66,7 @@ echo '[.] processing' "$_PATH"
 _regex="$_regex)(\d*)((\s\w*)|])"
 echo "[.] using regex: $_regex"
 
-find "$_PATH" | grep -E "$_regex" > ./tmp.txt
+find "$_PATH" | grep -Pi "$_regex" > ./tmp.txt
 if [ $? -ne 0 ]; then
   echo '[x] wrong input, or no matches found!'
   rm ./tmp.txt
@@ -91,7 +91,7 @@ do
   else
     # there's a single copy of this file, check for [b] and _FORCE_DELETE_BADS
     echo '[w] SINGLE COPY:' "$line"
-    _isbad=$(echo "$line" | grep -E '\[b(\d*)((\s\w*)|])')
+    _isbad=$(echo "$line" | grep -Pi "\[b(\d*)((\s\w*)|])")
     if [ "$_isbad" != "" ]; then
       if [ $_FORCE_DELETE_BADS -eq 1 ]; then
         # mark for deletion
