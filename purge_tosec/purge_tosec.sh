@@ -106,7 +106,7 @@ do
 
   # delete ?
   if [ "$_dodelete" -eq 1 ]; then
-    if [ $_TEST_RUN -eq 0]; then
+    if [ $_TEST_RUN -eq 0 ]; then
     	echo '[.] deleting' "$line"
     	rm -f "$line"
     else
