@@ -106,12 +106,11 @@ do
 
   # delete ?
   if [ "$_dodelete" -eq 1 ]; then
-    echo '[.] deleting' "$line"
-    rm -f "$line"
-  else
-    # check for test flag
-    if [ $_TEST_RUN -eq 1 ]; then
-    	echo '[.] deleting (TEST)' "$line"
+    if [ $_TEST_RUN -eq 0]; then
+    	echo '[.] deleting' "$line"
+    	rm -f "$line"
+    else
+    	echo '[.] (TEST) deleting' "$line"
     fi
   fi
 
