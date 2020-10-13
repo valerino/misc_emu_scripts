@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 function usage {
     echo 'zip all (non compressed) files in the given folder\n'
-    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-t to test run]'
+    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-s to delete the containing folder after moving, to be used with -m] [-t to test run]'
 }
 
 _TEST_RUN=0
@@ -9,7 +9,8 @@ _BREAK_ON_ERROR=0
 _DELETE_SRC=0
 _USE_7Z=0
 _MOVE_UP=0
-while getopts "btzmdp:" arg; do
+_DEL_AFTER_MOVE=0
+while getopts "btzmdsp:" arg; do
     case $arg in
         p)
           _PATH="${OPTARG}"
@@ -19,6 +20,9 @@ while getopts "btzmdp:" arg; do
           ;;
 	m)
 	  _MOVE_UP=1
+	  ;;
+	s)
+	  _DEL_AFTER_MOVE=1
 	  ;;
         b)
           _BREAK_ON_ERROR=1
@@ -80,6 +84,10 @@ do
       	_dir=$(dirname "$_newfile.zip")
 	echo "[.] moving $_newfile.zip to $_dir/../"
         mv "$_newfile.zip" "$_dir/../"
+	if [ $_DEL_AFTER_MOVE -eq 1 ]; then
+	  echo "[.] deleting folder $_dir"
+	  rm -rf "$_dir"
+	fi
       fi
     else
       # use 7z
@@ -89,6 +97,10 @@ do
         _dir=$(dirname "$_newfile.7z")
         echo "[.] moving $_newfile.7z to $_dir/../"
         mv "$_newfile.7z" "$_dir/../"
+        if [ $_DEL_AFTER_MOVE -eq 1 ]; then
+          echo "[.] deleting folder $_dir"
+          rm -rf "$_dir"
+        fi
       fi
     fi
 
