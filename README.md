@@ -12,6 +12,7 @@ most (if not all) can be used directly on rpi itself.
 * [mkconfig](./mkconfig/README.md)
 * [batch_unzip](./batch_unzip/README.md)
 * [batch_zip](./batch_zip/README.md)
+* [rezip](./rezip/README.md)
 * [fix_gamelist](./fix_gamelist/README.md)
 * [organize_set](./organize_set/README.md)
 * [misc assorted scripts](./misc)
