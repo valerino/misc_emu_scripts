@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 function usage {
   echo 'rezip files in the given zip.\n'
-  echo 'usage:' "$1" '-p <path/to/src_zip> [-o destination zip, default is to overwrite source] [-z to unzip individual files and delete the zips] [-i to ignore unzip errors]'
+  echo 'usage:' "$1" '-p <path/to/src_zip> [-o destination zip|destination dir (source path basename will be used), default is to overwrite source zip] [-z to unzip individual files and delete the zips] [-i to ignore unzip errors]'
 }
 
 _DEST_PATH=""
@@ -32,6 +32,12 @@ done
 if [ "$_PATH" == "" ]; then
   usage "$0"
   exit 1
+fi
+
+if [ -d "$_DEST_PATH" ]; then
+  # extract basename from path and use it in the destpath
+  _f=$(basename "$_PATH")
+  _DEST_PATH="$_DEST_PATH/$_f"
 fi
 
 echo '[.] unzipping' "$_PATH"
