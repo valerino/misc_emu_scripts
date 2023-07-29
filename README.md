@@ -16,3 +16,4 @@ most (if not all) can be used directly on rpi itself.
 * [fix_gamelist](./fix_gamelist/README.md)
 * [organize_set](./organize_set/README.md)
 * [misc assorted scripts](./misc)
+* [zipcue2chd](./zippedcue_to_chd)
