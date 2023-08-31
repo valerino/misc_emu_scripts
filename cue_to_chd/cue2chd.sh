@@ -32,6 +32,7 @@ while getopts "p:o:dizt" arg; do
     _SRC_PATH=$(realpath "${OPTARG}")
     ;;
   o)
+    mkdir -p "$OPTARG"
     _DEST_PATH=$(realpath "${OPTARG}")
     ;;
   d)
