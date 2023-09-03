@@ -11,7 +11,7 @@ _pwd=$(pwd)
 
 function usage {
   echo 'convert .CUE/BIN images to CHD.\n'
-  echo 'usage:' "$1" '-p <path/to/sourcedir> -o </path/to/destination> [-z sourcedir have zips] [-d delete zips/dirs] [-i ignore errors] [-t to testrun]'
+  echo 'usage:' "$1" '-p <path/to/sourcedir> -o </path/to/destination> [-z sourcedir have zips] [-d delete zips/dirs] [-i to DO NOT ignore errors] [-t to testrun]'
 }
 
 function cleanup {
