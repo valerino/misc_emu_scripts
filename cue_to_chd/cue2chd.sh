@@ -75,10 +75,10 @@ while IFS= read -r _line; do
     echo "[.] TEST extracting: $_line to: $_DEST_PATH ..."
     continue
   fi
-  
+
   # ensure destpath exists
   mkdir -p "$_DEST_PATH"
-  
+
   if [ "$_ZIPPED" -eq 1 ]; then
     # input are zips, extract
     echo "[.] extracting: $_line to: $_WRKDIR"
@@ -105,8 +105,8 @@ while IFS= read -r _line; do
   if [ "$?" -eq 0 ]; then
     # make chd
     _chd_barename=$(basename "$_f" ".cue")
-    _chd_path="$_DEST_PATH/$_chd_barename.chd"    
-    chdman createcd -i "$_f" -o "$_chd_path"
+    _chd_path="$_DEST_PATH/$_chd_barename.chd"
+    chdman createcd -i "$_f" -o "$_chd_path" --force
     if [ "$?" -eq 0 ]; then
       # done
       echo "[.] created $_chd_path !"
