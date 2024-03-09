@@ -73,8 +73,10 @@ do
   fi
 
   # zip
-  _barename=$(echo "$line" | rev | cut -c 5- | rev)
+  _barename=$(echo "$line" | sed 's/\.[^.]*$//')
+  #_barename=$(echo "$line" | rev | cut -c 5- | rev)
   _newfile="$_barename"
+
   if [ $_TEST_RUN -eq 0 ]; then
     # zip
     if [ $_USE_7Z == 0 ]; then
