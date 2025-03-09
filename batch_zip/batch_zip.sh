@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 function usage {
     echo 'zip all (non compressed) files in the given folder\n'
-    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-s to delete the containing folder after moving, to be used with -m] [-t to test run]'
+    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-s to delete the containing folder after moving, to be used with -m] [-t to test run] [-i to ignore common companion files (.txt, .md, .png, .gif, .jpg, .jpeg, .pdf, .doc, .docx, .rtf, .pcm, .wav, .mp3, .mp4)]'
 }
 
 _TEST_RUN=0
@@ -10,7 +10,8 @@ _DELETE_SRC=0
 _USE_7Z=0
 _MOVE_UP=0
 _DEL_AFTER_MOVE=0
-while getopts "btzmdsp:" arg; do
+_IGNORE_COMPANION=0
+while getopts "btzmdsip:" arg; do
     case $arg in
         p)
           _PATH="${OPTARG}"
@@ -18,12 +19,15 @@ while getopts "btzmdsp:" arg; do
         t)
           _TEST_RUN=1
           ;;
-	m)
-	  _MOVE_UP=1
-	  ;;
-	s)
-	  _DEL_AFTER_MOVE=1
-	  ;;
+        m)
+          _MOVE_UP=1
+          ;;
+        i)
+          _IGNORE_COMPANION=1
+          ;;
+        s)
+      	  _DEL_AFTER_MOVE=1
+	        ;;
         b)
           _BREAK_ON_ERROR=1
           ;;
@@ -46,13 +50,13 @@ if [ "$_PATH" == "" ]; then
 fi
 
 echo '[.] processing' "$_PATH"
-find "$_PATH" -not -iname "*.zip" -not -iname "*.7z" > ./tmp2.txt
-tail -n +2 ./tmp2.txt > ./tmp.txt
-rm ./tmp2.txt
+find "$_PATH" -not -iname "*.zip" -not -iname "*.7z" > /tmp/tmp2.txt
+tail -n +2 /tmp/tmp2.txt > /tmp/tmp.txt
+rm /tmp/tmp2.txt
 
 if [ $? -ne 0 ]; then
   echo '[x] wrong input, or no matches found!'
-  rm ./tmp.txt
+  rm /tmp.txt
   exit 1
 fi
 
@@ -60,6 +64,18 @@ while IFS= read -r line
 do
   if [ -d "$line" ]; then
     continue
+  fi
+
+  # filter files if -i is specified
+  if [ $_IGNORE_COMPANION -eq 1 ]; then
+    _ext=$(echo "$line" | rev | cut -d'.' -f1 | rev)
+    
+    # make ext lowercase
+    _ext=$(echo "$_ext" | tr '[:upper:]' '[:lower:]')
+    if [ "$_ext" == "txt" ] || [ "$_ext" == "md" ] || [ "$_ext" == "png" ] || [ "$_ext" == "gif" ] || [ "$_ext" == "jpg" ] || [ "$_ext" == "jpeg" ] || [ "$_ext" == "pdf" ] || [ "$_ext" == "doc" ] || [ "$_ext" == "docx" ] || [ "$_ext" == "rtf" ] || [ "$_ext" == "pcm" ] || [ "$_ext" == "wav" ] || [ "$_ext" == "mp3" ] || [ "$_ext" == "mp4" ]; then
+      echo "[.] ignoring companion file: $line"
+      continue
+    fi
   fi
 
   _dodelete=0
@@ -75,6 +91,7 @@ do
   # zip
   _barename=$(echo "$line" | sed 's/\.[^.]*$//')
   #_barename=$(echo "$line" | rev | cut -c 5- | rev)
+  
   _newfile="$_barename"
 
   if [ $_TEST_RUN -eq 0 ]; then
@@ -119,8 +136,8 @@ do
       rm -f "$line"
     fi
   fi
-done < "./tmp.txt"
-rm ./tmp.txt
+done < "/tmp/tmp.txt"
+rm /tmp/tmp.txt
 
 echo '[.] done!'
 
