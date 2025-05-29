@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 function usage {
     echo 'zip all (non compressed) files in the given folder\n'
-    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-s to delete the containing folder after moving, to be used with -m] [-t to test run] [-i to ignore common companion files (.txt, .md, .png, .gif, .jpg, .jpeg, .pdf, .doc, .docx, .rtf, .pcm, .wav, .mp3, .mp4)]'
+    echo 'usage:' "$1" '-p <path/to/folder> [-b to break on error] [-z use 7z instead of zip] [-d to delete source files] [-m to move compressed files one folder up once generated] [-s to delete the containing folder after moving, to be used with -m] [-t to test run] [-i to ignore common companion files (.txt, .md, .png, .gif, .jpg, .jpeg, .pdf, .doc, .docx, .rtf, .pcm, .wav, .mp3, .mp4, .zip, .rar, .7z)]'
 }
 
 _TEST_RUN=0
@@ -72,7 +72,7 @@ do
     
     # make ext lowercase
     _ext=$(echo "$_ext" | tr '[:upper:]' '[:lower:]')
-    if [ "$_ext" == "txt" ] || [ "$_ext" == "md" ] || [ "$_ext" == "png" ] || [ "$_ext" == "gif" ] || [ "$_ext" == "jpg" ] || [ "$_ext" == "jpeg" ] || [ "$_ext" == "pdf" ] || [ "$_ext" == "doc" ] || [ "$_ext" == "docx" ] || [ "$_ext" == "rtf" ] || [ "$_ext" == "pcm" ] || [ "$_ext" == "wav" ] || [ "$_ext" == "mp3" ] || [ "$_ext" == "mp4" ]; then
+    if [ "$_ext" == "txt" ] || [ "$_ext" == "md" ] || [ "$_ext" == "png" ] || [ "$_ext" == "gif" ] || [ "$_ext" == "jpg" ] || [ "$_ext" == "jpeg" ] || [ "$_ext" == "pdf" ] || [ "$_ext" == "doc" ] || [ "$_ext" == "docx" ] || [ "$_ext" == "rtf" ] || [ "$_ext" == "pcm" ] || [ "$_ext" == "wav" ] || [ "$_ext" == "mp3" ] || [ "$_ext" == "mp4" ] || [ "$_ext" == "zip" ] || [ "$_ext" == "rar" ] || [ "$_ext" == "7z" ]; then
       echo "[.] ignoring companion file: $line"
       continue
     fi
