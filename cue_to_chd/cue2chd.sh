@@ -60,7 +60,7 @@ if [ "$_ZIPPED" -eq 1 ]; then
   find "$_SRC_PATH" | grep -Ei "$_regex" >"$_FILES"
 else
   # get dirs list
-  find "$_SRC_PATH" -type d | sed "1d" >"$_FILES"
+  find "$_SRC_PATH" -type d >"$_FILES"
 fi
 
 if [ $? -ne 0 ]; then
