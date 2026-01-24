@@ -41,16 +41,11 @@ Examples
 
     ./iso_to_rvz.sh -p /path/to/input -d -z
 
-Test script
------------
-
-A basic test script `test_iso_to_rvz.sh` is provided that performs a minimal smoke test using the script's test mode (`-t`). The test doesn't require `dolphin-tool` to be present because it uses test mode.
+- Convert to GCZ format with max compression level 22:
+  
+    ./iso_to_rvz.sh -p /path/to/input -f gcz -l 22
 
 Notes
 -----
 
-- `dolphin-tool` is expected to be in PATH. The script uses the `convert` subcommand with recommended RVZ options:
-
-    dolphin-tool convert -i <input.iso> -o <output.rvz> -f rvz -b 131072 -c zstd -l 5
-
-  If your `dolphin-tool` requires different flags or you want other defaults, tell me and I can add a `-c/--convert-cmd` option to customize the invocation.
+- `dolphin-tool` is expected to be in PATH
