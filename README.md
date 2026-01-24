@@ -17,3 +17,4 @@ most (if not all) can be used directly on rpi itself.
 * [organize_set](./organize_set/README.md)
 * [misc assorted scripts](./misc)
 * [cue2chd](./cue_to_chd)
+* [iso_to_rvz](./iso_to_rvz)
