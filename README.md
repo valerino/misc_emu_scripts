@@ -18,3 +18,4 @@ most (if not all) can be used directly on rpi itself.
 * [misc assorted scripts](./misc)
 * [cue2chd](./cue_to_chd)
 * [iso_to_rvz](./iso_to_rvz)
+* [7z2zip](./7z2zip)
