@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableDelayedExpansion
+setlocal DisableDelayedExpansion
 
 :: Parse arguments
 set "DRY_RUN=false"
@@ -40,15 +40,15 @@ if not exist "%TARGET_DIR%\" (
 if "%DRY_RUN%"=="true" (
     echo === DRY RUN MODE - No files will be deleted ===
     for /r "%TARGET_DIR%" %%F in (*) do (
-        if not exist "%%F\" (
-            echo %%F
+        if not exist "%%~fF\" (
+            echo %%~fF
         )
     )
     echo === End of dry run ===
 ) else (
     for /r "%TARGET_DIR%" %%F in (*) do (
-        if not exist "%%F\" (
-            del /f /q "%%F"
+        if not exist "%%~fF\" (
+            del /f /q "%%~fF"
         )
     )
     echo All files deleted from '%TARGET_DIR%' and its subdirectories.

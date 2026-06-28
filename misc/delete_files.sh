@@ -50,6 +50,6 @@ if [ "$DRY_RUN" = true ]; then
     find "$TARGET_DIR" -type f -print
     echo "=== End of dry run ==="
 else
-    find "$TARGET_DIR" -type f -delete
+    find "$TARGET_DIR" -type f -exec rm -f -- {} +
     echo "All files deleted from '$TARGET_DIR' and its subdirectories."
 fi
