@@ -19,3 +19,4 @@ most (if not all) can be used directly on rpi itself.
 * [cue2chd](./cue_to_chd)
 * [iso_to_rvz](./iso_to_rvz)
 * [7z2zip](./7z2zip)
+* [batch_archive](./batch_archive/README.md) - extract nested ZIP/7z files and create one archive

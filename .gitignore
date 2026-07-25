@@ -3,3 +3,6 @@
 *.lpl
 *.txt
 *.xml
+*.bak
+__pycache__
+
