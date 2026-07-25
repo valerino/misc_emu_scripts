@@ -20,3 +20,4 @@ most (if not all) can be used directly on rpi itself.
 * [iso_to_rvz](./iso_to_rvz)
 * [7z2zip](./7z2zip)
 * [batch_archive](./batch_archive/README.md) - extract nested ZIP/7z files and create one archive
+* [batch_delete_files](./batch_delete_files.py) - recursively delete files and nested directories while preserving input-level directories; prints each deleted path. Use `--no-delete-directories` to preserve all directories.
