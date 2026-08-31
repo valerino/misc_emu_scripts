@@ -93,32 +93,29 @@ def extract_destination(archive: Path, lha_tag: bool) -> Path:
     return destination.with_name(destination.name + "-lha") if lha_tag and archive.suffix.lower() == ".lha" else destination
 
 
-def expand_archives(root: Path, pattern_files: list[list[str]], test: bool,
-                    lha_tag: bool = True) -> set[Path]:
+def expand_archives(root: Path, expanded: list[Path], pattern_files: list[list[str]], test: bool,
+                    lha_tag: bool = True) -> list[Path]:
     """Extract archives, including archives revealed by earlier extraction."""
-    expanded: set[Path] = set()
     while archives := [path for path in root.rglob("*")
                        if path.is_file() and path.suffix.lower() in ARCHIVE_SUFFIXES
-                       and path not in expanded and not protected(path, root, pattern_files)]:
+                       and extract_destination(path, lha_tag) not in expanded
+                       and not protected(path, root, pattern_files)]:
         for archive in archives:
-            expanded.add(archive)
             destination = extract_destination(archive, lha_tag)
             if archive.suffix.lower() == ".zip":
                 ensure_command("unzip")
                 command = ["unzip", "-o", str(archive), "-d", str(destination)]
             elif archive.suffix.lower() == ".lha":
-                ensure_command("lha")
-                command = ["lha", "x", str(archive)]
+                ensure_command("7z")
+                command = ["7z", "x", str(archive)]
                 if not test:
                     destination.mkdir(exist_ok=True)
-                print(f"extracting {archive} to {destination}", flush=True)
-                run(command, destination, test)
-                continue
             else:
                 ensure_command("7z")
                 command = ["7z", "x", "-y", f"-o{destination}", str(archive)]
             print(f"extracting {archive} to {destination}", flush=True)
-            run(command, root, test)
+            expanded.append(destination)
+            run(command, destination if archive.suffix.lower() == ".lha" else root, test)
     return expanded
 
 
@@ -152,12 +149,25 @@ def is_inside(path: Path, directory: Path) -> bool:
         return False
 
 
-def archive_batches(root: Path, expanded: set[Path]):
+def extracted_source(path: Path, expanded: list[Path], lha_tag: bool) -> bool:
+    """Return whether path is a source archive that was already extracted."""
+    return (path.suffix.lower() in ARCHIVE_SUFFIXES
+            and extract_destination(path, lha_tag) in expanded)
+
+
+def excluded_from_archive(path: Path, root: Path, expanded: list[Path],
+                          pattern_files: list[list[str]], lha_tag: bool) -> bool:
+    """Return whether path is kept out of the output archive."""
+    return protected(path, root, pattern_files) or extracted_source(path, expanded, lha_tag)
+
+
+def archive_batches(root: Path, expanded: list[Path],
+                    pattern_files: list[list[str]], lha_tag: bool = True):
     """Yield bounded argument batches without newline-delimited file lists."""
     batch: list[tuple[Path, str]] = []
     size = 0
     for path in root.rglob("*"):
-        if not path.is_file() or path in expanded:
+        if not path.is_file() or excluded_from_archive(path, root, expanded, pattern_files, lha_tag):
             continue
         name = "./" + path.relative_to(root).as_posix()
         if batch and size + len(name) + 1 > ARG_BATCH_BYTES:
@@ -170,15 +180,17 @@ def archive_batches(root: Path, expanded: set[Path]):
         yield batch
 
 
-def unsafe_7z_path(root: Path, expanded: set[Path]) -> Path | None:
+def unsafe_7z_path(root: Path, expanded: list[Path],
+                   pattern_files: list[list[str]], lha_tag: bool = True) -> Path | None:
     """Return a path whose newline 7z would silently rewrite."""
     return next((path for path in root.rglob("*")
-                 if path.is_file() and path not in expanded
+                 if path.is_file()
+                 and not excluded_from_archive(path, root, expanded, pattern_files, lha_tag)
                  and ("\n" in path.name or "\r" in path.name)), None)
 
 
 def create_archive(root: Path, output: Path, archive_format: str,
-                   pattern_files: list[list[str]], expanded: set[Path],
+                   pattern_files: list[list[str]], expanded: list[Path],
                    test: bool, delete: bool = False,
                    lha_tag: bool = True) -> None:
     """Archive every included file using the requested native command."""
@@ -186,7 +198,7 @@ def create_archive(root: Path, output: Path, archive_format: str,
         ensure_command("zip")
     else:
         ensure_command("7z")
-        if unsafe_path := unsafe_7z_path(root, expanded):
+        if unsafe_path := unsafe_7z_path(root, expanded, pattern_files, lha_tag):
             raise SystemExit(f"error: 7z cannot safely archive newline in filename: {unsafe_path}")
 
     if output.exists():
@@ -195,7 +207,7 @@ def create_archive(root: Path, output: Path, archive_format: str,
             output.unlink()
     print(f"creating {output} from {root}", flush=True)
     created = False
-    for batch in archive_batches(root, expanded):
+    for batch in archive_batches(root, expanded, pattern_files, lha_tag):
         names = [name for _, name in batch]
         if archive_format == "zip":
             run(["zip", "-q", str(output), *names], root, test)
@@ -205,11 +217,16 @@ def create_archive(root: Path, output: Path, archive_format: str,
     if not created:
         raise SystemExit("error: no files remain after exclusions")
     if delete:
-        print(f"deleting input directory {root}", flush=True)
-        if not test:
-            shutil.rmtree(root)
+        if test:
+            print(f"deleting input directory {root}", flush=True)
+        else:
+            for path in root.rglob("*"):
+                if path.is_file() and not protected(path, root, pattern_files):
+                    print(f"deleting {path}", flush=True)
+                    path.unlink()
+            delete_empty_directories(root, root, pattern_files, test, include_root=True)
     else:
-        delete_extracted(root, expanded, pattern_files, test, lha_tag)
+        delete_extracted(root, expanded, pattern_files, test)
 
 
 def delete_archived(files: list[Path], root: Path, pattern_files: list[list[str]],
@@ -239,12 +256,11 @@ def delete_empty_directories(directory: Path, root: Path,
                 path.rmdir()
 
 
-def delete_extracted(root: Path, expanded: set[Path],
-                     pattern_files: list[list[str]], test: bool,
-                     lha_tag: bool = True) -> None:
-    """Remove unprotected extracted files after archiving."""
-    destinations = {extract_destination(archive, lha_tag) for archive in expanded}
-    for destination in sorted(destinations, key=lambda path: len(path.parts), reverse=True):
+def delete_extracted(root: Path, expanded: list[Path],
+                     pattern_files: list[list[str]], test: bool) -> None:
+    """Remove unprotected extracted destination directories."""
+    destinations = sorted(expanded, key=lambda path: len(path.parts), reverse=True)
+    for destination in destinations:
         if not destination.exists():
             continue
         files = [path for path in destination.rglob("*")
@@ -267,18 +283,18 @@ def delete_extracted(root: Path, expanded: set[Path],
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Extract ZIP/7z/LHA files, then archive a directory.",
-        epilog="--delete removes the entire input directory and ignores --no-touch.",
+        epilog="--delete removes everything except files matching --no-touch.",
     )
     parser.add_argument("directory", type=Path, help="directory to process recursively")
     parser.add_argument("--format", choices=("zip", "7z"), default="zip",
                         help="output format (default: zip)")
     parser.add_argument("-o", "--output", help="output path (default: INPUT_DIRECTORY.EXT beside it)")
     parser.add_argument("-d", "--delete", action="store_true",
-                        help="delete the entire input directory after successful creation (ignores --no-touch)")
+                        help="delete the input after archiving, preserving only --no-touch files")
     parser.add_argument("-n", "--test", action="store_true",
                         help="print operations without changing files")
     parser.add_argument("--no-touch", type=Path, metavar="FILE",
-        help="read gitignore-like patterns for paths never extracted or deleted without --delete")
+        help="read gitignore-like patterns for paths never extracted or deleted")
     parser.add_argument("--no-lha-tag", action="store_true",
                         help="extract .lha files without the default -lha directory suffix")
     parser.add_argument("--backup", action="store_true",
@@ -292,13 +308,12 @@ def main() -> None:
     if not root.is_dir():
         raise SystemExit(f"error: not a directory: {root}")
     pattern_files: list[list[str]] = [[]]
-    if not args.delete:
-        pattern_file = no_touch_file(args.no_touch)
-        if pattern_file:
-            try:
-                pattern_files = [read_patterns(pattern_file.expanduser())]
-            except OSError as error:
-                raise SystemExit(f"error: cannot read pattern file: {error}") from error
+    pattern_file = no_touch_file(args.no_touch)
+    if pattern_file:
+        try:
+            pattern_files = [read_patterns(pattern_file.expanduser())]
+        except OSError as error:
+            raise SystemExit(f"error: cannot read pattern file: {error}") from error
 
     output = output_path(root, args.output, args.format)
     if is_inside(output, root):
@@ -306,9 +321,16 @@ def main() -> None:
 
     if args.backup:
         backup_input(root, args.test)
-    expanded = expand_archives(root, pattern_files, args.test, not args.no_lha_tag)
-    create_archive(root, output, args.format, pattern_files, expanded, args.test,
-                   args.delete, not args.no_lha_tag)
+
+    expanded: list[Path] = []
+    try:
+        expanded = expand_archives(root, expanded, pattern_files, args.test, not args.no_lha_tag)
+        create_archive(root, output, args.format, pattern_files, expanded, args.test,
+                    args.delete, not args.no_lha_tag)
+    except (Exception, KeyboardInterrupt) as error:
+        print(f"error: {error}, performing cleanup ...")
+        delete_extracted(root, expanded, pattern_files, args.test)
+
     print("done", flush=True)
 
 

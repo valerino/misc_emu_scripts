@@ -45,21 +45,19 @@ def main() -> None:
         def fake_run(command: list[str], cwd: Path, _test: bool, _input: str | None = None) -> None:
             if command[0] == "zip":
                 return
+            assert command[:2] == ["7z", "x"]
             archive = Path(command[-1])
             extracted.append(archive.relative_to(root).as_posix())
-            destination = (Path(command[-1]) if command[0] == "unzip"
-                           else cwd if command[0] == "lha"
-                           else Path(command[3][2:]))
-            assert command[:2] == ["lha", "x"]
+            destination = cwd if len(command) == 3 else Path(command[3][2:])
             if archive.name == "outer.lha":
                 destination.mkdir(exist_ok=True)
                 (destination / "inner.lha").touch()
                 (destination / "game.rom").touch()
 
         batch_archive.run = fake_run
-        expanded = batch_archive.expand_archives(root, [[], []], False)
+        expanded = batch_archive.expand_archives(root, [], [[], []], False)
         assert extracted == ["outer.lha", "outer-lha/inner.lha"]
-        assert {path.relative_to(root).as_posix() for path in expanded} == set(extracted)
+        assert {path.relative_to(root).as_posix() for path in expanded} == {"outer-lha", "outer-lha/inner-lha"}
 
         batch_archive.create_archive(
             root, root.parent / "roms.zip", "zip", [[], []], expanded, True)
@@ -69,13 +67,17 @@ def main() -> None:
 
         immediate = root / "immediate.rom"
         immediate.touch()
+        outer = root / "outer.lha"
+        outer.touch()
         added: list[Path] = []
         def removes_after_adding(command: list[str], cwd: Path, _test: bool, input_text: str | None = None) -> None:
             assert command[:2] == ["zip", "-q"]
             added.extend(root / name[2:] for name in command[3:])
         batch_archive.run = removes_after_adding
-        batch_archive.create_archive(root, root.parent / "roms.zip", "zip", [[], []], set(), False)
+        batch_archive.create_archive(root, root.parent / "roms.zip", "zip", [[], ["outer.lha"]],
+                                     [root / "outer-lha"], False)
         assert immediate in added
+        assert outer not in added
         assert immediate.exists()
         batch_archive.run = fake_run
 
@@ -88,7 +90,7 @@ def main() -> None:
         preserved.mkdir()
         (preserved / "keep.rom").touch()
         assert batch_archive.protected(preserved / "keep.rom", root, [[], ["preserved/"]])
-        batch_archive.delete_extracted(root, {root / "preserved.zip"}, [[], ["preserved/"]], False)
+        batch_archive.delete_extracted(root, [root / "preserved"], [[], ["preserved/"]], False)
         assert (preserved / "keep.rom").exists()
 
         nested = root / "delete" / "me.txt"
@@ -109,23 +111,29 @@ def main() -> None:
         temporary_file.touch()
         batch_archive.run = removes_after_adding
         batch_archive.create_archive(root, root.parent / "roms.zip", "zip", [[], []],
-                                     {root / "temporary.zip"}, False)
+                                     [root / "temporary"], False)
         assert not temporary.exists()
         batch_archive.run = fake_run
 
         locked = root / "locked.zip"
         locked.touch()
-        expanded = batch_archive.expand_archives(root, [[], ["locked.zip"]], False)
+        expanded = batch_archive.expand_archives(root, [], [[], ["locked.zip"]], False)
         assert locked not in expanded
         batch_archive.create_archive(
             root, root.parent / "roms.zip", "zip", [[], ["locked.zip"]], expanded, True)
 
         newline = root / "line\nbreak"
         newline.touch()
-        assert batch_archive.unsafe_7z_path(root, set()) == newline
+        assert batch_archive.unsafe_7z_path(root, [], [[], []]) == newline
 
         batch_archive.create_archive(root, root.parent / "deleted.zip", "zip", [[], ["locked.zip"]],
-                                     {locked}, False, delete=True)
+                                     [], False, delete=True)
+        assert root.exists()
+        assert locked.exists()
+        assert not (root / "line\nbreak").exists()
+
+        batch_archive.create_archive(root, root.parent / "deleted.zip", "zip", [[], []],
+                                     [], False, delete=True)
         assert not root.exists()
 
 
