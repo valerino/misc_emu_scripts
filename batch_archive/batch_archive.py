@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expand ZIP/7z/LHA files in a directory, then create one ZIP or 7z archive.
+"""Expand ZIP/7z/LHA/TAR.GZ files in a directory, then create one ZIP or 7z archive.
 
 Examples:
   batch_archive.py roms
@@ -19,7 +19,13 @@ import subprocess
 from pathlib import Path
 
 
-ARCHIVE_SUFFIXES = {".zip", ".7z", ".lha"}
+ARCHIVE_SUFFIXES = {".zip", ".7z", ".lha", ".tar.gz"}
+
+
+def archive_suffix(path: Path) -> str | None:
+    """Return the archive suffix of path, matching .tar.gz before single suffixes."""
+    name = path.name.lower()
+    return next((suffix for suffix in ARCHIVE_SUFFIXES if name.endswith(suffix)), None)
 ARG_BATCH_BYTES = 32_000
 
 
@@ -89,7 +95,7 @@ def ensure_command(name: str) -> None:
 
 def extract_destination(archive: Path, lha_tag: bool) -> Path:
     """Return the directory used for an archive's extracted files."""
-    destination = archive.with_suffix("")
+    destination = archive.with_name(archive.name[:-len(archive_suffix(archive))])
     return destination.with_name(destination.name + "-lha") if lha_tag and archive.suffix.lower() == ".lha" else destination
 
 
@@ -97,15 +103,21 @@ def expand_archives(root: Path, expanded: list[Path], pattern_files: list[list[s
                     lha_tag: bool = True) -> list[Path]:
     """Extract archives, including archives revealed by earlier extraction."""
     while archives := [path for path in root.rglob("*")
-                       if path.is_file() and path.suffix.lower() in ARCHIVE_SUFFIXES
+                       if path.is_file() and archive_suffix(path)
                        and extract_destination(path, lha_tag) not in expanded
                        and not protected(path, root, pattern_files)]:
         for archive in archives:
+            suffix = archive_suffix(archive)
             destination = extract_destination(archive, lha_tag)
-            if archive.suffix.lower() == ".zip":
+            if suffix == ".zip":
                 ensure_command("unzip")
                 command = ["unzip", "-o", str(archive), "-d", str(destination)]
-            elif archive.suffix.lower() == ".lha":
+            elif suffix == ".tar.gz":
+                ensure_command("tar")
+                command = ["tar", "-xzf", str(archive), "-C", str(destination)]
+                if not test:
+                    destination.mkdir(exist_ok=True)
+            elif suffix == ".lha":
                 ensure_command("7z")
                 command = ["7z", "x", str(archive)]
                 if not test:
@@ -115,7 +127,7 @@ def expand_archives(root: Path, expanded: list[Path], pattern_files: list[list[s
                 command = ["7z", "x", "-y", f"-o{destination}", str(archive)]
             print(f"extracting {archive} to {destination}", flush=True)
             expanded.append(destination)
-            run(command, destination if archive.suffix.lower() == ".lha" else root, test)
+            run(command, destination if suffix == ".lha" else root, test)
     return expanded
 
 
@@ -151,7 +163,7 @@ def is_inside(path: Path, directory: Path) -> bool:
 
 def extracted_source(path: Path, expanded: list[Path], lha_tag: bool) -> bool:
     """Return whether path is a source archive that was already extracted."""
-    return (path.suffix.lower() in ARCHIVE_SUFFIXES
+    return (archive_suffix(path)
             and extract_destination(path, lha_tag) in expanded)
 
 
@@ -282,7 +294,7 @@ def delete_extracted(root: Path, expanded: list[Path],
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Extract ZIP/7z/LHA files, then archive a directory.",
+        description="Extract ZIP/7z/LHA/TAR.GZ files, then archive a directory.",
         epilog="--delete removes everything except files matching --no-touch.",
     )
     parser.add_argument("directory", type=Path, help="directory to process recursively")

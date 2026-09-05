@@ -38,12 +38,19 @@ def main() -> None:
         root.mkdir()
         assert batch_archive.output_path(root, None, "7z") == root.parent / "roms.7z"
         (root / "outer.lha").touch()
+        (root / "game.tar.gz").touch()
         extracted: list[str] = []
 
         batch_archive.ensure_command = lambda _: None
 
         def fake_run(command: list[str], cwd: Path, _test: bool, _input: str | None = None) -> None:
             if command[0] == "zip":
+                return
+            if command[0] == "tar":
+                assert command[:2] == ["tar", "-xzf"]
+                archive = Path(command[2])
+                extracted.append(archive.relative_to(root).as_posix())
+                (Path(command[-1]) / "game.rom").touch()
                 return
             assert command[:2] == ["7z", "x"]
             archive = Path(command[-1])
@@ -56,8 +63,9 @@ def main() -> None:
 
         batch_archive.run = fake_run
         expanded = batch_archive.expand_archives(root, [], [[], []], False)
-        assert extracted == ["outer.lha", "outer-lha/inner.lha"]
-        assert {path.relative_to(root).as_posix() for path in expanded} == {"outer-lha", "outer-lha/inner-lha"}
+        assert sorted(extracted) == ["game.tar.gz", "outer-lha/inner.lha", "outer.lha"]
+        assert {path.relative_to(root).as_posix() for path in expanded} == {
+            "outer-lha", "outer-lha/inner-lha", "game"}
 
         batch_archive.create_archive(
             root, root.parent / "roms.zip", "zip", [[], []], expanded, True)
