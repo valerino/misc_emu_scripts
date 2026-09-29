@@ -19,7 +19,7 @@ import subprocess
 from pathlib import Path
 
 
-ARCHIVE_SUFFIXES = {".zip", ".7z", ".lha", ".tar.gz"}
+ARCHIVE_SUFFIXES = {".rar", ".zip", ".7z", ".lha", ".tar.gz"}
 
 
 def archive_suffix(path: Path) -> str | None:
