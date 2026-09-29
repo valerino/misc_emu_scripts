@@ -44,6 +44,8 @@ def no_touch_file(requested: Path | None) -> Path | None:
 def excluded(path: Path, root: Path, patterns: list[str]) -> bool:
     """Return whether path is excluded by the last matching pattern."""
     relative = path.relative_to(root).as_posix()
+    parts = relative.split("/")
+    parents = ["/".join(parts[:i]) for i in range(1, len(parts))]
     result = False
     for raw_pattern in patterns:
         include = raw_pattern.startswith("!")
@@ -52,11 +54,19 @@ def excluded(path: Path, root: Path, patterns: list[str]) -> bool:
         if pattern.endswith("/"):
             directory = pattern.rstrip("/")
             match = relative == directory or relative.startswith(directory + "/")
+            if not match:
+                match = any(fnmatch.fnmatchcase(parent, directory) and
+                            (relative == parent or relative.startswith(parent + "/"))
+                            for parent in [relative, *parents])
         elif "/" in pattern:
-            match = fnmatch.fnmatchcase(relative, pattern)
+            match = fnmatch.fnmatchcase(relative, pattern) or any(
+                fnmatch.fnmatchcase(parent, pattern) for parent in parents)
         else:
             match = (fnmatch.fnmatchcase(relative, pattern) or
-                     fnmatch.fnmatchcase(path.name, pattern))
+                     fnmatch.fnmatchcase(path.name, pattern) or
+                     any(fnmatch.fnmatchcase(parent, pattern) or
+                         fnmatch.fnmatchcase(Path(parent).name, pattern)
+                         for parent in parents))
         if match:
             result = not include
     return result
@@ -294,7 +304,7 @@ def delete_extracted(root: Path, expanded: list[Path],
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Extract ZIP/7z/LHA/TAR.GZ files, then archive a directory.",
+        description="Extract ZIP/7z/LHA/RAR/TAR.GZ files, then archive a directory.",
         epilog="--delete removes everything except files matching --no-touch.",
     )
     parser.add_argument("directory", type=Path, help="directory to process recursively")
@@ -302,15 +312,15 @@ def parse_args() -> argparse.Namespace:
                         help="output format (default: zip)")
     parser.add_argument("-o", "--output", help="output path (default: INPUT_DIRECTORY.EXT beside it)")
     parser.add_argument("-d", "--delete", action="store_true",
-                        help="delete the input after archiving, preserving only --no-touch files")
+                        help="delete the input after archiving, preserving only --no-touch files (default: keep the input)")
     parser.add_argument("-n", "--test", action="store_true",
-                        help="print operations without changing files")
+                        help="print operations without changing files (default: no test)")
     parser.add_argument("--no-touch", type=Path, metavar="FILE",
-        help="read gitignore-like patterns for paths never extracted or deleted")
+        help="read gitignore-like patterns for paths to be kept untouched in the output (not archived, not extracted, not deleted)")
     parser.add_argument("--no-lha-tag", action="store_true",
-                        help="extract .lha files without the default -lha directory suffix")
+                        help="extract .lha files without the default -lha directory suffix (default: add -lha to the extracted lha directories)")
     parser.add_argument("--backup", action="store_true",
-                        help="copy the original input to INPUT_DIRECTORY.backup before processing")
+                        help="copy the original input to INPUT_DIRECTORY.backup before processing (default: no backup)")
     return parser.parse_args()
 
 

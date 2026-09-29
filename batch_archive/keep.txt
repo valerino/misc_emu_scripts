@@ -1,6 +1,4 @@
 *.iso
 *.chd
-*.mp3
-*.wav
 
 
