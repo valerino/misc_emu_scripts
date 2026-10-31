@@ -4,7 +4,7 @@
 Examples:
   batch_archive.py roms
   batch_archive.py roms --format 7z --output /archives/roms.7z
-  batch_archive.py roms --no-touch keep.txt --delete
+  batch_archive.py roms --keep keep.txt --delete
 
 Patterns are gitignore-like: blank lines and lines beginning with # are ignored,
 and a leading ! re-includes a path matched by an earlier pattern.  Patterns with
@@ -35,9 +35,9 @@ def read_patterns(path: Path) -> list[str]:
             if line.strip() and not line.lstrip().startswith("#")]
 
 
-def no_touch_file(requested: Path | None) -> Path | None:
-    """Use notouch.txt in the current directory when none was requested."""
-    default = Path.cwd() / "notouch.txt"
+def keep_file(requested: Path | None) -> Path | None:
+    """Use keep.txt in the current directory when none was requested."""
+    default = Path.cwd() / "keep.txt"
     return requested or (default if default.is_file() else None)
 
 
@@ -128,8 +128,8 @@ def expand_archives(root: Path, expanded: list[Path], pattern_files: list[list[s
                 if not test:
                     destination.mkdir(exist_ok=True)
             elif suffix == ".lha":
-                ensure_command("7z")
-                command = ["7z", "x", str(archive)]
+                ensure_command("lha")
+                command = ["lha", "xf", str(archive)]
                 if not test:
                     destination.mkdir(exist_ok=True)
             else:
@@ -305,17 +305,17 @@ def delete_extracted(root: Path, expanded: list[Path],
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Extract ZIP/7z/LHA/RAR/TAR.GZ files, then archive a directory.",
-        epilog="--delete removes everything except files matching --no-touch.",
+        epilog="--delete removes everything except files matching --keep.",
     )
     parser.add_argument("directory", type=Path, help="directory to process recursively")
     parser.add_argument("--format", choices=("zip", "7z"), default="zip",
                         help="output format (default: zip)")
     parser.add_argument("-o", "--output", help="output path (default: INPUT_DIRECTORY.EXT beside it)")
     parser.add_argument("-d", "--delete", action="store_true",
-                        help="delete the input after archiving, preserving only --no-touch files (default: keep the input)")
+                        help="delete the input after archiving, preserving only --keep files (default: keep the input)")
     parser.add_argument("-n", "--test", action="store_true",
                         help="print operations without changing files (default: no test)")
-    parser.add_argument("--no-touch", type=Path, metavar="FILE",
+    parser.add_argument("--keep", type=Path, metavar="FILE",
         help="read gitignore-like patterns for paths to be kept untouched in the output (not archived, not extracted, not deleted)")
     parser.add_argument("--no-lha-tag", action="store_true",
                         help="extract .lha files without the default -lha directory suffix (default: add -lha to the extracted lha directories)")
@@ -330,7 +330,7 @@ def main() -> None:
     if not root.is_dir():
         raise SystemExit(f"error: not a directory: {root}")
     pattern_files: list[list[str]] = [[]]
-    pattern_file = no_touch_file(args.no_touch)
+    pattern_file = keep_file(args.keep)
     if pattern_file:
         try:
             pattern_files = [read_patterns(pattern_file.expanduser())]
@@ -350,10 +350,11 @@ def main() -> None:
         create_archive(root, output, args.format, pattern_files, expanded, args.test,
                     args.delete, not args.no_lha_tag)
     except (Exception, KeyboardInterrupt) as error:
-        print(f"error: {error}, performing cleanup ...")
         delete_extracted(root, expanded, pattern_files, args.test)
+        print(f"\nerror: {error}, intermediate output cleaned up!")
+        raise SystemExit(1)
 
-    print("done", flush=True)
+    print(f"done: {output}", flush=True)
 
 
 if __name__ == "__main__":

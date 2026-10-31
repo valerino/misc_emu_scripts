@@ -6,14 +6,14 @@ archives. Extracted archives are not included in the output archive, only their
 contents. The default output is a sibling of the input directory, so it cannot
 be added to or deleted from its own archive.
 
-Requires Python 3 plus `unzip`, `zip`, `7z`, and `tar` on `PATH`. On Arch Linux:
+Requires Python 3 plus `unzip`, `zip`, `7z`, `lha`, and `tar` on `PATH`. On Arch Linux:
 
 ```bash
-sudo pacman -S unzip zip 7z1 tar
+sudo pacman -S unzip zip 7z1 lhasa tar
 ```
 
-`tar` is only invoked for `.tar.gz` archives; `unzip` only for `.zip`; `7z`
-only for `.7z`/`.rar`/`.lha` inputs or `--format 7z` output.
+`tar` is only invoked for `.tar.gz` archives; `unzip` only for `.zip`; `lha`
+only for `.lha`; `7z` only for `.7z`/`.rar` inputs or `--format 7z` output.
 
 ## Examples
 
@@ -29,10 +29,10 @@ Create `202608.zip` beside `202608/` as `202608.zip`, leaving `202608/neogeocd` 
 
 ```bash
 # only 202608/neogeocd/game.chd remains (and is not included in 202608.zip)
-./batch_archive.py ./202608 --no-touch ./keep.txt --delete
+./batch_archive.py ./202608 --keep ./keep.txt --delete
 
 # leaves input untouched 
-./batch_archive.py ./202608 --no-touch ./keep.txt
+./batch_archive.py ./202608 --keep ./keep.txt
 
 ```
 
@@ -53,11 +53,11 @@ leading `/` is stripped; `!` re-includes a path matched by an earlier pattern
 relative to the input directory; other patterns match the relative path, the
 basename, or any parent directory (so `*.chd` matches at any depth, and a bare
 `neogeocd` protects `neogeocd/...` just like `neogeocd/` does); a trailing `/`
-applies recursively, globs included. When `--no-touch` is omitted,
-`./notouch.txt` is used if it exists in the current directory.
+applies recursively, globs included. When `--keep` is omitted,
+`./keep.txt` is used if it exists in the current directory.
 
 With `--delete`, everything in the input directory except files matched by
-`--no-touch` is deleted after successful archive creation; the input directory
+`--keep` is deleted after successful archive creation; the input directory
 itself is removed once it becomes empty (protected parent directories are kept
 only while they still contain protected files). Add `--backup` to first copy the
 untouched input directory to a sibling directory named
@@ -68,6 +68,9 @@ must point outside the input directory. `--no-lha-tag` extracts `.lha` files to
 a directory without the default `-lha` suffix. If nothing remains after
 exclusions, the program exits with `error: no files remain after exclusions`
 and, without `--delete`, only the extracted contents are cleaned up.
+
+On error the program prints the error, cleans up extracted contents, and exits
+non-zero. On success it prints `done: OUTPUT_PATH`.
 
 Run `./batch_archive.py --help` for every option. The small regression check
 can be run with `python3 test_batch_archive.py`.

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Small regression check for recursive extraction and directory cleanup."""
 
+import contextlib
 import importlib.util
+import io
 import sys
 import tempfile
 from unittest.mock import patch
@@ -18,14 +20,14 @@ SPEC.loader.exec_module(batch_archive)
 def main() -> None:
     with tempfile.TemporaryDirectory() as temporary:
         current = Path(temporary)
-        (current / "notouch.txt").write_text("keep.txt\n")
+        (current / "keep.txt").write_text("keep.txt\n")
         with patch("pathlib.Path.cwd", return_value=current):
-            assert batch_archive.no_touch_file(None) == current / "notouch.txt"
+            assert batch_archive.keep_file(None) == current / "keep.txt"
             explicit = current / "other.txt"
-            assert batch_archive.no_touch_file(explicit) == explicit
-        (current / "notouch.txt").unlink()
+            assert batch_archive.keep_file(explicit) == explicit
+        (current / "keep.txt").unlink()
         with patch("pathlib.Path.cwd", return_value=current):
-            assert batch_archive.no_touch_file(None) is None
+            assert batch_archive.keep_file(None) is None
 
         root = current / "input"
         root.mkdir()
@@ -52,14 +54,19 @@ def main() -> None:
                 extracted.append(archive.relative_to(root).as_posix())
                 (Path(command[-1]) / "game.rom").touch()
                 return
+            if command[0] == "lha":
+                assert command[:2] == ["lha", "xf"]
+                archive = Path(command[-1])
+                extracted.append(archive.relative_to(root).as_posix())
+                if archive.name == "outer.lha":
+                    cwd.mkdir(exist_ok=True)
+                    (cwd / "inner.lha").touch()
+                    (cwd / "game.rom").touch()
+                return
             assert command[:2] == ["7z", "x"]
             archive = Path(command[-1])
             extracted.append(archive.relative_to(root).as_posix())
-            destination = cwd if len(command) == 3 else Path(command[3][2:])
-            if archive.name == "outer.lha":
-                destination.mkdir(exist_ok=True)
-                (destination / "inner.lha").touch()
-                (destination / "game.rom").touch()
+            destination = Path(command[3][2:])
 
         batch_archive.run = fake_run
         expanded = batch_archive.expand_archives(root, [], [[], []], False)
@@ -143,6 +150,37 @@ def main() -> None:
         batch_archive.create_archive(root, root.parent / "deleted.zip", "zip", [[], []],
                                      [], False, delete=True)
         assert not root.exists()
+
+    with tempfile.TemporaryDirectory() as temporary:
+        root = Path(temporary) / "fail"
+        root.mkdir()
+        output = root.parent / "fail.zip"
+
+        def failing(*_args: object, **_kwargs: object) -> None:
+            raise RuntimeError("boom")
+
+        def run_main(create: object) -> tuple[str, bool]:
+            stream = io.StringIO()
+            exited = False
+            arguments = ["batch_archive.py", str(root)]
+            with patch.object(sys, "argv", arguments), \
+                    patch.object(batch_archive, "create_archive", create), \
+                    contextlib.redirect_stdout(stream):
+                try:
+                    batch_archive.main()
+                except SystemExit as error:
+                    exited = True
+                    assert error.code == 1
+            return stream.getvalue(), exited
+
+        text, exited = run_main(failing)
+        assert exited
+        assert "error: boom" in text
+        assert "done:" not in text
+
+        text, exited = run_main(lambda *_args, **_kwargs: None)
+        assert not exited
+        assert f"done: {output}" in text
 
 
 if __name__ == "__main__":
