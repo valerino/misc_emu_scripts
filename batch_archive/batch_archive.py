@@ -55,25 +55,28 @@ def excluded(path: Path, root: Path, patterns: list[str]) -> bool:
             directory = pattern.rstrip("/")
             match = relative == directory or relative.startswith(directory + "/")
             if not match:
-                match = any(fnmatch.fnmatchcase(parent, directory) and
+                match = any(fnmatch.fnmatch(parent, directory) and
                             (relative == parent or relative.startswith(parent + "/"))
                             for parent in [relative, *parents])
         elif "/" in pattern:
-            match = fnmatch.fnmatchcase(relative, pattern) or any(
-                fnmatch.fnmatchcase(parent, pattern) for parent in parents)
+            match = fnmatch.fnmatch(relative, pattern) or any(
+                fnmatch.fnmatch(parent, pattern) for parent in parents)
         else:
-            match = (fnmatch.fnmatchcase(relative, pattern) or
-                     fnmatch.fnmatchcase(path.name, pattern) or
-                     any(fnmatch.fnmatchcase(parent, pattern) or
-                         fnmatch.fnmatchcase(Path(parent).name, pattern)
+            match = (fnmatch.fnmatch(relative, pattern) or
+                     fnmatch.fnmatch(path.name, pattern) or
+                     any(fnmatch.fnmatch(parent, pattern) or
+                         fnmatch.fnmatch(Path(parent).name, pattern)
                          for parent in parents))
         if match:
             result = not include
     return result
 
 
-def protected(path: Path, root: Path, pattern_files: list[list[str]]) -> bool:
-    """Return whether any independent ignore file protects path."""
+def protected(path: Path, root: Path, pattern_files: list[list[str]],
+              keep_dotfiles: bool = False) -> bool:
+    """Return whether path is protected; dotfiles only with --keep-dotfiles."""
+    if path.name.startswith("."):
+        return keep_dotfiles
     return any(excluded(path, root, patterns) for patterns in pattern_files)
 
 
@@ -110,12 +113,15 @@ def extract_destination(archive: Path, lha_tag: bool) -> Path:
 
 
 def expand_archives(root: Path, expanded: list[Path], pattern_files: list[list[str]], test: bool,
-                    lha_tag: bool = True) -> list[Path]:
-    """Extract archives, including archives revealed by earlier extraction."""
+                    lha_tag: bool = True, recursive: bool = True,
+                    ignore_errors: bool = False, keep_dotfiles: bool = False) -> list[Path]:
+    """Extract archives, including archives revealed by earlier extraction unless not recursive."""
+    failed: set[Path] = set()
     while archives := [path for path in root.rglob("*")
                        if path.is_file() and archive_suffix(path)
                        and extract_destination(path, lha_tag) not in expanded
-                       and not protected(path, root, pattern_files)]:
+                       and path not in failed
+                       and not protected(path, root, pattern_files, keep_dotfiles)]:
         for archive in archives:
             suffix = archive_suffix(archive)
             destination = extract_destination(archive, lha_tag)
@@ -136,8 +142,17 @@ def expand_archives(root: Path, expanded: list[Path], pattern_files: list[list[s
                 ensure_command("7z")
                 command = ["7z", "x", "-y", f"-o{destination}", str(archive)]
             print(f"extracting {archive} to {destination}", flush=True)
+            try:
+                run(command, destination if suffix == ".lha" else root, test)
+            except subprocess.CalledProcessError as error:
+                if not ignore_errors:
+                    raise
+                print(f"warning: extraction failed ({error}), leaving {archive} in place", flush=True)
+                failed.add(archive)
+                continue
             expanded.append(destination)
-            run(command, destination if suffix == ".lha" else root, test)
+        if not recursive:
+            break
     return expanded
 
 
@@ -178,18 +193,22 @@ def extracted_source(path: Path, expanded: list[Path], lha_tag: bool) -> bool:
 
 
 def excluded_from_archive(path: Path, root: Path, expanded: list[Path],
-                          pattern_files: list[list[str]], lha_tag: bool) -> bool:
+                          pattern_files: list[list[str]], lha_tag: bool,
+                          keep_dotfiles: bool = False) -> bool:
     """Return whether path is kept out of the output archive."""
-    return protected(path, root, pattern_files) or extracted_source(path, expanded, lha_tag)
+    return (protected(path, root, pattern_files, keep_dotfiles)
+            or extracted_source(path, expanded, lha_tag))
 
 
 def archive_batches(root: Path, expanded: list[Path],
-                    pattern_files: list[list[str]], lha_tag: bool = True):
+                    pattern_files: list[list[str]], lha_tag: bool = True,
+                    keep_dotfiles: bool = False):
     """Yield bounded argument batches without newline-delimited file lists."""
     batch: list[tuple[Path, str]] = []
     size = 0
     for path in root.rglob("*"):
-        if not path.is_file() or excluded_from_archive(path, root, expanded, pattern_files, lha_tag):
+        if not path.is_file() or excluded_from_archive(path, root, expanded, pattern_files, lha_tag,
+                                                       keep_dotfiles):
             continue
         name = "./" + path.relative_to(root).as_posix()
         if batch and size + len(name) + 1 > ARG_BATCH_BYTES:
@@ -203,24 +222,26 @@ def archive_batches(root: Path, expanded: list[Path],
 
 
 def unsafe_7z_path(root: Path, expanded: list[Path],
-                   pattern_files: list[list[str]], lha_tag: bool = True) -> Path | None:
+                   pattern_files: list[list[str]], lha_tag: bool = True,
+                   keep_dotfiles: bool = False) -> Path | None:
     """Return a path whose newline 7z would silently rewrite."""
     return next((path for path in root.rglob("*")
                  if path.is_file()
-                 and not excluded_from_archive(path, root, expanded, pattern_files, lha_tag)
+                 and not excluded_from_archive(path, root, expanded, pattern_files, lha_tag,
+                                               keep_dotfiles)
                  and ("\n" in path.name or "\r" in path.name)), None)
 
 
 def create_archive(root: Path, output: Path, archive_format: str,
                    pattern_files: list[list[str]], expanded: list[Path],
                    test: bool, delete: bool = False,
-                   lha_tag: bool = True) -> None:
+                   lha_tag: bool = True, keep_dotfiles: bool = False) -> None:
     """Archive every included file using the requested native command."""
     if archive_format == "zip":
         ensure_command("zip")
     else:
         ensure_command("7z")
-        if unsafe_path := unsafe_7z_path(root, expanded, pattern_files, lha_tag):
+        if unsafe_path := unsafe_7z_path(root, expanded, pattern_files, lha_tag, keep_dotfiles):
             raise SystemExit(f"error: 7z cannot safely archive newline in filename: {unsafe_path}")
 
     if output.exists():
@@ -229,7 +250,7 @@ def create_archive(root: Path, output: Path, archive_format: str,
             output.unlink()
     print(f"creating {output} from {root}", flush=True)
     created = False
-    for batch in archive_batches(root, expanded, pattern_files, lha_tag):
+    for batch in archive_batches(root, expanded, pattern_files, lha_tag, keep_dotfiles):
         names = [name for _, name in batch]
         if archive_format == "zip":
             run(["zip", "-q", str(output), *names], root, test)
@@ -243,35 +264,37 @@ def create_archive(root: Path, output: Path, archive_format: str,
             print(f"deleting input directory {root}", flush=True)
         else:
             for path in root.rglob("*"):
-                if path.is_file() and not protected(path, root, pattern_files):
+                if path.is_file() and not protected(path, root, pattern_files, keep_dotfiles):
                     print(f"deleting {path}", flush=True)
                     path.unlink()
-            delete_empty_directories(root, root, pattern_files, test, include_root=True)
+            delete_empty_directories(root, root, pattern_files, test, include_root=True,
+                                     keep_dotfiles=keep_dotfiles)
     else:
-        delete_extracted(root, expanded, pattern_files, test)
+        delete_extracted(root, expanded, pattern_files, test, keep_dotfiles)
 
 
 def delete_archived(files: list[Path], root: Path, pattern_files: list[list[str]],
-                    test: bool) -> None:
+                    test: bool, keep_dotfiles: bool = False) -> None:
     """Delete archived files and their now-empty subdirectories."""
     for path in files:
-        if protected(path, root, pattern_files):
+        if protected(path, root, pattern_files, keep_dotfiles):
             continue
         print(f"deleting {path}", flush=True)
         if not test:
             path.unlink()
-    delete_empty_directories(root, root, pattern_files, test)
+    delete_empty_directories(root, root, pattern_files, test, keep_dotfiles=keep_dotfiles)
 
 
 def delete_empty_directories(directory: Path, root: Path,
                              pattern_files: list[list[str]], test: bool,
-                             include_root: bool = False) -> None:
+                             include_root: bool = False,
+                             keep_dotfiles: bool = False) -> None:
     """Delete unprotected empty directories, deepest first."""
     paths = [path for path in directory.rglob("*") if path != directory]
     if include_root:
         paths.append(directory)
     for path in sorted(paths, key=lambda path: len(path.parts), reverse=True):
-        if (path.is_dir() and not protected(path, root, pattern_files)
+        if (path.is_dir() and not protected(path, root, pattern_files, keep_dotfiles)
                 and not any(path.iterdir())):
             print(f"deleting {path}", flush=True)
             if not test:
@@ -279,24 +302,27 @@ def delete_empty_directories(directory: Path, root: Path,
 
 
 def delete_extracted(root: Path, expanded: list[Path],
-                     pattern_files: list[list[str]], test: bool) -> None:
+                     pattern_files: list[list[str]], test: bool,
+                     keep_dotfiles: bool = False) -> None:
     """Remove unprotected extracted destination directories."""
     destinations = sorted(expanded, key=lambda path: len(path.parts), reverse=True)
     for destination in destinations:
         if not destination.exists():
             continue
         files = [path for path in destination.rglob("*")
-                 if path.is_file() and not protected(path, root, pattern_files)]
+                 if path.is_file() and not protected(path, root, pattern_files, keep_dotfiles)]
         for path in files:
             print(f"deleting {path}", flush=True)
             if not test:
                 path.unlink()
         for path in sorted(destination.rglob("*"), key=lambda path: len(path.parts), reverse=True):
-            if path.is_dir() and not protected(path, root, pattern_files) and not any(path.iterdir()):
+            if (path.is_dir() and not protected(path, root, pattern_files, keep_dotfiles)
+                    and not any(path.iterdir())):
                 print(f"deleting extracted {path}", flush=True)
                 if not test:
                     path.rmdir()
-        if not protected(destination, root, pattern_files) and not any(destination.iterdir()):
+        if (not protected(destination, root, pattern_files, keep_dotfiles)
+                and not any(destination.iterdir())):
             print(f"deleting extracted {destination}", flush=True)
             if not test:
                 destination.rmdir()
@@ -317,8 +343,14 @@ def parse_args() -> argparse.Namespace:
                         help="print operations without changing files (default: no test)")
     parser.add_argument("--keep", type=Path, metavar="FILE",
         help="read gitignore-like patterns for paths to be kept untouched in the output (not archived, not extracted, not deleted)")
+    parser.add_argument("--keep-dotfiles", action="store_true",
+        help="keep hidden files and directories (names starting with '.') out of the output (default: dotfiles are archived like any other file)")
     parser.add_argument("--no-lha-tag", action="store_true",
                         help="extract .lha files without the default -lha directory suffix (default: add -lha to the extracted lha directories)")
+    parser.add_argument("--no-recursive", action="store_true",
+                        help="extract only the archives already present, not archives revealed by extraction (default: extract recursively)")
+    parser.add_argument("--ignore-extract-errors", action="store_true",
+                        help="keep going when an archive fails to extract, leaving that archive in the output (default: stop on error)")
     parser.add_argument("--backup", action="store_true",
                         help="copy the original input to INPUT_DIRECTORY.backup before processing (default: no backup)")
     return parser.parse_args()
@@ -346,11 +378,13 @@ def main() -> None:
 
     expanded: list[Path] = []
     try:
-        expanded = expand_archives(root, expanded, pattern_files, args.test, not args.no_lha_tag)
+        expanded = expand_archives(root, expanded, pattern_files, args.test, not args.no_lha_tag,
+                                   not args.no_recursive, args.ignore_extract_errors,
+                                   args.keep_dotfiles)
         create_archive(root, output, args.format, pattern_files, expanded, args.test,
-                    args.delete, not args.no_lha_tag)
+                    args.delete, not args.no_lha_tag, args.keep_dotfiles)
     except (Exception, KeyboardInterrupt) as error:
-        delete_extracted(root, expanded, pattern_files, args.test)
+        delete_extracted(root, expanded, pattern_files, args.test, args.keep_dotfiles)
         print(f"\nerror: {error}, intermediate output cleaned up!")
         raise SystemExit(1)
 

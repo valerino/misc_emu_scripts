@@ -54,7 +54,10 @@ relative to the input directory; other patterns match the relative path, the
 basename, or any parent directory (so `*.chd` matches at any depth, and a bare
 `neogeocd` protects `neogeocd/...` just like `neogeocd/` does); a trailing `/`
 applies recursively, globs included. When `--keep` is omitted,
-`./keep.txt` is used if it exists in the current directory.
+`./keep.txt` is used if it exists in the current directory. Dotfiles (names
+starting with `.`) are not matched by patterns and are always archived;
+`--keep-dotfiles` reverses that and keeps every dotfile out of the archive and
+untouched, like a `--keep` match.
 
 With `--delete`, everything in the input directory except files matched by
 `--keep` is deleted after successful archive creation; the input directory
@@ -65,9 +68,13 @@ untouched input directory to a sibling directory named
 
 `--output` defaults to `INPUT_DIRECTORY.zip` (or `.7z`) beside the input and
 must point outside the input directory. `--no-lha-tag` extracts `.lha` files to
-a directory without the default `-lha` suffix. If nothing remains after
-exclusions, the program exits with `error: no files remain after exclusions`
-and, without `--delete`, only the extracted contents are cleaned up.
+a directory without the default `-lha` suffix. `--no-recursive` extracts only
+the archives already present, leaving archives found inside extracted content
+as plain files. `--ignore-extract-errors` keeps going when an archive fails to
+extract and leaves that archive in the output instead of aborting. If nothing
+remains after exclusions, the program exits with `error: no files remain after
+exclusions` and, without `--delete`, only the extracted contents are cleaned
+up.
 
 On error the program prints the error, cleans up extracted contents, and exits
 non-zero. On success it prints `done: OUTPUT_PATH`.
